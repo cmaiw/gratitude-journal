@@ -12,8 +12,9 @@ function GlobalStyles() {
         body {
           font-size: 16px;
           margin: 0;
-          background: black;
-          font-family: “FArial, sans-serif;
+          background: ${theme.colors.background};
+          font-family: 'Roboto', sans-serif;
+          color: ${theme.colors.font};
         }
       `}
     />
