@@ -12,7 +12,6 @@ function BookIcon(props) {
       x="38px"
       y="38px"
       viewBox="0 0 296.999 296.999"
-      style="enable-background:new 0 0 296.999 296.999;"
       {...props}
     >
       <BookPath

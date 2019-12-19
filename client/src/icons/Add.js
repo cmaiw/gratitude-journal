@@ -8,7 +8,6 @@ const AddPath = styled.path`
 function AddIcon(props) {
   return (
     <svg
-      enable-background="new 0 0 24 24"
       height="38px"
       viewBox="0 0 24 24"
       width="38px"
