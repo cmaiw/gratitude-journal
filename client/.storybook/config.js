@@ -2,12 +2,15 @@ import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import GlobalStyles from '../src/GlobalStyles';
 import { withKnobs } from '@storybook/addon-knobs';
+import { ThemeProvider } from 'emotion-theming';
+import defaultTheme from '../src/themes/theme';
+
 // add GlobalStyle for every story
 const GlobalStyleDecorator = storyFn => (
-  <>
+  <ThemeProvider theme={defaultTheme}>
     <GlobalStyles />
     {storyFn()}
-  </>
+  </ThemeProvider>
 );
 addDecorator(GlobalStyleDecorator);
 addDecorator(withKnobs);
