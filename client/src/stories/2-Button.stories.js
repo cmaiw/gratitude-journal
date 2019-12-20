@@ -1,13 +1,12 @@
 import React from 'react';
-// import { action } from '@storybook/addon-actions';
 import NavButton from '../components/NavButton';
 import BirdIcon from '../icons/BirdIcon';
 
 export default {
-  title: 'NavButton'
+  title: 'Navigation Button'
 };
 
-export function NavButtonJournal() {
+export function NavButtonBird() {
   return (
     <NavButton>
       <BirdIcon />

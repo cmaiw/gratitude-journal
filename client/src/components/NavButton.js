@@ -7,6 +7,7 @@ const NavButton = styled.button`
   justify-content: center;
   align-items: center;
   background-color: ${props => props.theme.colors.primary};
+  border: none;
   outline: none;
 `;
 

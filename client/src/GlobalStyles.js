@@ -15,6 +15,8 @@ function GlobalStyles() {
           background: ${theme.colors.background};
           font-family: 'Roboto', sans-serif;
           color: ${theme.colors.font};
+          height: 100vh;
+          width: 100vw;
         }
       `}
     />
