@@ -7,14 +7,7 @@ const BookPath = styled.path`
 
 function BookIcon(props) {
   return (
-    <svg
-      id="Capa_1"
-      enable-background="new 0 0 510 510"
-      height="38px"
-      viewBox="0 0 510 510"
-      width="38px"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg height="38px" viewBox="0 0 510 510" width="38px" xmlns="http://www.w3.org/2000/svg">
       <BookPath d="m62.333 416.884v.01c0 27.534 22.407 49.94 49.941 49.94h27.584v-49.94c0-8.367 6.783-15.14 15.14-15.14h292.669v-34.811h-335.393c-27.534.001-49.941 22.407-49.941 49.941z" />
       <BookPath d="m269.615 466.835h173.005c2.787 0 5.047-2.259 5.047-5.047v-29.754h-178.052z" />
       <BookPath d="m123.407 336.665v-336.665h-11.133c-27.534 0-49.941 22.407-49.941 49.951v304.195c21.224-16.958 39.558-17.481 61.074-17.481z" />
