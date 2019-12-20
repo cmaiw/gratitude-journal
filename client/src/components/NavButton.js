@@ -9,6 +9,10 @@ const NavButton = styled.button`
   background-color: ${props => props.theme.colors.primary};
   border: none;
   outline: none;
+
+  :hover {
+    outline: ${props => props.theme.colors.quatenary}, opacity:1;
+  }
 `;
 
 export default NavButton;
