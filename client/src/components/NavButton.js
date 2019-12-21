@@ -6,9 +6,13 @@ const NavButton = styled.button`
   width: 40px;
   justify-content: center;
   align-items: center;
-  background-color: ${props => props.theme.colors.primary};
+  background-color: transparent;
   border: none;
   outline: none;
+
+  :hover {
+    outline: ${props => props.theme.colors.quatenary}, opacity:1;
+  }
 `;
 
 export default NavButton;

@@ -1,5 +1,6 @@
 import React from 'react';
 import NavButton from '../components/NavButton';
+import { action } from '@storybook/addon-actions';
 import BirdIcon from '../icons/BirdIcon';
 
 export default {
@@ -8,7 +9,7 @@ export default {
 
 export function NavButtonBird() {
   return (
-    <NavButton>
+    <NavButton onClick={action('clicked')}>
       <BirdIcon />
     </NavButton>
   );

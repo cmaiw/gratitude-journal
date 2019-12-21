@@ -6,7 +6,7 @@ import BookIcon from '../icons/BookIcon';
 import AddIcon from '../icons/AddIcon';
 import HelpIcon from '../icons/HelpIcon';
 
-const Footer = styled.footer`
+export const Footer = styled.footer`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -15,7 +15,7 @@ const Footer = styled.footer`
   background-color: ${props => props.theme.colors.primary};
 `;
 
-function NavBar() {
+export function NavBar() {
   return (
     <Footer>
       <NavButton>
