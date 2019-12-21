@@ -16,7 +16,7 @@ const TheButton = styled.button`
   border-radius: 4px;
 `;
 export function UniversalButton({ text, onClick }) {
-  return <TheButton onClick={onClick}>edit</TheButton>;
+  return <TheButton onClick={onClick}>{text}</TheButton>;
 }
 
 export default UniversalButton;
