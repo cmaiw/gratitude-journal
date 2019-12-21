@@ -15,8 +15,9 @@ const TheButton = styled.button`
   color: ${props => props.theme.colors.background};
   border-radius: 4px;
 `;
-export function UniversalButton({ text, onClick }) {
-  return <TheButton onClick={onClick}>edit</TheButton>;
+
+export function UniversalButton({ text = 'edit', onClick }) {
+  return <TheButton onClick={onClick}>{text}</TheButton>;
 }
 
 export default UniversalButton;
