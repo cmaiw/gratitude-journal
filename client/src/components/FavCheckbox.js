@@ -1,15 +1,17 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-const Checkbox = styled.input.attrs({ type: 'checkbox' })`
+const Checkbox = styled.input`
   display: flex;
+  background-color: #63a4b7;
   height: 20px;
   width: 20px;
-  background-color: ${props => props.theme.colors.quinary};
+  border: none;
 `;
 
 function FavCheckbox() {
-  return <Checkbox />;
+  const [on, setOn] = React.useState(false);
+  return <Checkbox type="checkbox" checked={on} onChange={e => setOn(e.target.checked)} />;
 }
 
 export default FavCheckbox;
