@@ -2,14 +2,17 @@ import React from 'react';
 import GlobalStyles from './GlobalStyles';
 import { ThemeProvider } from 'emotion-theming';
 import defaultTheme from './themes/theme';
-import FavCheckbox from './components/FavCheckbox';
+import Checkbox from './components/FavCheckbox';
 
 function App() {
   return (
     <>
       <ThemeProvider theme={defaultTheme}>
         <GlobalStyles />
-        <div>Gratefully</div>
+        <div>
+          Gratefully
+          <Checkbox />
+        </div>
       </ThemeProvider>
     </>
   );
