@@ -6,6 +6,6 @@ export default {
   title: 'Favourite Checkbox'
 };
 
-export function FavouriteCheckbox() {
+export function MyFavCheckbox() {
   return <FavCheckbox onClick={action('checked')} />;
 }

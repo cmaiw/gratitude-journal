@@ -5,9 +5,11 @@ const CheckmarkPath = styled.path`
   fill: ${props => props.theme.colors.background};
 `;
 
+const CheckmarkSvg = styled.svg``;
+
 function CheckmarkIcon(props) {
   return (
-    <svg
+    <CheckmarkSvg
       xmlns="http://www.w3.org/2000/svg"
       width="18px"
       height="18px"
@@ -19,7 +21,7 @@ function CheckmarkIcon(props) {
 				c-30.513-31.125-79.965-31.125-110.478,0c-30.513,31.125-30.513,81.572,0,112.678l124.29,126.776
         c30.513,31.125,79.965,31.125,110.478,0l331.453-338.033C619.619,162.202,619.619,111.755,589.105,80.63z"
       />
-    </svg>
+    </CheckmarkSvg>
   );
 }
 export default CheckmarkIcon;

@@ -1,46 +1,42 @@
 import React from 'react';
 import styled from '@emotion/styled';
+// import CheckmarkPath from '../icons/CheckmarkIcon';
 
-const StyledCheckbox = styled.div`
-  /* all: unset; */
+const CheckboxContainer = styled.label`
   display: flex;
   width: 20px;
   height: 20px;
   background-color: ${props => props.theme.colors.quinary};
-  border-radius: 4px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 1px;
+  padding: 1.5px;
+  cursor: pointer;
+`;
+
+const StyledCheckbox = styled.input`
+  opacity: 0.55;
+  display: flex;
+  width: 14px;
+  height: 14px;
   border: none;
   justify-content: center;
   align-items: center;
-  color: ${props => props.theme.colors.quinary};
-  font-size: 18px;
-  font-weight: bold;
-  overflow: hidden;
-
-  &:hover {
-    background-color: #b7dd96;
-    color: #b7dd96;
-    cursor: pointer;
-  }
-
-  &:active {
-    color: #f8f8ef;
-    background-color: #63a4b7;
-  }
 `;
 
 function FavCheckbox(props) {
-  const [active, setActive] = React.useState(false);
+  const [checked, setChecked] = React.useState(undefined);
 
   return (
-    <>
+    <CheckboxContainer {...props}>
       <StyledCheckbox
-        checked={active}
-        onChange={e => setActive(e.currentTarget ? !!active : active)}
-        {...props}
-      >
-        ✔︎
-      </StyledCheckbox>
-    </>
+        type="checkbox"
+        checked={checked}
+        onChange={e => setChecked(e.target.checked)}
+      />
+    </CheckboxContainer>
   );
 }
 
