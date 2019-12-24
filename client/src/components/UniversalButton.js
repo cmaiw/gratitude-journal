@@ -8,7 +8,7 @@ const TheButton = styled.button`
   justify-content: center;
   align-items: center;
   background-color: ${props =>
-    props.active ? props.theme.colors.primary : props.theme.colors.tertiary};
+    props.active ? props.theme.colors.tertiary : props.theme.colors.primary};
   border: none;
   outline: none;
   font-size: 16px;
@@ -16,7 +16,7 @@ const TheButton = styled.button`
   border-radius: 4px;
 `;
 
-export function UniversalButton({ text = 'edit', onClick }) {
+export function UniversalButton({ text, onClick }) {
   return <TheButton onClick={onClick}>{text}</TheButton>;
 }
 
