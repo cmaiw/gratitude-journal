@@ -9,7 +9,11 @@ export default {
 
 export function MyUniversalButton() {
   return (
-    <UniversalButton onClick={action('clicked')} text={text('Button Label', 'edit')}>
+    <UniversalButton
+      onClick={action('clicked')}
+      text={text('Button Label', 'edit')}
+      onMouseover={action('hover')}
+    >
       {text}
     </UniversalButton>
   );
