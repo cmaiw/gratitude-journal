@@ -7,13 +7,20 @@ const TheButton = styled.button`
   width: 60px;
   justify-content: center;
   align-items: center;
-  background-color: ${props =>
-    props.active ? props.theme.colors.tertiary : props.theme.colors.primary};
+  background-color: ${props => props.theme.colors.primary};
   border: none;
   outline: none;
   font-size: 16px;
   color: ${props => props.theme.colors.background};
   border-radius: 4px;
+
+  &:active: {
+    ${props => props.theme.colors.tertiary};
+  }
+
+  &:hover: {
+    ${props => props.theme.colors.tertiary};
+  }
 `;
 
 export function UniversalButton({ text, onClick }) {
