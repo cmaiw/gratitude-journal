@@ -6,12 +6,9 @@ export default {
   title: 'Entry Input'
 };
 
-export const info = 'Write it here!';
-
 export function JournalEntryInput(props) {
   return (
     <div onChange={action('key was pressed')} {...props}>
-      {info}
       <EntryInput></EntryInput>
     </div>
   );

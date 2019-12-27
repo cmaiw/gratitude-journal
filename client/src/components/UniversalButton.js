@@ -4,7 +4,7 @@ import React from 'react';
 const ThisUniversalButton = styled.button`
   display: flex;
   height: 20px;
-  width: 80px;
+  width: 60px;
   justify-content: center;
   align-items: center;
   background-color: ${props => props.theme.colors.primary};
@@ -22,25 +22,8 @@ const ThisUniversalButton = styled.button`
   }
 `;
 
-const Icon = styled.path`
-  &:active {
-    background-color: ${props => props.theme.colors.tertiary};
-  }
-
-  &:hover {
-    background-color: ${props => props.theme.colors.tertiary};
-  }
-`;
-
-const text = 'edit';
-
 function UniversalButton(props) {
-  return (
-    <ThisUniversalButton {...props}>
-      {text}
-      <Icon></Icon>
-    </ThisUniversalButton>
-  );
+  return <ThisUniversalButton {...props}></ThisUniversalButton>;
 }
 
 export default UniversalButton;

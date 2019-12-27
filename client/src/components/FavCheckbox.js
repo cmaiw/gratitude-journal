@@ -10,16 +10,14 @@ const CheckboxContainer = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin: 1px;
-  padding: 1.5px;
   cursor: pointer;
 `;
 
 const StyledCheckbox = styled.input`
-  opacity: 0.25;
+  opacity: 0.35;
   display: flex;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border: none;
   justify-content: center;
   align-items: center;
