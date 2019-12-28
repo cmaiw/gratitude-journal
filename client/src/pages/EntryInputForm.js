@@ -6,34 +6,36 @@ import FavCheckbox from '../components/FavCheckbox';
 import FeatherIcon from '../icons/FeatherIcon';
 
 const PageWrapper = styled.div`
+width: 100%;
+height: 100%;
 display: flex:
 flex-direction: column;
 justify-content: center;
 align-items: center;
+margin: auto;
 `;
 
 const FormContainer = styled.main`
   height: auto;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
+  width: 94%;
+  display: block;
   margin: 8px;
   padding: 4px;
   color: ${props => props.theme.colors.font};
   font-size: 14px;
   overflow: scroll;
-  align-self: center;
+  text-align: start;
+  margin: auto;
 `;
 
 const Label = styled.label`
-  width: 280px;
+  width: auto;
   display: flex;
   flex-direction: row;
   background-color: transparent;
   color: ${props => props.theme.colors.font};
   font-size: 14px;
   margin: 3px;
-  text-align: flex-start;
 `;
 
 const NewEntryHeading = styled.h2`
@@ -44,7 +46,7 @@ const NewEntryHeading = styled.h2`
 const Date = styled.input`
   all: unset;
   height: 20px;
-  width: 280px;
+  width: 100%;
   color: ${props => props.theme.colors.primary};
   background-color: ${props => props.theme.colors.secondary};
   opacity: 0.75;
@@ -61,10 +63,10 @@ const P = styled.p`
 
 const NaviContainer = styled.div`
   display: flex;
-  width: 280px;
+  width: 100%;
   flex-direction: row;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   font-size: 14px;
   text-align: baseline;
   outline: none;
@@ -97,7 +99,7 @@ function EntryInputForm() {
         <JournalInput></JournalInput>
         <NaviContainer>
           <UniversalButton>submit</UniversalButton>
-          <P>Mark as favourite:</P>
+          <P>Mark as favourite: </P>
           <FavCheckbox />
           <FeatherIcon />
         </NaviContainer>

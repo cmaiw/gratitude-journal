@@ -7,7 +7,7 @@ export default {
   title: 'Universal Button (edit, back, delete, submit)'
 };
 
-export const info = 'edit';
+const info = 'edit';
 
 export function MyUniversalButton() {
   return (

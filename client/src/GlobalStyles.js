@@ -10,6 +10,8 @@ function GlobalStyles() {
           box-sizing: border-box;
         }
         body {
+          height: 100vh;
+          width: 100vw;
           font-size: 16px;
           margin: 0;
           background: ${theme.colors.background};
