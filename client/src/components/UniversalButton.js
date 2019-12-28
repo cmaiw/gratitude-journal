@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
 
-const TheButton = styled.button`
+const ThisUniversalButton = styled.button`
   display: flex;
   height: 20px;
   width: 60px;
@@ -10,21 +10,20 @@ const TheButton = styled.button`
   background-color: ${props => props.theme.colors.primary};
   border: none;
   outline: none;
-  font-size: 16px;
   color: ${props => props.theme.colors.background};
   border-radius: 4px;
 
-  &:active: {
-    ${props => props.theme.colors.tertiary};
+  &:active {
+    background-color: ${props => props.theme.colors.tertiary};
   }
 
-  &:hover: {
-    ${props => props.theme.colors.tertiary};
+  &:hover {
+    background-color: ${props => props.theme.colors.tertiary};
   }
 `;
 
-export function UniversalButton({ text, onClick }) {
-  return <TheButton onClick={onClick}>{text}</TheButton>;
+function UniversalButton(props) {
+  return <ThisUniversalButton {...props}></ThisUniversalButton>;
 }
 
 export default UniversalButton;

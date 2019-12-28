@@ -7,10 +7,16 @@ export default {
   title: 'Universal Button (edit, back, delete, submit)'
 };
 
+export const info = 'edit';
+
 export function MyUniversalButton() {
   return (
-    <UniversalButton onClick={action('clicked')} text={text('Button Label', 'edit')}>
-      {text}
+    <UniversalButton
+      onClick={action('clicked')}
+      text={text('Button Label', 'edit')}
+      onMouseover={action('hover')}
+    >
+      {info}
     </UniversalButton>
   );
 }

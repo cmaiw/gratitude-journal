@@ -3,6 +3,10 @@ import styled from '@emotion/styled';
 
 const AddPath = styled.path`
   fill: ${props => (props.active ? props.theme.colors.quaternary : props.theme.colors.tertiary)};
+
+  &:hover {
+    fill: ${props => props.theme.colors.quaternary};
+  }
 `;
 
 function AddIcon(props) {

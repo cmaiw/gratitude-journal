@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
-// import CheckmarkPath from '../icons/CheckmarkIcon';
 
-const CheckboxContainer = styled.label`
+const CheckboxContainer = styled.div`
   display: flex;
   width: 20px;
   height: 20px;
@@ -11,33 +10,28 @@ const CheckboxContainer = styled.label`
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin: 1px;
-  padding: 1.5px;
   cursor: pointer;
 `;
 
 const StyledCheckbox = styled.input`
-  opacity: 0.55;
+  opacity: 0.35;
   display: flex;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border: none;
   justify-content: center;
   align-items: center;
 `;
 
-function FavCheckbox(props) {
-  const [checked, setChecked] = React.useState(undefined);
+const FavCheckbox = () => {
+  const [checked, setChecked] = React.useState(false);
+  const handleChange = event => setChecked(event.target.checked);
 
   return (
-    <CheckboxContainer {...props}>
-      <StyledCheckbox
-        type="checkbox"
-        checked={checked}
-        onChange={e => setChecked(e.target.checked)}
-      />
+    <CheckboxContainer>
+      <StyledCheckbox type="checkbox" checked={checked} onChange={handleChange} />
     </CheckboxContainer>
   );
-}
+};
 
 export default FavCheckbox;
