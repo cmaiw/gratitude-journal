@@ -2,20 +2,20 @@ import React from 'react';
 import styled from '@emotion/styled';
 import JournalLabel from '../components/JournalLabel';
 
-const JournalCoverWrapper = styled.div`
-  height: 100vh;
-  width: 100vw;
+const JournalCoverWrapper = styled.main`
+  height: 568px;
+  width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${props => props.theme.colors.primary};
+  text-align: center;
 `;
 
 function JournalCover() {
   return (
     <JournalCoverWrapper>
-      <JournalLabel></JournalLabel>
+      <JournalLabel />
     </JournalCoverWrapper>
   );
 }
