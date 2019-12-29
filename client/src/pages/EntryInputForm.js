@@ -5,7 +5,7 @@ import UniversalButton from '../components/UniversalButton';
 import FavCheckbox from '../components/FavCheckbox';
 import FeatherIcon from '../icons/FeatherIcon';
 
-const PageWrapper = styled.div`
+const EntryInputFormPageWrapper = styled.div`
 width: 100%;
 height: 100%;
 display: flex:
@@ -77,7 +77,7 @@ const NaviContainer = styled.div`
 
 function EntryInputForm() {
   return (
-    <PageWrapper>
+    <EntryInputFormPageWrapper>
       <FormContainer>
         <NewEntryHeading>New Entry:</NewEntryHeading>
         <Date type="date" placeholder="date:"></Date>
@@ -104,7 +104,7 @@ function EntryInputForm() {
           <FeatherIcon />
         </NaviContainer>
       </FormContainer>
-    </PageWrapper>
+    </EntryInputFormPageWrapper>
   );
 }
 export default EntryInputForm;

@@ -6,9 +6,9 @@ export default {
   title: 'Entry Input'
 };
 
-export function JournalEntryInput(props) {
+export function JournalEntryInput() {
   return (
-    <div onChange={action('key was pressed')} {...props}>
+    <div onChange={action('key was pressed')}>
       <EntryInput></EntryInput>
     </div>
   );
