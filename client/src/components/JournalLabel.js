@@ -12,14 +12,14 @@ const BookLabel = styled.div`
   background-color: transparent;
   display: flex;
   flex-direction: column;
-  margin-top: 130px;
+  margin-top: 135px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   justify-content: center;
   align-items: flex-start;
-  height: 150px;
-  width: 230px;
+  height: 190px;
+  width: 280px;
   padding: none;
   background-image: url(${label});
   background-origin: border-box;
@@ -36,24 +36,24 @@ const LabelTitle = styled.div`
   margin-right: auto;
   margin-left: auto;
   font-family: 'Cookie', cursive;
-  font-size: 22px;
+  font-size: 32px;
 `;
 const LabelSubtitle = styled.div`
   color: ${props => props.theme.colors.font};
   margin-right: auto;
   margin-left: auto;
   font-family: 'Cookie', cursive;
-  font-size: 14px;
+  font-size: 18px;
   text-wrap: wrap;
   display: block;
 `;
 
 const OrigamiBirdImg = styled.img`
-  height: 80px;
-  width: 90px;
+  height: 90px;
+  width: 100px;
   position: absolute;
-  margin-top: 88px;
-  margin-left: 38px;
+  margin-top: 107px;
+  margin-left: 68px;
 `;
 
 function JournalLabel() {
