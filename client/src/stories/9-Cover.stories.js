@@ -1,5 +1,5 @@
 import React from 'react';
-import JournalCover from '../components/JournalLabel';
+import JournalCover from '../pages/JournalCover';
 
 export default {
   title: 'Journal Cover'
