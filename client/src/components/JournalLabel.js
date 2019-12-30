@@ -1,19 +1,25 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import label from '../../public/images/label.png';
+import bird from '../../public/images/birdlookingleft.png';
+
+const LabelAndBirdWrapper = styled.div`
+  width: 100%;
+  height: 500px;
+`;
 
 const BookLabel = styled.div`
   background-color: transparent;
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 130px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   justify-content: center;
   align-items: flex-start;
-  height: 200px;
-  width: 300px;
+  height: 150px;
+  width: 230px;
   padding: none;
   background-image: url(${label});
   background-origin: border-box;
@@ -42,13 +48,24 @@ const LabelSubtitle = styled.div`
   display: block;
 `;
 
+const OrigamiBirdImg = styled.img`
+  height: 80px;
+  width: 90px;
+  position: absolute;
+  margin-top: 88px;
+  margin-left: 38px;
+`;
+
 function JournalLabel() {
   return (
-    <BookLabel>
-      <LabelTitle>Gratefully</LabelTitle>
-      <LabelSubtitle>your gratitude</LabelSubtitle>
-      <LabelSubtitle>journal</LabelSubtitle>
-    </BookLabel>
+    <LabelAndBirdWrapper>
+      <OrigamiBirdImg src={bird} />
+      <BookLabel>
+        <LabelTitle>Gratefully</LabelTitle>
+        <LabelSubtitle>your gratitude</LabelSubtitle>
+        <LabelSubtitle>journal</LabelSubtitle>
+      </BookLabel>
+    </LabelAndBirdWrapper>
   );
 }
 
