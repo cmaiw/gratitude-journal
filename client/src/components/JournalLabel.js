@@ -12,7 +12,7 @@ const BookLabel = styled.div`
   background-color: transparent;
   display: flex;
   flex-direction: column;
-  margin-top: 135px;
+  margin-top: 115px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -52,8 +52,8 @@ const OrigamiBirdImg = styled.img`
   height: 90px;
   width: 100px;
   position: absolute;
-  margin-top: 107px;
-  margin-left: 68px;
+  margin-top: 85px;
+  margin-left: 56px;
 `;
 
 function JournalLabel() {
