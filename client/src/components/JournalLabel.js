@@ -12,13 +12,13 @@ const BookLabel = styled.div`
   background-color: transparent;
   display: flex;
   flex-direction: column;
-  margin-top: 115px;
+  margin-top: 125px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   justify-content: center;
   align-items: flex-start;
-  height: 190px;
+  height: 200px;
   width: 280px;
   padding: none;
   background-image: url(${label});
@@ -49,10 +49,10 @@ const LabelSubtitle = styled.div`
 `;
 
 const OrigamiBirdImg = styled.img`
-  height: 90px;
-  width: 100px;
+  height: 95px;
+  width: 105px;
   position: absolute;
-  margin-top: 85px;
+  margin-top: 95px;
   margin-left: 56px;
 `;
 
