@@ -4,10 +4,33 @@ import JournalInput from '../components/EntryInput';
 import UniversalButton from '../components/UniversalButton';
 import FavCheckbox from '../components/FavCheckbox';
 import FeatherIcon from '../icons/FeatherIcon';
+import backgroundsplashes from '../../public/images/backgroundsplashes1.png';
+import origamibird from '../../public/images/birdlookingleft.png';
 
-const EntryInputFormPageWrapper = styled.div`
+const OrigamibirdEntryForm = styled.img`
+  height: 75px;
+  width: 95px;
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 200px;
+`;
+
+const BackgroundWithSplashesEntryInputForm = styled.div`
+  align-self: flex-start;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-image: url(${backgroundsplashes});
+  background-size: cover;
+`;
+
+const EntryInputFormWrapper = styled.div`
 width: 100%;
-height: 100%;
+height: 87%;
 display: flex:
 flex-direction: column;
 justify-content: center;
@@ -19,12 +42,13 @@ const FormContainer = styled.main`
   height: auto;
   width: 94%;
   display: block;
-  margin: 8px;
+  margin: 12px;
   padding: 4px;
   color: ${props => props.theme.colors.font};
   font-size: 14px;
   overflow: scroll;
   text-align: start;
+  justify-content: space-evenly;
   margin: auto;
 `;
 
@@ -45,11 +69,11 @@ const NewEntryHeading = styled.h2`
 
 const Date = styled.input`
   all: unset;
-  height: 20px;
+  height: 22px;
   width: 100%;
   color: ${props => props.theme.colors.primary};
   background-color: ${props => props.theme.colors.secondary};
-  opacity: 0.75;
+  opacity: 0.35;
   outline: none;
   cursor: text;
   border: none;
@@ -77,34 +101,37 @@ const NaviContainer = styled.div`
 
 function EntryInputForm() {
   return (
-    <EntryInputFormPageWrapper>
-      <FormContainer>
-        <NewEntryHeading>New Entry:</NewEntryHeading>
-        <Date type="date" placeholder="date:"></Date>
-        <Label>What made you smile / laugh?</Label>
-        <JournalInput></JournalInput>
-        <Label>What did you learn?</Label>
+    <BackgroundWithSplashesEntryInputForm>
+      <EntryInputFormWrapper>
+        <OrigamibirdEntryForm src={origamibird} />
+        <FormContainer>
+          <NewEntryHeading>New Entry:</NewEntryHeading>
+          <Date type="date" placeholder="date:"></Date>
+          <Label>What made you smile / laugh?</Label>
+          <JournalInput></JournalInput>
+          <Label>What did you learn?</Label>
 
-        <JournalInput></JournalInput>
+          <JournalInput></JournalInput>
 
-        <Label>Who made you smile / laugh?</Label>
-        <JournalInput></JournalInput>
-        <Label>What are you thankful for today?</Label>
-        <JournalInput></JournalInput>
-        <Label>Who would you like to thank?</Label>
-        <JournalInput></JournalInput>
-        <Label>What are you thankful for today?</Label>
-        <JournalInput></JournalInput>
-        <Label>What are you looking for tomorrow?</Label>
-        <JournalInput></JournalInput>
-        <NaviContainer>
-          <UniversalButton>submit</UniversalButton>
-          <P>Mark as favourite: </P>
-          <FavCheckbox />
-          <FeatherIcon />
-        </NaviContainer>
-      </FormContainer>
-    </EntryInputFormPageWrapper>
+          <Label>Who made you smile / laugh?</Label>
+          <JournalInput></JournalInput>
+          <Label>What are you thankful for today?</Label>
+          <JournalInput></JournalInput>
+          <Label>Who would you like to thank?</Label>
+          <JournalInput></JournalInput>
+          <Label>What are you thankful for today?</Label>
+          <JournalInput></JournalInput>
+          <Label>What are you looking for tomorrow?</Label>
+          <JournalInput></JournalInput>
+          <NaviContainer>
+            <UniversalButton>submit</UniversalButton>
+            <P>Mark as favourite: </P>
+            <FavCheckbox />
+            <FeatherIcon />
+          </NaviContainer>
+        </FormContainer>
+      </EntryInputFormWrapper>
+    </BackgroundWithSplashesEntryInputForm>
   );
 }
 export default EntryInputForm;

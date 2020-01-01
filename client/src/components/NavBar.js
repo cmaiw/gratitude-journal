@@ -6,12 +6,13 @@ import BookIcon from '../icons/BookIcon';
 import AddIcon from '../icons/AddIcon';
 import HelpIcon from '../icons/HelpIcon';
 
-export const Footer = styled.footer`
+const Footer = styled.footer`
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   height: 40px;
-  width: 500px;
+  width: 100%;
   background-color: ${props => props.theme.colors.primary};
 `;
 

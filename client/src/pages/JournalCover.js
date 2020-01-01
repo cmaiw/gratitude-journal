@@ -9,7 +9,7 @@ import TreeIcon from '../components/TreeIcon';
 import orangesplash1 from '../../public/images/orangesplash1.png';
 import backgroundsplashes from '../../public/images/backgroundsplashes1.png';
 
-const BackgroundWithSplashes = styled.div`
+const BackgroundWithSplashesCover = styled.div`
   align-self: flex-start;
   height: 100vh;
   width: 100vw;
@@ -114,7 +114,7 @@ const SplashOrange = styled.div`
 function JournalCover() {
   return (
     <>
-      <BackgroundWithSplashes>
+      <BackgroundWithSplashesCover>
         <JournalCoverBackground>
           <WashiTapeImgGreenVertical src={washitapegreenvert} />
           <JournalLabel />
@@ -127,7 +127,7 @@ function JournalCover() {
             </SpecialHomeButton>
           </SplashOrange>
         </JournalCoverBackground>
-      </BackgroundWithSplashes>
+      </BackgroundWithSplashesCover>
     </>
   );
 }

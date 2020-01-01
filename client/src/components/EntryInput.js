@@ -12,7 +12,7 @@ const JournalInput = styled.input`
   font-size: 14px;
   border: none;
   outline: none;
-  opacity: 0.75;
+  opacity: 0.35;
 `;
 function EntryInput(props) {
   return <JournalInput type="text" {...props} />;
