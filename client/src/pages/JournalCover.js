@@ -7,8 +7,10 @@ import washitapegreenhappy from '../../public/images/maskingtapebehappy.png';
 import paperclipclover from '../../public/images/paperclipclover.png';
 import TreeIcon from '../components/TreeIcon';
 import orangesplash1 from '../../public/images/orangesplash1.png';
+import backgroundsplashes from '../../public/images/backgroundsplashes1.png';
 
-const CoverPageWrapper = styled.div`
+const BackgroundWithSplashes = styled.div`
+  align-self: flex-start;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -16,7 +18,8 @@ const CoverPageWrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin: auto;
-  background-color: ${props => props.theme.colors.background};
+  background-image: url(${backgroundsplashes});
+  background-size: cover;
 `;
 
 const JournalCoverBackground = styled.div`
@@ -78,12 +81,14 @@ const SpecialHomeButton = styled.button`
   background: transparent;
   border: none;
   outline: none;
-  &:active {
-    fill: ${props => props.theme.colors.tertiary};
-  }
+  z-index: 455;
 
   &:hover {
-    fill: ${props => props.theme.colors.tertiary};
+    color: ${props => props.theme.colors.tertiary};
+  }
+
+  &:active {
+    color: ${props => props.theme.colors.tertiary};
   }
 `;
 
@@ -106,22 +111,24 @@ const SplashOrange = styled.div`
   overflow: hidden;
 `;
 
-function JournalCover(props) {
+function JournalCover() {
   return (
-    <CoverPageWrapper>
-      <JournalCoverBackground>
-        <WashiTapeImgGreenVertical src={washitapegreenvert} />
-        <JournalLabel />
-        <WashiTapeImgBlueHorizontal src={washitapebluehor} />
-        <WashiTapeImgGreenHappy src={washitapegreenhappy} />
-        <PaperclipClover src={paperclipclover} />
-        <SplashOrange>
-          <SpecialHomeButton {...props}>
-            <TreeIcon />
-          </SpecialHomeButton>
-        </SplashOrange>
-      </JournalCoverBackground>
-    </CoverPageWrapper>
+    <>
+      <BackgroundWithSplashes>
+        <JournalCoverBackground>
+          <WashiTapeImgGreenVertical src={washitapegreenvert} />
+          <JournalLabel />
+          <WashiTapeImgBlueHorizontal src={washitapebluehor} />
+          <WashiTapeImgGreenHappy src={washitapegreenhappy} />
+          <PaperclipClover src={paperclipclover} />
+          <SplashOrange>
+            <SpecialHomeButton>
+              <TreeIcon />
+            </SpecialHomeButton>
+          </SplashOrange>
+        </JournalCoverBackground>
+      </BackgroundWithSplashes>
+    </>
   );
 }
 
