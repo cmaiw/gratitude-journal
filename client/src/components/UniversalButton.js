@@ -12,6 +12,8 @@ const ThisUniversalButton = styled.button`
   outline: none;
   color: ${props => props.theme.colors.background};
   border-radius: 4px;
+  padding: none;
+  margin: none;
 
   &:active {
     background-color: ${props => props.theme.colors.tertiary};
