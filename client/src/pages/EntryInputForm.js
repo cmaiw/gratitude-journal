@@ -4,10 +4,19 @@ import JournalInput from '../components/EntryInput';
 import UniversalButton from '../components/UniversalButton';
 import FavCheckbox from '../components/FavCheckbox';
 import FeatherIcon from '../icons/FeatherIcon';
+import origamibird from '../../public/images/birdlookingleft.png';
 
-const EntryInputFormPageWrapper = styled.div`
+const OrigamibirdEntryForm = styled.img`
+  height: 75px;
+  width: 95px;
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 200px;
+`;
+
+const EntryInputFormWrapper = styled.div`
 width: 100%;
-height: 100%;
+height: 87%;
 display: flex:
 flex-direction: column;
 justify-content: center;
@@ -19,13 +28,16 @@ const FormContainer = styled.main`
   height: auto;
   width: 94%;
   display: block;
-  margin: 8px;
+  margin: 12px;
   padding: 4px;
   color: ${props => props.theme.colors.font};
   font-size: 14px;
   overflow: scroll;
   text-align: start;
-  margin: auto;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
 `;
 
 const Label = styled.label`
@@ -45,11 +57,11 @@ const NewEntryHeading = styled.h2`
 
 const Date = styled.input`
   all: unset;
-  height: 20px;
+  height: 22px;
   width: 100%;
   color: ${props => props.theme.colors.primary};
   background-color: ${props => props.theme.colors.secondary};
-  opacity: 0.75;
+  opacity: 0.35;
   outline: none;
   cursor: text;
   border: none;
@@ -77,7 +89,8 @@ const NaviContainer = styled.div`
 
 function EntryInputForm() {
   return (
-    <EntryInputFormPageWrapper>
+    <EntryInputFormWrapper>
+      <OrigamibirdEntryForm src={origamibird} />
       <FormContainer>
         <NewEntryHeading>New Entry:</NewEntryHeading>
         <Date type="date" placeholder="date:"></Date>
@@ -104,7 +117,7 @@ function EntryInputForm() {
           <FeatherIcon />
         </NaviContainer>
       </FormContainer>
-    </EntryInputFormPageWrapper>
+    </EntryInputFormWrapper>
   );
 }
 export default EntryInputForm;

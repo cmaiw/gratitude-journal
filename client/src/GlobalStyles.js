@@ -1,5 +1,6 @@
 import React from 'react';
 import { Global, css } from '@emotion/core';
+import backgroundsplashes from './assets/backgroundsplashes1.jpg';
 function GlobalStyles() {
   return (
     <Global
@@ -19,6 +20,8 @@ function GlobalStyles() {
           color: ${theme.colors.font};
           height: 100vh;
           width: 100vw;
+          background-image: url(${backgroundsplashes});
+          background-size: cover;
         }
       `}
     />

@@ -5,18 +5,17 @@ import washitapegreenvert from '../../public/images/washitapegreentexturevert.pn
 import washitapebluehor from '../../public/images/washitapebluevert.png';
 import washitapegreenhappy from '../../public/images/maskingtapebehappy.png';
 import paperclipclover from '../../public/images/paperclipclover.png';
-import TreeIcon from '../components/TreeIcon';
+import TreeIcon from '../icons/TreeIcon';
 import orangesplash1 from '../../public/images/orangesplash1.png';
 
-const CoverPageWrapper = styled.div`
-  height: 100vh;
-  width: 100vw;
+const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100vh;
+  width: 100vw;
   justify-content: center;
-  margin: auto;
-  background-color: ${props => props.theme.colors.background};
+  align-items: center;
+  overflow: hidden;
 `;
 
 const JournalCoverBackground = styled.div`
@@ -29,7 +28,8 @@ const JournalCoverBackground = styled.div`
   text-align: center;
   background-color: ${props => props.theme.colors.primary};
   align-self: center;
-  overflow: hidden;
+  overflow: scroll;
+
   border-radius: 8px;
   box-shadow: 12px 12px 11px 0px rgba(99, 164, 183, 0.8);
 `;
@@ -78,12 +78,14 @@ const SpecialHomeButton = styled.button`
   background: transparent;
   border: none;
   outline: none;
-  &:active {
-    fill: ${props => props.theme.colors.tertiary};
-  }
+  padding-right: 60px;
 
   &:hover {
-    fill: ${props => props.theme.colors.tertiary};
+    color: ${props => props.theme.colors.tertiary};
+  }
+
+  &:active {
+    color: ${props => props.theme.colors.tertiary};
   }
 `;
 
@@ -95,20 +97,20 @@ const SplashOrange = styled.div`
   height: 154px;
   width: 154px;
   position: absolute;
-  margin-top: 450px;
-  margin-left: 222px;
+  margin-top: 430px;
+  margin-left: 192px;
   opacity: 0.9;
   background-image: url(${orangesplash1});
   background-origin: border-box;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   overflow: hidden;
 `;
 
-function JournalCover(props) {
+function JournalCover() {
   return (
-    <CoverPageWrapper>
+    <PageWrapper>
       <JournalCoverBackground>
         <WashiTapeImgGreenVertical src={washitapegreenvert} />
         <JournalLabel />
@@ -116,12 +118,12 @@ function JournalCover(props) {
         <WashiTapeImgGreenHappy src={washitapegreenhappy} />
         <PaperclipClover src={paperclipclover} />
         <SplashOrange>
-          <SpecialHomeButton {...props}>
+          <SpecialHomeButton>
             <TreeIcon />
           </SpecialHomeButton>
         </SplashOrange>
       </JournalCoverBackground>
-    </CoverPageWrapper>
+    </PageWrapper>
   );
 }
 

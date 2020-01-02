@@ -10,17 +10,19 @@ const ThisNavButton = styled.button`
   background-color: transparent;
   border: none;
   outline: none;
+  background-color: ${props => props.theme.colors.primary};
+  border-radius: 6px; 
 
   &:hover {
-    color: ${props => props.theme.colors.quartenary};
+    background-color: ${props => props.theme.colors.quartenary} opacity: 0.15;
   }
   &:active {
   }
-  color: ${props => props.theme.colors.quartenary};
+  background-color: ${props => props.theme.colors.quartenary} opacity: 0.15;
 `;
 
-function NavButton(props) {
-  return <ThisNavButton {...props}></ThisNavButton>;
+function NavButton(props, onClick) {
+  return <ThisNavButton onClick={onClick} {...props}></ThisNavButton>;
 }
 
 export default NavButton;
