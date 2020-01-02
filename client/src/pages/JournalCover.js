@@ -29,6 +29,7 @@ const JournalCoverBackground = styled.div`
   background-color: ${props => props.theme.colors.primary};
   align-self: center;
   overflow: scroll;
+
   border-radius: 8px;
   box-shadow: 12px 12px 11px 0px rgba(99, 164, 183, 0.8);
 `;
