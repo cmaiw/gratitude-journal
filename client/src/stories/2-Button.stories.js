@@ -9,7 +9,7 @@ export default {
 
 export function NavButtonBird() {
   return (
-    <NavButton onClick={action('clicked')}>
+    <NavButton onClick={action('clicked')} onMouseover={action('hover')}>
       <BirdIcon />
     </NavButton>
   );
