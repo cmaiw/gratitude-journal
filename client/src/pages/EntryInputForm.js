@@ -4,7 +4,6 @@ import JournalInput from '../components/EntryInput';
 import UniversalButton from '../components/UniversalButton';
 import FavCheckbox from '../components/FavCheckbox';
 import FeatherIcon from '../icons/FeatherIcon';
-import backgroundsplashes from '../../public/images/backgroundsplashes1.png';
 import origamibird from '../../public/images/birdlookingleft.png';
 
 const OrigamibirdEntryForm = styled.img`
@@ -13,19 +12,6 @@ const OrigamibirdEntryForm = styled.img`
   position: absolute;
   margin-top: 0px;
   margin-left: 200px;
-`;
-
-const BackgroundWithSplashesEntryInputForm = styled.div`
-  align-self: flex-start;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  background-image: url(${backgroundsplashes});
-  background-size: cover;
 `;
 
 const EntryInputFormWrapper = styled.div`
@@ -101,37 +87,35 @@ const NaviContainer = styled.div`
 
 function EntryInputForm() {
   return (
-    <BackgroundWithSplashesEntryInputForm>
-      <EntryInputFormWrapper>
-        <OrigamibirdEntryForm src={origamibird} />
-        <FormContainer>
-          <NewEntryHeading>New Entry:</NewEntryHeading>
-          <Date type="date" placeholder="date:"></Date>
-          <Label>What made you smile / laugh?</Label>
-          <JournalInput></JournalInput>
-          <Label>What did you learn?</Label>
+    <EntryInputFormWrapper>
+      <OrigamibirdEntryForm src={origamibird} />
+      <FormContainer>
+        <NewEntryHeading>New Entry:</NewEntryHeading>
+        <Date type="date" placeholder="date:"></Date>
+        <Label>What made you smile / laugh?</Label>
+        <JournalInput></JournalInput>
+        <Label>What did you learn?</Label>
 
-          <JournalInput></JournalInput>
+        <JournalInput></JournalInput>
 
-          <Label>Who made you smile / laugh?</Label>
-          <JournalInput></JournalInput>
-          <Label>What are you thankful for today?</Label>
-          <JournalInput></JournalInput>
-          <Label>Who would you like to thank?</Label>
-          <JournalInput></JournalInput>
-          <Label>What are you thankful for today?</Label>
-          <JournalInput></JournalInput>
-          <Label>What are you looking for tomorrow?</Label>
-          <JournalInput></JournalInput>
-          <NaviContainer>
-            <UniversalButton>submit</UniversalButton>
-            <P>Mark as favourite: </P>
-            <FavCheckbox />
-            <FeatherIcon />
-          </NaviContainer>
-        </FormContainer>
-      </EntryInputFormWrapper>
-    </BackgroundWithSplashesEntryInputForm>
+        <Label>Who made you smile / laugh?</Label>
+        <JournalInput></JournalInput>
+        <Label>What are you thankful for today?</Label>
+        <JournalInput></JournalInput>
+        <Label>Who would you like to thank?</Label>
+        <JournalInput></JournalInput>
+        <Label>What are you thankful for today?</Label>
+        <JournalInput></JournalInput>
+        <Label>What are you looking for tomorrow?</Label>
+        <JournalInput></JournalInput>
+        <NaviContainer>
+          <UniversalButton>submit</UniversalButton>
+          <P>Mark as favourite: </P>
+          <FavCheckbox />
+          <FeatherIcon />
+        </NaviContainer>
+      </FormContainer>
+    </EntryInputFormWrapper>
   );
 }
 export default EntryInputForm;
