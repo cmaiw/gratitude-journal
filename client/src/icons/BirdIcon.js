@@ -7,6 +7,10 @@ const BirdPath = styled.path`
   &:hover {
     fill: ${props => props.theme.colors.quaternary};
   }
+
+  &:active {
+    fill: ${props => props.theme.colors.quaternary};
+  }
 `;
 
 function BirdIcon(props) {

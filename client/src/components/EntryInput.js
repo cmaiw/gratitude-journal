@@ -6,7 +6,6 @@ const JournalInput = styled.input`
   height: 22px;
   width: 100%;
   display: block;
-  height: 18px;
   padding: 2px;
   background-color: ${props => props.theme.colors.secondary};
   border-radius: 6px;
