@@ -44,7 +44,7 @@ font-size: 12px;
 background-color: ${props => props.theme.colors.secondary};
 padding: 10px;
 border-radius: 8px;
-opacity: 0.75;
+opacity: 0.35;
 `;
 
 const AboutMainArticle = styled.main`

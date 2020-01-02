@@ -35,7 +35,9 @@ const FormContainer = styled.main`
   overflow: scroll;
   text-align: start;
   justify-content: space-evenly;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
 `;
 
 const Label = styled.label`
