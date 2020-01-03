@@ -3,23 +3,14 @@ import React from 'react';
 import origamibird from '../../public/images/bird.png';
 import speechbubble from '../../public/images/speechbubble.png';
 import tree from '../../public/images/tree.png';
-
-const Pagewrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-`;
+import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 667px;
   width: 375px;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   overflow: hidden;
   background-image: url(${tree});
@@ -28,7 +19,6 @@ const ContentWrapper = styled.div`
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
-  overflow: hidden;
   transform: scaleX(-1);
 `;
 
@@ -36,7 +26,7 @@ const OrigamibirdAboutPage = styled.img`
   height: 75px;
   width: 95px;
   position: absolute;
-  margin-top: 84px;
+  margin-top: 395px;
   transform: scaleX(-1);
   margin-left: 118px;
 `;
@@ -51,7 +41,7 @@ const Speechbubble = styled.div`
   background-size: contain;
   position: relative;
   overflow: hidden;
-  margin-bottom: 250px;
+  margin-top: 80px;
   margin-left: -100px;
   opacity: 0.85;
 `;
@@ -67,9 +57,9 @@ const SpeechbubbleText = styled.div`
   margin-left: 63px;
 `;
 
-function Home() {
+function Home(props) {
   return (
-    <Pagewrapper>
+    <PageWrapperCenterSpEvenly {...props}>
       <ContentWrapper>
         <Speechbubble src={speechbubble}>
           <SpeechbubbleText>
@@ -78,7 +68,7 @@ function Home() {
         </Speechbubble>
         <OrigamibirdAboutPage src={origamibird} />
       </ContentWrapper>
-    </Pagewrapper>
+    </PageWrapperCenterSpEvenly>
   );
 }
 
