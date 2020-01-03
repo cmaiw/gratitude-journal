@@ -10,7 +10,7 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   height: 667px;
   width: 375px;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   overflow: hidden;
   background-image: url(${tree});
@@ -19,7 +19,6 @@ const ContentWrapper = styled.div`
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
-  overflow: hidden;
   transform: scaleX(-1);
 `;
 
@@ -27,7 +26,7 @@ const OrigamibirdAboutPage = styled.img`
   height: 75px;
   width: 95px;
   position: absolute;
-  margin-top: 84px;
+  margin-top: 395px;
   transform: scaleX(-1);
   margin-left: 118px;
 `;
@@ -42,7 +41,7 @@ const Speechbubble = styled.div`
   background-size: contain;
   position: relative;
   overflow: hidden;
-  margin-bottom: 250px;
+  margin-top: 80px;
   margin-left: -100px;
   opacity: 0.85;
 `;
@@ -58,9 +57,9 @@ const SpeechbubbleText = styled.div`
   margin-left: 63px;
 `;
 
-function Home() {
+function Home(props) {
   return (
-    <PageWrapperCenterSpEvenly>
+    <PageWrapperCenterSpEvenly {...props}>
       <ContentWrapper>
         <Speechbubble src={speechbubble}>
           <SpeechbubbleText>

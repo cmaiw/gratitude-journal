@@ -18,7 +18,7 @@ const TextAndSearchWrapper = styled.div`
   justify-content: flex-start;
   align-items: space-evenly;
   height: 33%;
-  width: 85%;
+  width: 100%;
   text-align: flex-start;
 `;
 
@@ -31,7 +31,7 @@ const SubtitleSearch = styled.p`
 const SearchBarByDate = styled.input`
   all: unset;
   height: 22px;
-  width: 80%;
+  width: 85%;
   color: ${props => props.theme.colors.primary};
   background-color: ${props => props.theme.colors.secondary};
   opacity: 0.35;

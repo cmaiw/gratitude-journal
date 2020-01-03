@@ -21,7 +21,8 @@ function GlobalStyles() {
           height: 100vh;
           width: 100vw;
           background-image: url(${backgroundsplashes});
-          background-size: cover;
+          background-size: fill;
+          background-repeat: no-repeat;
         }
       `}
     />
