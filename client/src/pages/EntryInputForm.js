@@ -82,21 +82,21 @@ function EntryInputForm() {
         <Origamibird src={origamibird} />
       </WrapperTitleBird>
       <FormContainer>
-        <Date type="date" placeholder="date:"></Date>
-        <Label>What made you smile / laugh?</Label>
-        <JournalInput></JournalInput>
-        <Label>What did you learn?</Label>
-        <JournalInput></JournalInput>
-        <Label>Who made you smile / laugh?</Label>
-        <JournalInput></JournalInput>
-        <Label>What are you thankful for today?</Label>
-        <JournalInput></JournalInput>
-        <Label>Who would you like to thank?</Label>
-        <JournalInput></JournalInput>
-        <Label>What are you thankful for today?</Label>
-        <JournalInput></JournalInput>
-        <Label>What are you looking for tomorrow?</Label>
-        <JournalInput></JournalInput>
+        <Date name="entry date" type="date" placeholder="date:"></Date>
+        <Label>1. What made you smile / laugh?</Label>
+        <JournalInput name="1. Whate made you smile / laugh?"></JournalInput>
+        <Label>2. What did you learn?</Label>
+        <JournalInput name="2. What did you learn?"></JournalInput>
+        <Label>3. Who made you smile / laugh?</Label>
+        <JournalInput name="Who made you smile / laugh?"></JournalInput>
+        <Label>4. What are you thankful for today?</Label>
+        <JournalInput name="4. What are you thankful for today?"></JournalInput>
+        <Label>5. Who would you like to thank?</Label>
+        <JournalInput name="5. Who would you like to thank?"></JournalInput>
+        <Label>6 .What are you thankful for today?</Label>
+        <JournalInput name="6 .What are you thankful for today?"></JournalInput>
+        <Label>7. What are you looking for tomorrow?</Label>
+        <JournalInput name="7. What are you looking for tomorrow?"></JournalInput>
         <ButtonCheckboxContainer>
           <UniversalButton>submit</UniversalButton>
           <P>Mark as favourite: </P>
