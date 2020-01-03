@@ -7,7 +7,7 @@ import washitapegreenhappy from '../../public/images/maskingtapebehappy.png';
 import paperclipclover from '../../public/images/paperclipclover.png';
 import TreeIcon from '../icons/TreeIcon';
 import orangesplash1 from '../../public/images/orangesplash1.png';
-import PageWrapperCenterSpEvenly from '../components/PageWarapperCenterSpEvemly';
+import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 
 const JournalCoverBackground = styled.div`
   height: 667px;

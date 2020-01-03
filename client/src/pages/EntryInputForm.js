@@ -5,27 +5,28 @@ import UniversalButton from '../components/UniversalButton';
 import FavCheckbox from '../components/FavCheckbox';
 import FeatherIcon from '../icons/FeatherIcon';
 import origamibird from '../../public/images/birdlookingleft.png';
-import PageWrapperCenterSpEvenly from '../components/PageWarapperCenterSpEvemly';
+import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
+import WrapperTitleBird from '../components/WrapperTitleBird';
+import PageTitle from '../components/PageTitle';
 
-const OrigamibirdEntryForm = styled.img`
-  height: 75px;
-  width: 95px;
-  position: absolute;
-  margin-top: 0px;
-  margin-left: 200px;
+const Origamibird = styled.img`
+  height: 65px;
+  width: 85px;
+  margin-top: 20px;
 `;
 
 const FormContainer = styled.main`
   height: auto;
-  width: 94%;
-  display: block;
-  margin: 12px;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
   padding: 4px;
   color: ${props => props.theme.colors.font};
   font-size: 14px;
   overflow: scroll;
   text-align: start;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
@@ -39,11 +40,6 @@ const Label = styled.label`
   color: ${props => props.theme.colors.font};
   font-size: 14px;
   margin: 3px;
-`;
-
-const NewEntryHeading = styled.h2`
-  color: ${props => props.theme.colors.primary};
-  font-family: 'Cookie', cursive;
 `;
 
 const Date = styled.input`
@@ -64,7 +60,7 @@ const P = styled.p`
   color: ${props => props.theme.colors.font};
 `;
 
-const NaviContainer = styled.div`
+const ButtonCheckboxContainer = styled.div`
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -81,16 +77,16 @@ const NaviContainer = styled.div`
 function EntryInputForm() {
   return (
     <PageWrapperCenterSpEvenly>
-      <OrigamibirdEntryForm src={origamibird} />
+      <WrapperTitleBird>
+        <PageTitle>New entry:</PageTitle>
+        <Origamibird src={origamibird} />
+      </WrapperTitleBird>
       <FormContainer>
-        <NewEntryHeading>New Entry:</NewEntryHeading>
         <Date type="date" placeholder="date:"></Date>
         <Label>What made you smile / laugh?</Label>
         <JournalInput></JournalInput>
         <Label>What did you learn?</Label>
-
         <JournalInput></JournalInput>
-
         <Label>Who made you smile / laugh?</Label>
         <JournalInput></JournalInput>
         <Label>What are you thankful for today?</Label>
@@ -101,12 +97,12 @@ function EntryInputForm() {
         <JournalInput></JournalInput>
         <Label>What are you looking for tomorrow?</Label>
         <JournalInput></JournalInput>
-        <NaviContainer>
+        <ButtonCheckboxContainer>
           <UniversalButton>submit</UniversalButton>
           <P>Mark as favourite: </P>
           <FavCheckbox />
           <FeatherIcon />
-        </NaviContainer>
+        </ButtonCheckboxContainer>
       </FormContainer>
     </PageWrapperCenterSpEvenly>
   );

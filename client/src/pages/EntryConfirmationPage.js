@@ -1,30 +1,24 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import origamibird from '../../public/images/birdlookingleft.png';
 import UniversalButton from '../components/UniversalButton';
 import EntryConfirmationCard from '../components/EntryConfirmationCard';
-import PageWrapperCenterSpEvenly from '../components/PageWarapperCenterSpEvemly';
+import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
+import WrapperTitleBird from '../components/WrapperTitleBird';
+import PageTitle from '../components/PageTitle';
+import origamibird from '../../public/images/birdlookingleft.png';
 
-const ConfirmationTitle = styled.h2`
-  color: ${props => props.theme.colors.primary};
-  font-family: 'Cookie', cursive;
-  margin-top: 90px;
-  align-self: center;
-`;
-
-const OrigamibirdEntryConfirmation = styled.img`
+const Origamibird = styled.img`
   height: 65px;
   width: 85px;
-  position: absolute;
-  margin-top: -190px;
-  margin-left: 0px;
 `;
 
-function EntryConfirmationPage() {
+function EntryConfirmationPage(props) {
   return (
-    <PageWrapperCenterSpEvenly>
-      <OrigamibirdEntryConfirmation src={origamibird} />
-      <ConfirmationTitle>Thank you!</ConfirmationTitle>
+    <PageWrapperCenterSpEvenly {...props}>
+      <WrapperTitleBird>
+        <PageTitle>Thank you!</PageTitle>
+        <Origamibird src={origamibird} />
+      </WrapperTitleBird>
       <EntryConfirmationCard></EntryConfirmationCard>
       <UniversalButton>Back</UniversalButton>
     </PageWrapperCenterSpEvenly>

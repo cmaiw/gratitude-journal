@@ -2,14 +2,13 @@ import React from 'react';
 import styled from '@emotion/styled';
 import origamibird from '../../public/images/birdlookingleft.png';
 import UniversalButton from '../components/UniversalButton';
-import PageWrapperCenterSpEvenly from '../components/PageWarapperCenterSpEvemly';
+import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
+import PageTitle from '../components/PageTitle';
+import WrapperTitleBird from '../components/WrapperTitleBird';
 
-const OrigamibirdEntryOverview = styled.img`
-  height: 75px;
-  width: 95px;
-  position: absolute;
-  margin-top: -120px;
-  margin-left: 70px;
+const Origamibird = styled.img`
+  height: 65px;
+  width: 85px;
 `;
 
 const TextAndSearchWrapper = styled.div`
@@ -23,13 +22,10 @@ const TextAndSearchWrapper = styled.div`
   text-align: flex-start;
 `;
 
-const OverviewAndSearchTitle = styled.h2`
-  color: ${props => props.theme.colors.primary};
-  font-family: 'Cookie', cursive;
-`;
-
 const SubtitleSearch = styled.p`
   color: ${props => props.theme.colors.text};
+  font-size: 14px;
+  margin: 0px;
 `;
 
 const SearchBarByDate = styled.input`
@@ -54,15 +50,16 @@ const EntryCard = styled.card`
   opacity: 0.35;
   min-height: 22px;
   margin: 10px;
+  font-size: 14px;
 `;
 
 function EntryOverviewPage() {
   return (
     <PageWrapperCenterSpEvenly>
-      <OrigamibirdEntryOverview src={origamibird} />
-      <TextAndSearchWrapper>
-        <OverviewAndSearchTitle>Journal:</OverviewAndSearchTitle>
-      </TextAndSearchWrapper>
+      <WrapperTitleBird>
+        <PageTitle>Journal:</PageTitle>
+        <Origamibird src={origamibird} />
+      </WrapperTitleBird>
       <TextAndSearchWrapper>
         <SubtitleSearch>Search entries by date:</SubtitleSearch>
       </TextAndSearchWrapper>
@@ -71,7 +68,7 @@ function EntryOverviewPage() {
         <UniversalButton>Submit</UniversalButton>
       </TextAndSearchWrapper>
       <TextAndSearchWrapper>
-        <OverviewAndSearchTitle>Last Entries:</OverviewAndSearchTitle>
+        <PageTitle>Last Entries:</PageTitle>
       </TextAndSearchWrapper>
       <EntryCard>Ich bin noch ein Platzhalter</EntryCard>
       <UniversalButton>Back</UniversalButton>

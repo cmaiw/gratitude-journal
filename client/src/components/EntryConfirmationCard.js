@@ -8,7 +8,7 @@ const Confirmation = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 5px;
+  margin-top: 15px;
   margin-bottom: 15px;
   margin-right: auto;
   margin-left: auto;
@@ -27,15 +27,7 @@ const Needle = styled.img`
   padding-top: 10px;
 `;
 
-const ConfirmationIntroduction = styled.p`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin: 15px;
-  overflow: scroll;
-`;
-
-const ConfirmationAdvice = styled.p`
+const ConfirmationText = styled.p`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -48,14 +40,12 @@ function EntryConfirmationCard() {
     <Confirmation>
       <Confirmation>
         <Needle src={needle} />
-        <ConfirmationIntroduction>Your entry has been submitted.</ConfirmationIntroduction>
-        <ConfirmationIntroduction>
-          I have something inspiring to think about for you:
-        </ConfirmationIntroduction>
-        <ConfirmationAdvice>
+        <ConfirmationText>Your entry has been submitted.</ConfirmationText>
+        <ConfirmationText>I have something inspiring to think about for you:</ConfirmationText>
+        <ConfirmationText>
           Ich bin ein Platzhalter und noch ein Platzhalter und noch ein Platzhalter und noch ein
           Platzhalter...
-        </ConfirmationAdvice>
+        </ConfirmationText>
         <FeatherIcon />
       </Confirmation>
     </Confirmation>

@@ -1,45 +1,19 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import UniversalButton from '../components/UniversalButton';
+import WrapperTitleBird from '../components/WrapperTitleBird';
+import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
+import PageTitle from '../components/PageTitle';
 import origamibird from '../../public/images/birdlookingleft.png';
 
-const OrigamibirdAboutPage = styled.img`
-  height: 75px;
-  width: 95px;
-  position: absolute;
-  margin-top: -30px;
-  margin-left: 190px;
-`;
-
-const AboutTitle = styled.h2`
-  color: ${props => props.theme.colors.primary};
-  font-family: 'Cookie', cursive;
-  margin-top: 60px;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  width: 85%;
-`;
-
-const AboutPageWrapper = styled.div`
-width: 100%;
-height: 100%;
-display: flex:
-flex-direction: column;
-justify-content: center;
-align-items: center;
-margin: auto;
-font-size: 12px;
-`;
-
 const ArticleWrapper = styled.div`
-width: 90%;
+width: 85%;
 height: 100%;
 display: flex:
 flex-direction: column;
 justify-content: center;
 align-items: center;
-margin: auto;
+margin-top: 10px;
 font-size: 12px;
 background-color: ${props => props.theme.colors.secondary};
 padding: 10px;
@@ -49,28 +23,35 @@ opacity: 0.35;
 
 const AboutMainArticle = styled.main`
   display: block;
-  width: 85%;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   overflow: scroll;
   color: ${props => props.theme.colors.font};
-  margin: auto;
-  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 `;
 
-const NavWrapper = styled.div`
+const Origamibird = styled.img`
+  height: 65px;
+  width: 85px;
+  margin-top: 20px;
+`;
+
+const ButtonCheckboxWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 30px;
 `;
-function About() {
+function About(props) {
   return (
     <>
-      <AboutPageWrapper>
-        <OrigamibirdAboutPage src={origamibird} />
-        <AboutTitle>About:</AboutTitle>
+      <PageWrapperCenterSpEvenly {...props}>
+        <WrapperTitleBird>
+          <PageTitle>About:</PageTitle>
+          <Origamibird src={origamibird} />
+        </WrapperTitleBird>
         <ArticleWrapper>
           <AboutMainArticle>
             Welcome! This journal is about becoming happier by focusing on the positive aspects in
@@ -93,10 +74,10 @@ function About() {
             healthier and happier.
           </AboutMainArticle>
         </ArticleWrapper>
-        <NavWrapper>
+        <ButtonCheckboxWrapper>
           <UniversalButton>Back</UniversalButton>
-        </NavWrapper>
-      </AboutPageWrapper>
+        </ButtonCheckboxWrapper>
+      </PageWrapperCenterSpEvenly>
     </>
   );
 }

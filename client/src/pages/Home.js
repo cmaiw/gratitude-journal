@@ -3,7 +3,7 @@ import React from 'react';
 import origamibird from '../../public/images/bird.png';
 import speechbubble from '../../public/images/speechbubble.png';
 import tree from '../../public/images/tree.png';
-import PageWrapperCenterSpEvenly from '../components/PageWarapperCenterSpEvemly';
+import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 
 const ContentWrapper = styled.div`
   display: flex;
