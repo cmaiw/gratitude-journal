@@ -7,16 +7,7 @@ import washitapegreenhappy from '../../public/images/maskingtapebehappy.png';
 import paperclipclover from '../../public/images/paperclipclover.png';
 import TreeIcon from '../icons/TreeIcon';
 import orangesplash1 from '../../public/images/orangesplash1.png';
-
-const PageWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-`;
+import PageWrapperCenterSpEvenly from '../components/PageWarapperCenterSpEvemly';
 
 const JournalCoverBackground = styled.div`
   height: 667px;
@@ -109,7 +100,7 @@ const SplashOrange = styled.div`
 
 function JournalCover() {
   return (
-    <PageWrapper>
+    <PageWrapperCenterSpEvenly>
       <JournalCoverBackground>
         <WashiTapeImgGreenVertical src={washitapegreenvert} />
         <JournalLabel />
@@ -122,7 +113,7 @@ function JournalCover() {
           </SpecialHomeButton>
         </SplashOrange>
       </JournalCoverBackground>
-    </PageWrapper>
+    </PageWrapperCenterSpEvenly>
   );
 }
 

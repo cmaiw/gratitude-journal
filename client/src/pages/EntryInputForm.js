@@ -5,6 +5,7 @@ import UniversalButton from '../components/UniversalButton';
 import FavCheckbox from '../components/FavCheckbox';
 import FeatherIcon from '../icons/FeatherIcon';
 import origamibird from '../../public/images/birdlookingleft.png';
+import PageWrapperCenterSpEvenly from '../components/PageWarapperCenterSpEvemly';
 
 const OrigamibirdEntryForm = styled.img`
   height: 75px;
@@ -12,16 +13,6 @@ const OrigamibirdEntryForm = styled.img`
   position: absolute;
   margin-top: 0px;
   margin-left: 200px;
-`;
-
-const EntryInputFormWrapper = styled.div`
-width: 100%;
-height: 87%;
-display: flex:
-flex-direction: column;
-justify-content: center;
-align-items: center;
-margin: auto;
 `;
 
 const FormContainer = styled.main`
@@ -89,7 +80,7 @@ const NaviContainer = styled.div`
 
 function EntryInputForm() {
   return (
-    <EntryInputFormWrapper>
+    <PageWrapperCenterSpEvenly>
       <OrigamibirdEntryForm src={origamibird} />
       <FormContainer>
         <NewEntryHeading>New Entry:</NewEntryHeading>
@@ -117,7 +108,7 @@ function EntryInputForm() {
           <FeatherIcon />
         </NaviContainer>
       </FormContainer>
-    </EntryInputFormWrapper>
+    </PageWrapperCenterSpEvenly>
   );
 }
 export default EntryInputForm;

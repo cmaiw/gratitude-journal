@@ -3,16 +3,7 @@ import React from 'react';
 import origamibird from '../../public/images/bird.png';
 import speechbubble from '../../public/images/speechbubble.png';
 import tree from '../../public/images/tree.png';
-
-const Pagewrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-`;
+import PageWrapperCenterSpEvenly from '../components/PageWarapperCenterSpEvemly';
 
 const ContentWrapper = styled.div`
   display: flex;
@@ -69,7 +60,7 @@ const SpeechbubbleText = styled.div`
 
 function Home() {
   return (
-    <Pagewrapper>
+    <PageWrapperCenterSpEvenly>
       <ContentWrapper>
         <Speechbubble src={speechbubble}>
           <SpeechbubbleText>
@@ -78,7 +69,7 @@ function Home() {
         </Speechbubble>
         <OrigamibirdAboutPage src={origamibird} />
       </ContentWrapper>
-    </Pagewrapper>
+    </PageWrapperCenterSpEvenly>
   );
 }
 

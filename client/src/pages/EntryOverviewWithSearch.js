@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import origamibird from '../../public/images/birdlookingleft.png';
 import UniversalButton from '../components/UniversalButton';
+import PageWrapperCenterSpEvenly from '../components/PageWarapperCenterSpEvemly';
 
 const OrigamibirdEntryOverview = styled.img`
   height: 75px;
@@ -9,15 +10,6 @@ const OrigamibirdEntryOverview = styled.img`
   position: absolute;
   margin-top: -120px;
   margin-left: 70px;
-`;
-
-const OverviewPageWrapper = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
 `;
 
 const TextAndSearchWrapper = styled.div`
@@ -66,7 +58,7 @@ const EntryCard = styled.card`
 
 function EntryOverviewPage() {
   return (
-    <OverviewPageWrapper>
+    <PageWrapperCenterSpEvenly>
       <OrigamibirdEntryOverview src={origamibird} />
       <TextAndSearchWrapper>
         <OverviewAndSearchTitle>Journal:</OverviewAndSearchTitle>
@@ -83,7 +75,7 @@ function EntryOverviewPage() {
       </TextAndSearchWrapper>
       <EntryCard>Ich bin noch ein Platzhalter</EntryCard>
       <UniversalButton>Back</UniversalButton>
-    </OverviewPageWrapper>
+    </PageWrapperCenterSpEvenly>
   );
 }
 export default EntryOverviewPage;
