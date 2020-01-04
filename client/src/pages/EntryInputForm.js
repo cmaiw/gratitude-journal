@@ -74,9 +74,9 @@ const ButtonCheckboxContainer = styled.div`
   padding: 5px;
 `;
 
-function EntryInputForm() {
+function EntryInputForm(props) {
   return (
-    <PageWrapperCenterSpEvenly>
+    <PageWrapperCenterSpEvenly {...props}>
       <WrapperTitleBird>
         <PageTitle>New entry:</PageTitle>
         <Origamibird src={origamibird} />
@@ -100,7 +100,7 @@ function EntryInputForm() {
         <ButtonCheckboxContainer>
           <UniversalButton>submit</UniversalButton>
           <P>Mark as favourite: </P>
-          <FavCheckbox />
+          <FavCheckbox name="Is favourite?" />
           <FeatherIcon />
         </ButtonCheckboxContainer>
       </FormContainer>
