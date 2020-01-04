@@ -1,5 +1,15 @@
 {
-  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
-  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
-  "profile": { "name": "typicode" }
+  "entries": [
+    {
+      "id": "",
+      "entry date": "yyyy.mm.dd",
+      "answer to question 1:": "",
+      "answer to question 2:": "",
+      "answer to question 3:": "",
+      "answer to question 4:": "",
+      "answer to question 5:": "",
+      "answer to question 6:": "",
+      "answer to question 7:": ""
+    }
+  ]
 }

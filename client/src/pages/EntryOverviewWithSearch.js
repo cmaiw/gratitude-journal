@@ -53,9 +53,9 @@ const EntryCard = styled.card`
   font-size: 14px;
 `;
 
-function EntryOverviewPage() {
+function EntryOverviewPage(props) {
   return (
-    <PageWrapperCenterSpEvenly>
+    <PageWrapperCenterSpEvenly {...props}>
       <WrapperTitleBird>
         <PageTitle>Journal:</PageTitle>
         <Origamibird src={origamibird} />
@@ -64,7 +64,7 @@ function EntryOverviewPage() {
         <SubtitleSearch>Search entries by date:</SubtitleSearch>
       </TextAndSearchWrapper>
       <TextAndSearchWrapper>
-        <SearchBarByDate></SearchBarByDate>
+        <SearchBarByDate type="date" name="entry date" placeholder="date"></SearchBarByDate>
         <UniversalButton>Submit</UniversalButton>
       </TextAndSearchWrapper>
       <TextAndSearchWrapper>
