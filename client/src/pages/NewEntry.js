@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import JournalInput from '../components/EntryInput';
+import JournalInput from '../components/JournalInput';
 import UniversalButton from '../components/UniversalButton';
 import FavCheckbox from '../components/FavCheckbox';
 import FeatherIcon from '../icons/FeatherIcon';
@@ -8,6 +8,7 @@ import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import WrapperTitleBird from '../components/WrapperTitleBird';
 import PageTitle from '../components/PageTitle';
 import { saveEntriesToDB } from '../api/entryRequests';
+import { useHistory } from 'react-router-dom';
 
 const Origamibird = styled.img`
   height: 65px;
@@ -41,20 +42,6 @@ const Label = styled.label`
   margin: 3px;
 `;
 
-const Date = styled.input`
-  all: unset;
-  height: 22px;
-  width: 100%;
-  color: ${props => props.theme.colors.primary};
-  background-color: ${props => props.theme.colors.secondary};
-  opacity: 0.35;
-  outline: none;
-  cursor: text;
-  border: none;
-  border-radius: 4px;
-  margin: 3px;
-`;
-
 const P = styled.p`
   color: ${props => props.theme.colors.font};
 `;
@@ -75,7 +62,20 @@ const ButtonCheckboxContainer = styled.div`
   margin-bottom: 42px;
 `;
 
-function EntryInputFormNewEntryByDate() {
+const CheckboxContainer = styled.div`
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background-color: ${props => props.theme.colors.quinary};
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+`;
+
+function NewEntry(...props) {
+  let history = useHistory();
   const [entry, setEntry] = React.useState({
     date: '',
     answerQuestionOne: '',
@@ -85,7 +85,7 @@ function EntryInputFormNewEntryByDate() {
     answerQuestionFive: '',
     answerQuestionSix: '',
     answerQuestionSeven: '',
-    favourite: ''
+    favourite: false
   });
 
   function onChange(event) {
@@ -96,39 +96,37 @@ function EntryInputFormNewEntryByDate() {
     });
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    saveEntriesToDB(entry);
+  function onCheckboxChange(event) {
+    const checked = event.target.checked;
     setEntry({
-      date: '',
-      answerQuestionOne: '',
-      answerQuestionTwo: '',
-      answerQuestionThree: '',
-      answerQuestionFour: '',
-      answerQuestionFive: '',
-      answerQuestionSix: '',
-      answerQuestionSeven: '',
-      favourite: ''
+      ...entry,
+      [event.target.name]: checked
     });
   }
 
+  function handleSubmit() {
+    saveEntriesToDB(entry);
+    history.push('/confirmation');
+  }
+
   return (
-    <PageWrapperCenterSpEvenly>
+    <PageWrapperCenterSpEvenly {...props}>
       <WrapperTitleBird>
         <PageTitle>New entry:</PageTitle>
         <Origamibird src="/images/birdlookingleft.png" />
       </WrapperTitleBird>
       <FormContainer onSubmit={handleSubmit}>
-        <Date
+        <JournalInput
           name="date"
           type="date"
           placeholder="date:"
           value={entry.date}
           onChange={onChange}
-        ></Date>
+        ></JournalInput>
         <Label>1. What made you smile / laugh?</Label>
         <JournalInput
           name="answerQuestionOne"
+          type="text"
           value={entry.answerQuestionOne}
           onChange={onChange}
         ></JournalInput>
@@ -137,46 +135,52 @@ function EntryInputFormNewEntryByDate() {
           name="answerQuestionTwo"
           value={entry.answerQuestionTwo}
           onChange={onChange}
+          type="text"
         ></JournalInput>
         <Label>3. Who made you smile / laugh?</Label>
         <JournalInput
           name="answerQuestionThree"
           value={entry.answerQuestionThree}
           onChange={onChange}
+          type="text"
         ></JournalInput>
         <Label>4. What are you thankful for today?</Label>
         <JournalInput
-          name="answerQuestionFour?"
+          name="answerQuestionFour"
           value={entry.AnswerQuestionFour}
           onChange={onChange}
+          type="text"
         ></JournalInput>
         <Label>5. Who would you like to thank?</Label>
         <JournalInput
           name="answerQuestionFive"
           value={entry.answerQuestionFive}
           onChange={onChange}
+          type="text"
         ></JournalInput>
-        <Label>6 .What are you thankful for today?</Label>
+        <Label>6 .What are you looking for tomorrow?</Label>
         <JournalInput
           name="answerQuestionSix"
           value={entry.answerQuestionSix}
           onChange={onChange}
-        ></JournalInput>
-        <Label>7. What are you looking for tomorrow?</Label>
-        <JournalInput
-          name="answerQuestionSeven"
-          value={entry.answerQuestionSeven}
-          onChange={onChange}
+          type="text"
         ></JournalInput>
         <ButtonCheckboxContainer>
           <P>Mark as favourite: </P>
-          <FavCheckbox name="Isfavourite?" onChange={onChange} value={entry.Isfavourite} />
+          <CheckboxContainer>
+            <FavCheckbox
+              type="checkbox"
+              name="favourite"
+              onChange={onCheckboxChange}
+              value={entry.favourite}
+            />
+          </CheckboxContainer>
           <FeatherIcon />
-          <UniversalButton>submit</UniversalButton>
+          <UniversalButton type="submit">submit</UniversalButton>
         </ButtonCheckboxContainer>
       </FormContainer>
     </PageWrapperCenterSpEvenly>
   );
 }
 
-export default EntryInputFormNewEntryByDate;
+export default NewEntry;

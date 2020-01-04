@@ -1,8 +1,8 @@
-export async function saveEntriesToDB(entry) {
-  await fetch('http://localhost:8080/entries', {
+export async function saveEntriesToDB(entries) {
+  await fetch('/api/entries', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
 
-    body: JSON.stringify(entry)
+    body: JSON.stringify(entries)
   });
 }
