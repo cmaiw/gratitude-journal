@@ -1,15 +1,10 @@
 import React from 'react';
-import EntryInput from '../components/EntryInput';
-import { action } from '@storybook/addon-actions';
+import EntryInputFormNewEntryByDate from '../pages/EntryInputForm';
 
 export default {
-  title: 'Entry Input'
+  title: 'Entry Input Form'
 };
 
-export function JournalEntryInput() {
-  return (
-    <div onChange={action('key was pressed')}>
-      <EntryInput></EntryInput>
-    </div>
-  );
+export function EntryInputFormJournal() {
+  return <EntryInputFormNewEntryByDate></EntryInputFormNewEntryByDate>;
 }
