@@ -19,7 +19,7 @@ export default function EntryOverview() {
       {entries &&
         entries.map(entry => (
           <div key={entry.date}>
-            <h3>entry date:</h3>
+            <h3>Entry date:</h3>
             <div>{entry.date}</div>
             <h3>What made you smile or laugh that day?</h3>
             <p>{entry.answerQuestionOne}</p>
