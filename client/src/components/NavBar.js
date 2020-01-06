@@ -15,7 +15,6 @@ const Footer = styled.footer`
   width: 100%;
   background-color: ${props => props.theme.colors.primary};
   border: ${props => props.theme.colors.primary};
-  margin-top: 10px;
 `;
 
 export function NavBar() {

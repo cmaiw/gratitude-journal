@@ -5,7 +5,6 @@ import EntryConfirmationCard from '../components/EntryConfirmationCard';
 import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import WrapperTitleBird from '../components/WrapperTitleBird';
 import PageTitle from '../components/PageTitle';
-import { useLocation } from 'react-router-dom';
 
 const Origamibird = styled.img`
   height: 65px;
@@ -26,9 +25,7 @@ function EntryConfirmationPage(props) {
       </WrapperTitleBird>
       <EntryConfirmationCard></EntryConfirmationCard>
       <ButtonContainer>
-        <UniversalButton to="/new" active={location.pathname === '/new'}>
-          Back
-        </UniversalButton>
+        <UniversalButton>Back</UniversalButton>
       </ButtonContainer>
     </PageWrapperCenterSpEvenly>
   );

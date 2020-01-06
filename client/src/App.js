@@ -27,7 +27,7 @@ function App() {
             <Route exact path="/new">
               <NewEntry />
             </Route>
-            <Route exact path="/entryconfirmation">
+            <Route exact path="/confirmation">
               <EntryConfirmationPage />
             </Route>
             <Route exact path="/journal">

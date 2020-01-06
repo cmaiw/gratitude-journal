@@ -1,5 +1,5 @@
 import React from 'react';
-import EntryInputFormNewEntryByDate from '../pages/EntryInputForm';
+import EntryInputFormNewEntryByDate from '../pages/EntryInputFormNewEntryByDate';
 
 export default {
   title: 'Entry Input Form'
