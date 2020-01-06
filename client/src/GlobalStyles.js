@@ -1,6 +1,7 @@
 import React from 'react';
 import { Global, css } from '@emotion/core';
-import backgroundsplashes from './assets/backgroundsplashes1.jpg';
+import backgroundsplashes from './ressources/backgroundsplashes1.jpg';
+
 function GlobalStyles() {
   return (
     <Global

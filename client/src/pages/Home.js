@@ -1,19 +1,16 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import origamibird from '../../public/images/bird.png';
-import speechbubble from '../../public/images/speechbubble.png';
-import tree from '../../public/images/tree.png';
 import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 667px;
-  width: 375px;
+  height: 627px;
+  width: 320px;
   justify-content: flex-start;
   align-items: center;
   overflow: hidden;
-  background-image: url(${tree});
+  background-image: url('images/tree.png');
   background-origin: border-box;
   background-position: center;
   background-repeat: no-repeat;
@@ -23,27 +20,30 @@ const ContentWrapper = styled.div`
 `;
 
 const OrigamibirdAboutPage = styled.img`
+  align-self: flex-end;
   height: 75px;
   width: 95px;
   position: absolute;
-  margin-top: 395px;
+  margin-top: 328px;
   transform: scaleX(-1);
-  margin-left: 118px;
+  margin-left: none;
 `;
 
 const Speechbubble = styled.div`
   height: 200px;
   width: 350px;
-  background-image: url(${speechbubble});
+  align-self: flex-end;
+  background-image: url('images/speechbubble.png');
   background-origin: border-box;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  position: relative;
+  position: absolute;
   overflow: hidden;
-  margin-top: 80px;
-  margin-left: -100px;
+  margin-top: 60px;
+  margin-right: none;
   opacity: 0.85;
+  flex-grow: 1;
 `;
 
 const SpeechbubbleText = styled.div`
@@ -61,12 +61,12 @@ function Home(props) {
   return (
     <PageWrapperCenterSpEvenly {...props}>
       <ContentWrapper>
-        <Speechbubble src={speechbubble}>
+        <Speechbubble>
           <SpeechbubbleText>
             I feel like this is a beautiful day. Let us write about it!
           </SpeechbubbleText>
         </Speechbubble>
-        <OrigamibirdAboutPage src={origamibird} />
+        <OrigamibirdAboutPage src="/images/bird.png" />
       </ContentWrapper>
     </PageWrapperCenterSpEvenly>
   );

@@ -1,17 +1,23 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-const BookPath = styled.path`
-  fill: ${props => (props.active ? props.theme.colors.quaternary : props.theme.colors.tertiary)};
+const SVG = styled.svg`
+  fill: ${props => props.theme.colors.tertiary};
 
   &:hover {
-    fill: ${props => props.theme.colors.quaternary};
+    fill: ${props => props.theme.colors.quartenary};
+  }
+
+  &:active {
+    fill: ${props => props.theme.colors.secondary};
   }
 `;
 
+const BookPath = styled.path``;
+
 function BookIcon(props) {
   return (
-    <svg
+    <SVG
       height="38px"
       viewBox="0 0 510 510"
       width="38px"
@@ -24,7 +30,7 @@ function BookIcon(props) {
       <BookPath d="m153.686 0v336.665h293.981v-331.618c0-2.787-2.259-5.047-5.047-5.047zm242.304 140.051c0 8.357-6.783 15.14-15.14 15.14h-160.338c-8.367 0-15.14-6.783-15.14-15.14v-74.648c0-8.357 6.772-15.14 15.14-15.14h160.339c8.357 0 15.14 6.783 15.14 15.14v74.648z" />
       <BookPath d="m170.137 504.944c0 4.268 4.969 6.608 8.26 3.891 16.5-13.622 13.775-11.372 16.7-13.79 5.595-4.626 13.675-4.632 19.278 0 2.923 2.416.218.183 16.7 13.79 3.291 2.717 8.26.377 8.26-3.891v-72.91h-69.198z" />
       <BookPath d="m235.652 80.543h130.059v44.369h-130.059z" />
-    </svg>
+    </SVG>
   );
 }
 

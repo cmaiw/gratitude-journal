@@ -1,16 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import JournalLabel from '../components/JournalLabel';
-import washitapegreenvert from '../../public/images/washitapegreentexturevert.png';
-import washitapebluehor from '../../public/images/washitapebluevert.png';
-import washitapegreenhappy from '../../public/images/maskingtapebehappy.png';
-import paperclipclover from '../../public/images/paperclipclover.png';
 import TreeIcon from '../icons/TreeIcon';
-import orangesplash1 from '../../public/images/orangesplash1.png';
 import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 
 const JournalCoverBackground = styled.div`
-  height: 667px;
+  height: 627px;
   width: 375px;
   display: flex;
   flex-direction: column;
@@ -20,8 +15,7 @@ const JournalCoverBackground = styled.div`
   background-color: ${props => props.theme.colors.primary};
   align-self: center;
   overflow: scroll;
-  border-radius: 8px;
-  box-shadow: 12px 12px 11px 0px rgba(99, 164, 183, 0.8);
+  box-shadow: 6px -9px 11px 0px rgba(99, 164, 183, 0.8);
 `;
 
 const WashiTapeImgGreenVertical = styled.img`
@@ -90,7 +84,7 @@ const SplashOrange = styled.div`
   margin-top: 430px;
   margin-left: 192px;
   opacity: 0.9;
-  background-image: url(${orangesplash1});
+  background-image: url('/images/orangesplash1.png');
   background-origin: border-box;
   background-position: center;
   background-repeat: no-repeat;
@@ -102,11 +96,11 @@ function JournalCover() {
   return (
     <PageWrapperCenterSpEvenly>
       <JournalCoverBackground>
-        <WashiTapeImgGreenVertical src={washitapegreenvert} />
+        <WashiTapeImgGreenVertical src="/images/washitapegreentexturevert.png" />
         <JournalLabel />
-        <WashiTapeImgBlueHorizontal src={washitapebluehor} />
-        <WashiTapeImgGreenHappy src={washitapegreenhappy} />
-        <PaperclipClover src={paperclipclover} />
+        <WashiTapeImgBlueHorizontal src="images/washitapebluevert.png" />
+        <WashiTapeImgGreenHappy src="images/maskingtapebehappy.png" />
+        <PaperclipClover src="images/paperclipclover.png" />
         <SplashOrange>
           <SpecialHomeButton>
             <TreeIcon />

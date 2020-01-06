@@ -11,9 +11,10 @@ const Footer = styled.footer`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  height: 40px;
+  height: 42px;
   width: 100%;
   background-color: ${props => props.theme.colors.primary};
+  border: ${props => props.theme.colors.primary};
 `;
 
 export function NavBar() {

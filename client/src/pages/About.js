@@ -4,7 +4,6 @@ import UniversalButton from '../components/UniversalButton';
 import WrapperTitleBird from '../components/WrapperTitleBird';
 import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import PageTitle from '../components/PageTitle';
-import origamibird from '../../public/images/birdlookingleft.png';
 
 const ArticleWrapper = styled.div`
 width: 85%;
@@ -50,7 +49,7 @@ function About(props) {
       <PageWrapperCenterSpEvenly {...props}>
         <WrapperTitleBird>
           <PageTitle>About:</PageTitle>
-          <Origamibird src={origamibird} />
+          <Origamibird src="/images/birdlookingleft.png" />
         </WrapperTitleBird>
         <ArticleWrapper>
           <AboutMainArticle>
