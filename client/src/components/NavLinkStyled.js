@@ -1,11 +1,7 @@
 import styled from '@emotion/styled';
-import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-const ThisNavButton = styled.button`
-  display: flex;
-  height: 40px;
-  width: 40px;
-  justify-content: center;
+const NavLinkStyled = styled(NavLink)`
   align-items: center;
   background-color: transparent;
   border: none;
@@ -21,8 +17,4 @@ const ThisNavButton = styled.button`
   background-color: ${props => props.theme.colors.quartenary} opacity: 0.15;
 `;
 
-function NavButton(props, onClick) {
-  return <ThisNavButton onClick={onClick} {...props}></ThisNavButton>;
-}
-
-export default NavButton;
+export default NavLinkStyled;

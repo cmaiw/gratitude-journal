@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import NavButton from './NavButton';
+import NavLinkStyled from './NavLinkStyled';
 import BirdIcon from '../icons/BirdIcon';
 import BookIcon from '../icons/BookIcon';
 import AddIcon from '../icons/AddIcon';
@@ -15,23 +15,24 @@ const Footer = styled.footer`
   width: 100%;
   background-color: ${props => props.theme.colors.primary};
   border: ${props => props.theme.colors.primary};
+  margin-top: 10px;
 `;
 
 export function NavBar() {
   return (
     <Footer>
-      <NavButton>
+      <NavLinkStyled to="/home">
         <BirdIcon />
-      </NavButton>
-      <NavButton>
+      </NavLinkStyled>
+      <NavLinkStyled to="/journal">
         <BookIcon />
-      </NavButton>
-      <NavButton>
+      </NavLinkStyled>
+      <NavLinkStyled to="/new">
         <AddIcon />
-      </NavButton>
-      <NavButton>
+      </NavLinkStyled>
+      <NavLinkStyled to="/about">
         <HelpIcon />
-      </NavButton>
+      </NavLinkStyled>
     </Footer>
   );
 }
