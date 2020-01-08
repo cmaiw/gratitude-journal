@@ -1,24 +1,26 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-const BirdPath = styled.path`
-  fill: ${props => (props.active ? props.theme.colors.quaternary : props.theme.colors.tertiary)};
+const SVG = styled.svg`
+  fill: ${props => props.theme.colors.tertiary};
 
   &:hover {
-    fill: ${props => props.theme.colors.quaternary};
+    fill: ${props => props.theme.colors.quartenary};
   }
 
   &:active {
-    fill: ${props => props.theme.colors.quaternary};
+    fill: ${props => props.theme.colors.secondary};
   }
 `;
 
+const BirdPath = styled.path``;
+
 function BirdIcon(props) {
   return (
-    <svg
+    <SVG
       xmlns="http://www.w3.org/2000/svg"
-      width="38px"
-      height="38px"
+      width="32px"
+      height="32px"
       viewBox="0 0 469.333 469.333"
       {...props}
     >
@@ -31,7 +33,7 @@ function BirdIcon(props) {
 			c0-1.656-0.385-3.292-1.125-4.771L324.368,166.22L466.363,18.052C469.321,14.958,470.155,10.406,468.478,6.479z M208.061,250.333
 			l-73.99-49.323L282.048,53.049L208.061,250.333z"
       />
-    </svg>
+    </SVG>
   );
 }
 export default BirdIcon;

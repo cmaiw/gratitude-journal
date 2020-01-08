@@ -6,7 +6,7 @@ const JournalPageContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  height: 100%;
+  height: 90%;
   width: 100%;
 `;
 

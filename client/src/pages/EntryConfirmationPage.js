@@ -5,22 +5,31 @@ import EntryConfirmationCard from '../components/EntryConfirmationCard';
 import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import WrapperTitleBird from '../components/WrapperTitleBird';
 import PageTitle from '../components/PageTitle';
-import origamibird from '../../public/images/birdlookingleft.png';
+import { useLocation } from 'react-router-dom';
 
 const Origamibird = styled.img`
   height: 65px;
   width: 85px;
 `;
 
+const ButtonContainer = styled.div`
+  margin-bottom: 34px;
+`;
+
 function EntryConfirmationPage(props) {
+  const location = useLocation();
   return (
     <PageWrapperCenterSpEvenly {...props}>
       <WrapperTitleBird>
         <PageTitle>Thank you!</PageTitle>
-        <Origamibird src={origamibird} />
+        <Origamibird src="/images/birdlookingleft.png" />
       </WrapperTitleBird>
       <EntryConfirmationCard></EntryConfirmationCard>
-      <UniversalButton>Back</UniversalButton>
+      <ButtonContainer>
+        <UniversalButton to="/new" active={location.pathname === '/new'}>
+          Back
+        </UniversalButton>
+      </ButtonContainer>
     </PageWrapperCenterSpEvenly>
   );
 }

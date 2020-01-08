@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import origamibird from '../../public/images/birdlookingleft.png';
 import UniversalButton from '../components/UniversalButton';
 import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import PageTitle from '../components/PageTitle';
@@ -18,7 +17,7 @@ const TextAndSearchWrapper = styled.div`
   justify-content: flex-start;
   align-items: space-evenly;
   height: 33%;
-  width: 100%;
+  width: 85%;
   text-align: flex-start;
 `;
 
@@ -58,7 +57,7 @@ function EntryOverviewPage(props) {
     <PageWrapperCenterSpEvenly {...props}>
       <WrapperTitleBird>
         <PageTitle>Journal:</PageTitle>
-        <Origamibird src={origamibird} />
+        <Origamibird src="/images/birdlookingleft.png" />
       </WrapperTitleBird>
       <TextAndSearchWrapper>
         <SubtitleSearch>Search entries by date:</SubtitleSearch>

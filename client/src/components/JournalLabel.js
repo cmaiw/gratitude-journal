@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import label from '../../public/images/label.png';
-import bird from '../../public/images/birdlookingleft.png';
 
 const LabelAndBirdWrapper = styled.div`
   width: 100%;
@@ -21,7 +19,7 @@ const BookLabel = styled.div`
   height: 200px;
   width: 280px;
   padding: none;
-  background-image: url(${label});
+  background-image: url('images/label.png');
   background-origin: border-box;
   background-position: center;
   background-repeat: no-repeat;
@@ -59,7 +57,7 @@ const OrigamiBirdImg = styled.img`
 function JournalLabel() {
   return (
     <LabelAndBirdWrapper>
-      <OrigamiBirdImg src={bird} />
+      <OrigamiBirdImg src="/images/birdlookingleft.png" />
       <BookLabel>
         <LabelTitle>Gratefully</LabelTitle>
         <LabelSubtitle>your gratitude</LabelSubtitle>

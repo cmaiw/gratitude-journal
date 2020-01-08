@@ -11,7 +11,8 @@
     "server": "node server.js",
     "storybook": "cd client && npm run storybook",
     "test": "cd client && npm test",
-    "postinstall": "cd client && npm install"
+    "postinstall": "cd client && npm install",
+    "fake-api": "json-server --watch db.json --port 8080 --routes routes.json"
   },
   "repository": {
     "type": "git",
