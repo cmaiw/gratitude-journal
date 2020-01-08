@@ -42,6 +42,7 @@ const ButtonCheckboxWrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 30px;
+  margin-bottom: 195px;
 `;
 function About(props) {
   return (

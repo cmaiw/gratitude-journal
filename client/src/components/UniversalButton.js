@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
-import React from 'react';
 
-const ThisUniversalButton = styled.button`
+const UniversalButton = styled.button`
   display: flex;
   height: 20px;
   width: 60px;
@@ -14,6 +13,7 @@ const ThisUniversalButton = styled.button`
   border-radius: 4px;
   padding: none;
   margin: none;
+  text-decoration: none;
 
   &:active {
     background-color: ${props => props.theme.colors.tertiary};
@@ -23,9 +23,5 @@ const ThisUniversalButton = styled.button`
     background-color: ${props => props.theme.colors.tertiary};
   }
 `;
-
-function UniversalButton(props) {
-  return <ThisUniversalButton {...props}></ThisUniversalButton>;
-}
 
 export default UniversalButton;

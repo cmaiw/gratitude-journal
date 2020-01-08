@@ -5,7 +5,7 @@ import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 627px;
+  height: 617px;
   width: 320px;
   justify-content: flex-start;
   align-items: center;
@@ -24,7 +24,7 @@ const OrigamibirdAboutPage = styled.img`
   height: 75px;
   width: 95px;
   position: absolute;
-  margin-top: 328px;
+  margin-top: 350px;
   transform: scaleX(-1);
   margin-left: none;
 `;
