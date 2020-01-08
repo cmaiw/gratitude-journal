@@ -3,7 +3,8 @@ import GlobalStyles from './GlobalStyles';
 import { ThemeProvider } from 'emotion-theming';
 import defaultTheme from './themes/theme';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import EntryInputFormNewEntryByDate from './pages/EntryInputFormNewEntryByDate';
+import NewEntry from './pages/NewEntry';
+import EntryOverviewWithSearch from './pages/EntryOverviewWithSearch';
 import NavBar from './components/NavBar';
 import JournalCover from './pages/JournalCover';
 import Home from './pages/Home';
@@ -24,12 +25,15 @@ function App() {
               <Home />
             </Route>
             <Route exact path="/new">
-              <EntryInputFormNewEntryByDate />
+              <NewEntry />
             </Route>
-            <Route exact path="/entry-confirmation">
+            <Route exact path="/entryconfirmation">
               <EntryConfirmationPage />
             </Route>
-            <Route exact path="/About">
+            <Route exact path="/journal">
+              <EntryOverviewWithSearch />
+            </Route>
+            <Route exact path="/about">
               <About />
             </Route>
             <Route>

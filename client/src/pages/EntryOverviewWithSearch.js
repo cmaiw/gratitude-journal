@@ -4,6 +4,7 @@ import UniversalButton from '../components/UniversalButton';
 import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import PageTitle from '../components/PageTitle';
 import WrapperTitleBird from '../components/WrapperTitleBird';
+import { getAllEntries } from '../api/entryRequests';
 
 const Origamibird = styled.img`
   height: 65px;
@@ -16,9 +17,10 @@ const TextAndSearchWrapper = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: space-evenly;
-  height: 33%;
+  height: 100%;
   width: 85%;
   text-align: flex-start;
+  overflow: scroll;
 `;
 
 const SubtitleSearch = styled.p`
@@ -43,7 +45,7 @@ const SearchBarByDate = styled.input`
   margin-right: 5px;
 `;
 
-const EntryCard = styled.card`
+const EntryCard = styled.div`
   color: ${props => props.theme.colors.text};
   background-color: ${props => props.theme.colors.secondary};
   opacity: 0.35;
@@ -67,9 +69,9 @@ function EntryOverviewPage(props) {
         <UniversalButton>Submit</UniversalButton>
       </TextAndSearchWrapper>
       <TextAndSearchWrapper>
-        <PageTitle>Last Entries:</PageTitle>
+        <PageTitle>Entries:</PageTitle>
       </TextAndSearchWrapper>
-      <EntryCard>Ich bin noch ein Platzhalter</EntryCard>
+      <EntryCard>{getAllEntries}</EntryCard>
       <UniversalButton>Back</UniversalButton>
     </PageWrapperCenterSpEvenly>
   );

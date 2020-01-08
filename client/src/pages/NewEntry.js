@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import JournalInput from '../components/EntryInput';
+import JournalInput from '../components/JournalInput';
 import UniversalButton from '../components/UniversalButton';
 import FavCheckbox from '../components/FavCheckbox';
 import FeatherIcon from '../icons/FeatherIcon';
@@ -41,20 +41,6 @@ const Label = styled.label`
   margin: 3px;
 `;
 
-const Date = styled.input`
-  all: unset;
-  height: 22px;
-  width: 100%;
-  color: ${props => props.theme.colors.primary};
-  background-color: ${props => props.theme.colors.secondary};
-  opacity: 0.35;
-  outline: none;
-  cursor: text;
-  border: none;
-  border-radius: 4px;
-  margin: 3px;
-`;
-
 const P = styled.p`
   color: ${props => props.theme.colors.font};
 `;
@@ -75,7 +61,19 @@ const ButtonCheckboxContainer = styled.div`
   margin-bottom: 42px;
 `;
 
-function EntryInputFormNewEntryByDate() {
+const CheckboxContainer = styled.div`
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background-color: ${props => props.theme.colors.quinary};
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+`;
+
+function NewEntry(...props) {
   const [entry, setEntry] = React.useState({
     date: '',
     answerQuestionOne: '',
@@ -96,36 +94,24 @@ function EntryInputFormNewEntryByDate() {
     });
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  function handleSubmit() {
     saveEntriesToDB(entry);
-    setEntry({
-      date: '',
-      answerQuestionOne: '',
-      answerQuestionTwo: '',
-      answerQuestionThree: '',
-      answerQuestionFour: '',
-      answerQuestionFive: '',
-      answerQuestionSix: '',
-      answerQuestionSeven: '',
-      favourite: ''
-    });
   }
 
   return (
-    <PageWrapperCenterSpEvenly>
+    <PageWrapperCenterSpEvenly {...props}>
       <WrapperTitleBird>
         <PageTitle>New entry:</PageTitle>
         <Origamibird src="/images/birdlookingleft.png" />
       </WrapperTitleBird>
       <FormContainer onSubmit={handleSubmit}>
-        <Date
+        <JournalInput
           name="date"
           type="date"
           placeholder="date:"
           value={entry.date}
           onChange={onChange}
-        ></Date>
+        ></JournalInput>
         <Label>1. What made you smile / laugh?</Label>
         <JournalInput
           name="answerQuestionOne"
@@ -146,7 +132,7 @@ function EntryInputFormNewEntryByDate() {
         ></JournalInput>
         <Label>4. What are you thankful for today?</Label>
         <JournalInput
-          name="answerQuestionFour?"
+          name="answerQuestionFour"
           value={entry.AnswerQuestionFour}
           onChange={onChange}
         ></JournalInput>
@@ -170,13 +156,22 @@ function EntryInputFormNewEntryByDate() {
         ></JournalInput>
         <ButtonCheckboxContainer>
           <P>Mark as favourite: </P>
-          <FavCheckbox name="Isfavourite?" onChange={onChange} value={entry.Isfavourite} />
+          <CheckboxContainer>
+            <FavCheckbox
+              type="checkbox"
+              name="favourite"
+              value={entry.favourite}
+              onChange={onChange}
+            />
+          </CheckboxContainer>
           <FeatherIcon />
-          <UniversalButton>submit</UniversalButton>
+          <UniversalButton type="submit" onClick={event => handleSubmit(event.target.value)}>
+            submit
+          </UniversalButton>
         </ButtonCheckboxContainer>
       </FormContainer>
     </PageWrapperCenterSpEvenly>
   );
 }
 
-export default EntryInputFormNewEntryByDate;
+export default NewEntry;
