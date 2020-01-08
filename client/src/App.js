@@ -27,7 +27,11 @@ function App() {
             <Route exact path="/new">
               <NewEntry />
             </Route>
+<<<<<<< HEAD
             <Route exact path="/confirmation">
+=======
+            <Route exact path="/entryconfirmation">
+>>>>>>> Change imports
               <EntryConfirmationPage />
             </Route>
             <Route exact path="/journal">
