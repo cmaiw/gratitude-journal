@@ -18,9 +18,9 @@ const AddPath = styled.path``;
 function AddIcon(props) {
   return (
     <SVG
-      height="38px"
+      height="32px"
       viewBox="-16 0 512 512"
-      width="38px"
+      width="32px"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
