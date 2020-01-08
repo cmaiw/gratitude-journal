@@ -24,6 +24,7 @@ const OrigamibirdAboutPage = styled.img`
   height: 75px;
   width: 95px;
   position: absolute;
+<<<<<<< HEAD
   <<<<<<<HEAD
   margin-top: 350px;
   =======margin-top: 328px;
@@ -31,6 +32,10 @@ const OrigamibirdAboutPage = styled.img`
   transform: scaleX(
     -1
   );
+=======
+  margin-top: 350px;
+  transform: scaleX(-1);
+>>>>>>> Adjust styling issues after changing from storybook view to browser view
   margin-left: none;
 `;
 
