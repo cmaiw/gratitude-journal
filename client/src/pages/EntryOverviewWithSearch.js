@@ -4,7 +4,7 @@ import UniversalButton from '../components/UniversalButton';
 import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import PageTitle from '../components/PageTitle';
 import WrapperTitleBird from '../components/WrapperTitleBird';
-import { getAllEntries } from '../api/entryRequests';
+import EntryOverview from '../components/EntryOverview';
 
 const Origamibird = styled.img`
   height: 65px;
@@ -45,18 +45,23 @@ const SearchBarByDate = styled.input`
   margin-right: 5px;
 `;
 
-const EntryCard = styled.div`
+const EntryList = styled.div`
   color: ${props => props.theme.colors.text};
   background-color: ${props => props.theme.colors.secondary};
   opacity: 0.35;
   min-height: 22px;
+  width: 85%;
   margin: 10px;
   font-size: 14px;
+  text-align: start;
+  overflow: scroll;
+  padding: 5px;
+  border-radius: 8px;
 `;
 
-function EntryOverviewPage(props) {
+function EntryOverviewWithSearch() {
   return (
-    <PageWrapperCenterSpEvenly {...props}>
+    <PageWrapperCenterSpEvenly>
       <WrapperTitleBird>
         <PageTitle>Journal:</PageTitle>
         <Origamibird src="/images/birdlookingleft.png" />
@@ -71,9 +76,11 @@ function EntryOverviewPage(props) {
       <TextAndSearchWrapper>
         <PageTitle>Entries:</PageTitle>
       </TextAndSearchWrapper>
-      <EntryCard>{getAllEntries}</EntryCard>
+      <EntryList>
+        <EntryOverview></EntryOverview>
+      </EntryList>
       <UniversalButton>Back</UniversalButton>
     </PageWrapperCenterSpEvenly>
   );
 }
-export default EntryOverviewPage;
+export default EntryOverviewWithSearch;

@@ -8,6 +8,7 @@ import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import WrapperTitleBird from '../components/WrapperTitleBird';
 import PageTitle from '../components/PageTitle';
 import { saveEntriesToDB } from '../api/entryRequests';
+import { useHistory } from 'react-router-dom';
 
 const Origamibird = styled.img`
   height: 65px;
@@ -74,6 +75,7 @@ const CheckboxContainer = styled.div`
 `;
 
 function NewEntry(...props) {
+  let history = useHistory();
   const [entry, setEntry] = React.useState({
     date: '',
     answerQuestionOne: '',
@@ -83,7 +85,7 @@ function NewEntry(...props) {
     answerQuestionFive: '',
     answerQuestionSix: '',
     answerQuestionSeven: '',
-    favourite: ''
+    favourite: false
   });
 
   function onChange(event) {
@@ -94,8 +96,17 @@ function NewEntry(...props) {
     });
   }
 
+  function onCheckboxChange(event) {
+    const checked = event.target.checked;
+    setEntry({
+      ...entry,
+      [event.target.name]: checked
+    });
+  }
+
   function handleSubmit() {
     saveEntriesToDB(entry);
+    history.push('/confirmation');
   }
 
   return (
@@ -115,6 +126,7 @@ function NewEntry(...props) {
         <Label>1. What made you smile / laugh?</Label>
         <JournalInput
           name="answerQuestionOne"
+          type="text"
           value={entry.answerQuestionOne}
           onChange={onChange}
         ></JournalInput>
@@ -123,36 +135,35 @@ function NewEntry(...props) {
           name="answerQuestionTwo"
           value={entry.answerQuestionTwo}
           onChange={onChange}
+          type="text"
         ></JournalInput>
         <Label>3. Who made you smile / laugh?</Label>
         <JournalInput
           name="answerQuestionThree"
           value={entry.answerQuestionThree}
           onChange={onChange}
+          type="text"
         ></JournalInput>
         <Label>4. What are you thankful for today?</Label>
         <JournalInput
           name="answerQuestionFour"
           value={entry.AnswerQuestionFour}
           onChange={onChange}
+          type="text"
         ></JournalInput>
         <Label>5. Who would you like to thank?</Label>
         <JournalInput
           name="answerQuestionFive"
           value={entry.answerQuestionFive}
           onChange={onChange}
+          type="text"
         ></JournalInput>
-        <Label>6 .What are you thankful for today?</Label>
+        <Label>6 .What are you looking for tomorrow?</Label>
         <JournalInput
           name="answerQuestionSix"
           value={entry.answerQuestionSix}
           onChange={onChange}
-        ></JournalInput>
-        <Label>7. What are you looking for tomorrow?</Label>
-        <JournalInput
-          name="answerQuestionSeven"
-          value={entry.answerQuestionSeven}
-          onChange={onChange}
+          type="text"
         ></JournalInput>
         <ButtonCheckboxContainer>
           <P>Mark as favourite: </P>
@@ -160,14 +171,12 @@ function NewEntry(...props) {
             <FavCheckbox
               type="checkbox"
               name="favourite"
+              onChange={onCheckboxChange}
               value={entry.favourite}
-              onChange={onChange}
             />
           </CheckboxContainer>
           <FeatherIcon />
-          <UniversalButton type="submit" onClick={event => handleSubmit(event.target.value)}>
-            submit
-          </UniversalButton>
+          <UniversalButton type="submit">submit</UniversalButton>
         </ButtonCheckboxContainer>
       </FormContainer>
     </PageWrapperCenterSpEvenly>
