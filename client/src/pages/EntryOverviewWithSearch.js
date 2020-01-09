@@ -17,7 +17,7 @@ const TextAndSearchWrapper = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: space-evenly;
-  height: 33%;
+  height: 100%;
   width: 85%;
   text-align: flex-start;
   overflow: scroll;
