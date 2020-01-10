@@ -19,7 +19,7 @@ const ContentWrapper = styled.div`
   transform: scaleX(-1);
 `;
 
-const OrigamibirdAboutPage = styled.img`
+const OrigamibirdAboutPage = styled.div`
   align-self: flex-end;
   height: 75px;
   width: 95px;

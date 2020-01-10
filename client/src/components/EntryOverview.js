@@ -1,6 +1,17 @@
 import React from 'react';
+import styled from '@emotion/styled';
 
-export default function EntryOverview() {
+export default function EntryOverview(...props) {
+  const Textarea = styled.textarea`
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    padding: 3px;
+    background: ${props => props.theme.colors.background};
+    border: none;
+    font-family: ;
+  `;
+
   const [entries, setEntries] = React.useState(null);
 
   async function getAllEntries() {
@@ -15,26 +26,26 @@ export default function EntryOverview() {
   }, []);
 
   return (
-    <div>
+    <div {...props}>
       {entries &&
         entries.map(entry => (
-          <div key={entry.date}>
+          <div key={entry.id}>
             <h3>Entry date:</h3>
-            <div>{entry.date}</div>
+            <Textarea>{entry.date}</Textarea>
             <h3>What made you smile or laugh that day?</h3>
-            <p>{entry.answerQuestionOne}</p>
+            <Textarea type="text">{entry.answerQuestionOne}</Textarea>
             <h3>What did you learn?</h3>
-            <p>{entry.answerQuestionTwo}</p>
+            <Textarea>{entry.answerQuestionTwo}</Textarea>
             <h3>Who made you smile or laugh?</h3>
-            <p>{entry.answerQuestionThree}</p>
+            <Textarea>{entry.answerQuestionThree}</Textarea>
             <h3>What were you thankful for that day?</h3>
-            <p>{entry.answerQuestionFour}</p>
+            <Textarea>{entry.answerQuestionFour}</Textarea>
             <h3>Who did you like to thank that day?</h3>
-            <p>{entry.answerQuestionFive}</p>
+            <Textarea>{entry.answerQuestionFive}</Textarea>
             <h3>What were you looking for the next day?</h3>
-            <p>{entry.answerQuestionSix}</p>
+            <Textarea>{entry.answerQuestionSix}</Textarea>
             <h3>One of your favourite entries?</h3>
-            <p>{entry.favourite ? 'yes' : 'no'}</p>
+            <Textarea>{entry.favourite ? 'yes' : 'no'}</Textarea>
           </div>
         ))}
     </div>
