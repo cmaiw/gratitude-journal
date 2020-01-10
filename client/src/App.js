@@ -8,46 +8,40 @@ import EntryOverviewWithSearch from './pages/EntryOverviewWithSearch';
 import NavBar from './components/NavBar';
 import JournalCover from './pages/JournalCover';
 import Home from './pages/Home';
-import EntryConfirmationPage from './pages/EntryConfirmationPage';
+import EntryConfirmation from './pages/EntryConfirmation';
 import About from './pages/About';
 
 function App() {
   return (
-    <>
-      <ThemeProvider theme={defaultTheme}>
-        <GlobalStyles />
-        <Router>
-          <Switch>
-            <Route exact path="/">
-              <JournalCover />
-            </Route>
-            <Route exact path="/home">
-              <Home />
-            </Route>
-            <Route exact path="/new">
-              <NewEntry />
-            </Route>
-<<<<<<< HEAD
-            <Route exact path="/confirmation">
-=======
-            <Route exact path="/entryconfirmation">
->>>>>>> Change imports
-              <EntryConfirmationPage />
-            </Route>
-            <Route exact path="/journal">
-              <EntryOverviewWithSearch />
-            </Route>
-            <Route exact path="/about">
-              <About />
-            </Route>
-            <Route>
-              <div>404 Not found</div>
-            </Route>
-          </Switch>
-          <NavBar />
-        </Router>
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={defaultTheme}>
+      <GlobalStyles />
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <JournalCover />
+          </Route>
+          <Route exact path="/home">
+            <Home />
+          </Route>
+          <Route exact path="/new">
+            <NewEntry />
+          </Route>
+          <Route exact path="/confirmation">
+            <EntryConfirmation />
+          </Route>
+          <Route exact path="/journal">
+            <EntryOverviewWithSearch />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route>
+            <div>404 Not found</div>
+          </Route>
+        </Switch>
+        <NavBar />
+      </Router>
+    </ThemeProvider>
   );
 }
 

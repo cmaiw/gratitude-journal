@@ -44,10 +44,10 @@ const ButtonCheckboxWrapper = styled.div`
   margin-top: 30px;
   margin-bottom: 195px;
 `;
-function About(props) {
+function About() {
   return (
     <>
-      <PageWrapperCenterSpEvenly {...props}>
+      <PageWrapperCenterSpEvenly>
         <WrapperTitleBird>
           <PageTitle>About:</PageTitle>
           <Origamibird src="/images/birdlookingleft.png" />

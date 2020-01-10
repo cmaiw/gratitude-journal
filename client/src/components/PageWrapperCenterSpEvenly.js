@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from '@emotion/styled';
 
-const JournalPageContainer = styled.div`
+const PageWrapperCenterSpEvenly = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -9,9 +8,5 @@ const JournalPageContainer = styled.div`
   height: 90%;
   width: 100%;
 `;
-
-function PageWrapperCenterSpEvenly(props) {
-  return <JournalPageContainer {...props}></JournalPageContainer>;
-}
 
 export default PageWrapperCenterSpEvenly;
