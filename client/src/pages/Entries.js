@@ -59,7 +59,7 @@ const EntryList = styled.div`
   border-radius: 8px;
 `;
 
-function EntryOverviewWithSearch() {
+function Entries() {
   return (
     <PageWrapperCenterSpEvenly>
       <WrapperTitleBird>
@@ -83,4 +83,4 @@ function EntryOverviewWithSearch() {
     </PageWrapperCenterSpEvenly>
   );
 }
-export default EntryOverviewWithSearch;
+export default Entries;

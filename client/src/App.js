@@ -4,11 +4,11 @@ import { ThemeProvider } from 'emotion-theming';
 import defaultTheme from './themes/theme';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NewEntry from './pages/NewEntry';
-import EntryOverviewWithSearch from './pages/EntryOverviewWithSearch';
+import Entries from './pages/Entries';
 import NavBar from './components/NavBar';
 import JournalCover from './pages/JournalCover';
 import Home from './pages/Home';
-import EntryConfirmation from './pages/EntryConfirmation';
+import Confirmation from './pages/Confirmation';
 import About from './pages/About';
 
 function App() {
@@ -27,10 +27,10 @@ function App() {
             <NewEntry />
           </Route>
           <Route exact path="/confirmation">
-            <EntryConfirmation />
+            <Confirmation />
           </Route>
           <Route exact path="/journal">
-            <EntryOverviewWithSearch />
+            <Entries />
           </Route>
           <Route exact path="/about">
             <About />
