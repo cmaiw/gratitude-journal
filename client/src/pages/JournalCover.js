@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import JournalLabel from '../components/JournalLabel';
 import TreeIcon from '../icons/TreeIcon';
 import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
+import { NavLink } from 'react-router-dom';
 
 const JournalCoverBackground = styled.div`
   height: 627px;
@@ -56,21 +57,13 @@ const PaperclipClover = styled.img`
   margin-left: 135px;
 `;
 
-const SpecialHomeButton = styled.button`
+const SpecialHomeButton = styled(NavLink)`
   height: 62px;
   width: 62px;
   background: transparent;
   border: none;
   outline: none;
   padding-right: 60px;
-
-  &:hover {
-    color: ${props => props.theme.colors.tertiary};
-  }
-
-  &:active {
-    color: ${props => props.theme.colors.tertiary};
-  }
 `;
 
 const SplashOrange = styled.div`
@@ -102,7 +95,7 @@ function JournalCover() {
         <WashiTapeImgGreenHappy src="images/maskingtapebehappy.png" />
         <PaperclipClover src="images/paperclipclover.png" />
         <SplashOrange>
-          <SpecialHomeButton>
+          <SpecialHomeButton to="/home">
             <TreeIcon />
           </SpecialHomeButton>
         </SplashOrange>

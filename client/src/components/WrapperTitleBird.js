@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from '@emotion/styled';
 
-const WrapperHeadingWithBird = styled.div`
+const WrapperTitleBird = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -11,7 +10,4 @@ const WrapperHeadingWithBird = styled.div`
   margin-top: 15px;
 `;
 
-function WrapperTitleBird(props) {
-  return <WrapperHeadingWithBird {...props}></WrapperHeadingWithBird>;
-}
 export default WrapperTitleBird;

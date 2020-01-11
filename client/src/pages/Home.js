@@ -24,18 +24,8 @@ const OrigamibirdAboutPage = styled.img`
   height: 75px;
   width: 95px;
   position: absolute;
-<<<<<<< HEAD
-  <<<<<<<HEAD
-  margin-top: 350px;
-  =======margin-top: 328px;
-  >>>>>>>Change image import and adjust styling after setting up routes, Add post  request functionality
-  transform: scaleX(
-    -1
-  );
-=======
   margin-top: 350px;
   transform: scaleX(-1);
->>>>>>> Adjust styling issues after changing from storybook view to browser view
   margin-left: none;
 `;
 

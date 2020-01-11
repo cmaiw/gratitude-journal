@@ -13,6 +13,9 @@ const Footer = styled.footer`
   align-items: center;
   height: 42px;
   width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   background-color: ${props => props.theme.colors.primary};
   border: ${props => props.theme.colors.primary};
   margin-top: 10px;
