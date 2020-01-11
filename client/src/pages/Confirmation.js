@@ -16,9 +16,6 @@ const ButtonContainer = styled.div`
 `;
 
 function Confirmation() {
-  function onClick() {
-    window.location.href = '/new';
-  }
   return (
     <PageWrapperCenterSpEvenly>
       <WrapperTitleBird>
@@ -27,7 +24,7 @@ function Confirmation() {
       </WrapperTitleBird>
       <ConfirmationCard></ConfirmationCard>
       <ButtonContainer>
-        <UniversalButton onClick={onClick}>Back</UniversalButton>
+        <UniversalButton type="button">Back</UniversalButton>
       </ButtonContainer>
     </PageWrapperCenterSpEvenly>
   );

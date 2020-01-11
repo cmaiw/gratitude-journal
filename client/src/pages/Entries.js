@@ -20,7 +20,6 @@ const TextAndSearchWrapper = styled.div`
   height: 100%;
   width: 85%;
   text-align: flex-start;
-  overflow: scroll;
 `;
 
 const SubtitleSearch = styled.p`
@@ -79,7 +78,6 @@ function Entries() {
       <EntryList>
         <EntryOverview></EntryOverview>
       </EntryList>
-      <UniversalButton>Back</UniversalButton>
     </PageWrapperCenterSpEvenly>
   );
 }

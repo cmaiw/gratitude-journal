@@ -1,17 +1,28 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import UniversalButton from './UniversalButton';
+
+const Textarea = styled.div`
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  padding: 3px;
+  background: ${props => props.theme.colors.secondary};
+  border: none;
+  font-family: ;
+`;
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 4px;
+  justify-content: flex-start;
+  align-items: space-around;
+  margin-top: 8px;
+`;
 
 export default function EntryOverview(...props) {
-  const Textarea = styled.textarea`
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    padding: 3px;
-    background: ${props => props.theme.colors.background};
-    border: none;
-    font-family: ;
-  `;
-
   const [entries, setEntries] = React.useState(null);
 
   async function getAllEntries() {
@@ -46,6 +57,10 @@ export default function EntryOverview(...props) {
             <Textarea>{entry.answerQuestionSix}</Textarea>
             <h3>One of your favourite entries?</h3>
             <Textarea>{entry.favourite ? 'yes' : 'no'}</Textarea>
+            <UniversalButton type="button">Edit</UniversalButton>
+            <ButtonWrapper>
+              <UniversalButton>delete</UniversalButton>
+            </ButtonWrapper>
           </div>
         ))}
     </div>

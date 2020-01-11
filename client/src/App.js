@@ -10,6 +10,8 @@ import JournalCover from './pages/JournalCover';
 import Home from './pages/Home';
 import Confirmation from './pages/Confirmation';
 import About from './pages/About';
+import EntryCard from './components/EntryCard';
+import EditEntry from './pages/EditEntry';
 
 function App() {
   return (
@@ -31,6 +33,12 @@ function App() {
           </Route>
           <Route exact path="/journal">
             <Entries />
+          </Route>
+          <Route exact path="/:entryId">
+            <EntryCard />
+          </Route>
+          <Route exact path="/:editId">
+            <EditEntry />
           </Route>
           <Route exact path="/about">
             <About />
