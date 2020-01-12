@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import UniversalButton from './UniversalButton';
 import PageWrapperCenterSpEvenly from './PageWrapperCenterSpEvenly';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 
 const QuestionLine = styled.p`
   width: 100%;
@@ -48,6 +48,7 @@ const ButtonWrapper = styled.div`
 export default function EntryCard() {
   const { entryId } = useParams();
   const [entry, setEntry] = React.useState([]);
+  const history = useHistory();
 
   React.useEffect(() => {
     async function getEntry() {
@@ -58,6 +59,10 @@ export default function EntryCard() {
 
     getEntry();
   }, []);
+
+  function handleClick() {
+    history.push('/entry');
+  }
 
   return (
     <PageWrapperCenterSpEvenly>
@@ -80,7 +85,9 @@ export default function EntryCard() {
           <QuestionLine>One of your favourite entries?</QuestionLine>
           <EntryLine name="favourite">{entry.favourite}</EntryLine>
           <ButtonWrapper>
-            <UniversalButton type="button">Edit</UniversalButton>
+            <UniversalButton type="button" onClick={handleClick}>
+              Edit
+            </UniversalButton>
           </ButtonWrapper>
         </Card>
       )}

@@ -37,12 +37,13 @@ const ButtonWrapper = styled.div`
 
 function EditEntry() {
   const [edit, setEdit] = React.useState([]);
+  const [update, setUpdate] = React.useState();
   const { editId } = useParams();
   const history = useHistory();
 
   async function saveEditedEntriesToDB(value) {
     setEdit();
-    await fetch(`/api/entries${editId}`, {
+    await fetch(`/api/entries/${editId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
@@ -55,14 +56,14 @@ function EditEntry() {
 
   function onChange(event) {
     const value = event.target.value;
-    setEdit({
-      ...edit,
+    setUpdate({
+      ...update,
       [event.target.name]: value
     });
   }
 
   function handleSubmit() {
-    saveEditedEntriesToDB(edit);
+    saveEditedEntriesToDB(update);
     history.push('/entries');
   }
 
@@ -71,40 +72,49 @@ function EditEntry() {
       <Card onSubmit={handleSubmit}>
         {edit && (
           <div key={edit.id}>
+            <h2>Welcome! Edit your entry!</h2>
             <h3>date:</h3>
-            <Textarea type="date" name="date" onChange={onChange} value={edit.date}>
+            <Textarea type="date" name="date" onChange={onChange} value={update.date}>
               {edit.date}
             </Textarea>
             <h3>What made you smile or laugh that day?</h3>
-            <Textarea name="answerQuestionOne" onChange={onChange} value={edit.answerQuestionOne}>
+            <Textarea name="answerQuestionOne" onChange={onChange} value={update.answerQuestionOne}>
               {edit.answerQuestionOne}
             </Textarea>
             <h3>What did you learn?</h3>
-            <Textarea name="answerQuestionTwo" onChange={onChange} value={edit.answerQuestionTwo}>
+            <Textarea name="answerQuestionTwo" onChange={onChange} value={update.answerQuestionTwo}>
               {edit.answerQuestionTwo}
             </Textarea>
             <h3>Who made you smile or laugh?</h3>
             <Textarea
               name="answerQuestionThree"
               onChange={onChange}
-              value={edit.answerQuestionThree}
+              value={update.answerQuestionThree}
             >
               {edit.answerQuestionThree}
             </Textarea>
             <h3>What were you thankful for that day?</h3>
-            <Textarea name="answerQuestionFour" onChange={onChange} value={edit.answerQuestionFour}>
+            <Textarea
+              name="answerQuestionFour"
+              onChange={onChange}
+              value={update.answerQuestionFour}
+            >
               {edit.answerQuestionFour}
             </Textarea>
             <h3>Who did you like to thank that day?</h3>
-            <Textarea name="answerQuestionFive" onChange={onChange} value={edit.answerQuestionFive}>
+            <Textarea
+              name="answerQuestionFive"
+              onChange={onChange}
+              value={update.answerQuestionFive}
+            >
               {edit.answerQuestionFive}
             </Textarea>
             <h3>What were you looking for the next day?</h3>
-            <Textarea name="answerQuestionSix" onChange={onChange} value={edit.answerQuestionSix}>
+            <Textarea name="answerQuestionSix" onChange={onChange} value={update.answerQuestionSix}>
               {edit.answerQuestionSix}
             </Textarea>
             <h3>One of your favourite entries?</h3>
-            <Textarea name="favourite" onChange={onChange} value={edit.favourite}>
+            <Textarea name="favourite" onChange={onChange} value={update.favourite}>
               {edit.favourite}
             </Textarea>
             <ButtonWrapper>

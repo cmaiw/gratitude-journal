@@ -17,7 +17,8 @@ font-size: 12px;
 background-color: ${props => props.theme.colors.secondary};
 padding: 10px;
 border-radius: 8px;
-opacity: 0.35;
+opacity: 0.75;
+overflow: hidden;
 `;
 
 const AboutMainArticle = styled.main`
@@ -27,8 +28,9 @@ const AboutMainArticle = styled.main`
   flex-wrap: wrap;
   overflow: scroll;
   color: ${props => props.theme.colors.font};
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 12px;
+  font-size: 14px;
+  overflow: scroll;
 `;
 
 const Origamibird = styled.img`
@@ -53,9 +55,9 @@ function About() {
           <Origamibird src="/images/birdlookingleft.png" />
         </WrapperTitleBird>
         <ArticleWrapper>
+          <AboutMainArticle>Welcome!</AboutMainArticle>
           <AboutMainArticle>
-            Welcome! This journal is about becoming happier by focusing on the positive aspects in
-            your life.
+            This journal is about becoming happier by focusing on the positive aspects in your life.
           </AboutMainArticle>
           <AboutMainArticle>
             It happens to all of us. We think about the day and focus on the cold, rainy weather, a

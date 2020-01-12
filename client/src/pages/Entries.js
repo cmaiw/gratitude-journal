@@ -17,7 +17,6 @@ const TextAndSearchWrapper = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: space-evenly;
-  height: 100%;
   width: 85%;
   text-align: flex-start;
 `;
@@ -45,11 +44,11 @@ const SearchBarByDate = styled.input`
 `;
 
 const EntryList = styled.div`
-  color: ${props => props.theme.colors.text};
-  background-color: ${props => props.theme.colors.secondary};
-  opacity: 0.35;
-  min-height: 22px;
-  width: 85%;
+  color: ${props => props.theme.colors.primary};
+  background-color: ${props => props.theme.colors.quinary};
+  opacity: 0.75;
+  max-height: 400px;
+  width: 90%;
   margin: 10px;
   font-size: 14px;
   text-align: start;
@@ -67,14 +66,10 @@ function Entries() {
       </WrapperTitleBird>
       <TextAndSearchWrapper>
         <SubtitleSearch>Search entries by date:</SubtitleSearch>
-      </TextAndSearchWrapper>
-      <TextAndSearchWrapper>
         <SearchBarByDate type="date" name="entry date" placeholder="date"></SearchBarByDate>
-        <UniversalButton>Submit</UniversalButton>
+        <UniversalButton type="submit">Submit</UniversalButton>
       </TextAndSearchWrapper>
-      <TextAndSearchWrapper>
-        <PageTitle>Entries:</PageTitle>
-      </TextAndSearchWrapper>
+      <PageTitle>Entries:</PageTitle>
       <EntryList>
         <EntryOverview></EntryOverview>
       </EntryList>

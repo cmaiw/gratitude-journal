@@ -13,9 +13,12 @@ function GlobalStyles() {
         body {
           height: 100vh;
           width: 100vw;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
           font-size: 16px;
           margin: 0;
-          background: ${theme.colors.background};
+          background: ${theme.colors.ptimary};
           font-family: 'Roboto', sans-serif;
           color: ${theme.colors.font};
           height: 100vh;
@@ -23,6 +26,9 @@ function GlobalStyles() {
           background-image: url(/images/backgroundsplashes1.jpg);
           background-size: fill;
           background-repeat: no-repeat;
+          background-position: center;
+          height: 100%;
+          overflow: hidden;
         }
       `}
     />

@@ -34,6 +34,15 @@ function App() {
           <Route exact path="/journal">
             <Entries />
           </Route>
+          <Route exact path="/entry">
+            <EntryCard />
+          </Route>
+          <Route exact path="/edit">
+            <EditEntry />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
           <Route exact path="/:entryId">
             <EntryCard />
           </Route>

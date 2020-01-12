@@ -27,6 +27,7 @@ const OrigamibirdAboutPage = styled.div`
   margin-top: 350px;
   transform: scaleX(-1);
   margin-left: none;
+  background-image: url('images/bird.png');
 `;
 
 const Speechbubble = styled.div`

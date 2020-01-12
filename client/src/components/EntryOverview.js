@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import UniversalButton from './UniversalButton';
+import { useHistory } from 'react-router-dom';
 
 const Textarea = styled.div`
   width: 100%;
   height: auto;
   border-radius: 8px;
   padding: 3px;
-  background: ${props => props.theme.colors.secondary};
+  background: ${props => props.theme.colors.quinary};
+  color: ${props => props.theme.colors.background};
   border: none;
   font-family: ;
 `;
@@ -18,11 +20,12 @@ const ButtonWrapper = styled.div`
   width: 100%;
   margin: 4px;
   justify-content: flex-start;
-  align-items: space-around;
+  align-items: space-between;
   margin-top: 8px;
 `;
 
 export default function EntryOverview(...props) {
+  const history = useHistory();
   const [entries, setEntries] = React.useState(null);
 
   async function getAllEntries() {
@@ -35,6 +38,10 @@ export default function EntryOverview(...props) {
   React.useEffect(() => {
     getAllEntries();
   }, []);
+
+  function handleClick() {
+    history.push('/edit');
+  }
 
   return (
     <div {...props}>
@@ -57,9 +64,10 @@ export default function EntryOverview(...props) {
             <Textarea>{entry.answerQuestionSix}</Textarea>
             <h3>One of your favourite entries?</h3>
             <Textarea>{entry.favourite ? 'yes' : 'no'}</Textarea>
-            <UniversalButton type="button">Edit</UniversalButton>
             <ButtonWrapper>
-              <UniversalButton>delete</UniversalButton>
+              <UniversalButton type="button" onClick={handleClick}>
+                Detail
+              </UniversalButton>
             </ButtonWrapper>
           </div>
         ))}
