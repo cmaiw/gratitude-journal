@@ -47,7 +47,7 @@ const EntryList = styled.div`
   color: ${props => props.theme.colors.primary};
   background-color: ${props => props.theme.colors.quinary};
   opacity: 0.75;
-  max-height: 400px;
+  max-height: 450px;
   width: 90%;
   margin: 10px;
   font-size: 14px;
@@ -65,7 +65,7 @@ function Entries() {
         <Origamibird src="/images/birdlookingleft.png" />
       </WrapperTitleBird>
       <TextAndSearchWrapper>
-        <SubtitleSearch>Search entries by date:</SubtitleSearch>
+        <SubtitleSearch>Search entries:</SubtitleSearch>
         <SearchBarByDate type="date" name="entry date" placeholder="date"></SearchBarByDate>
         <UniversalButton type="submit">Submit</UniversalButton>
       </TextAndSearchWrapper>

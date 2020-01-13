@@ -5,6 +5,8 @@ import ConfirmationCard from '../components/ConfirmationCard';
 import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import WrapperTitleBird from '../components/WrapperTitleBird';
 import PageTitle from '../components/PageTitle';
+import { useHistory } from 'react-router-dom';
+
 
 const Origamibird = styled.img`
   height: 65px;
@@ -16,6 +18,7 @@ const ButtonContainer = styled.div`
 `;
 
 function Confirmation() {
+  const history = useHistory();
   return (
     <PageWrapperCenterSpEvenly>
       <WrapperTitleBird>
@@ -24,10 +27,18 @@ function Confirmation() {
       </WrapperTitleBird>
       <ConfirmationCard></ConfirmationCard>
       <ButtonContainer>
-        <UniversalButton type="button">Back</UniversalButton>
+        <UniversalButton
+          type="button"
+          onclick={() => {
+            history.push('/new');
+          }}
+        >
+          Back
+        </UniversalButton>
       </ButtonContainer>
     </PageWrapperCenterSpEvenly>
   );
 }
 
 export default Confirmation;
+

@@ -18,9 +18,9 @@ const BookPath = styled.path``;
 function BookIcon(props) {
   return (
     <SVG
-      height="32px"
+      height="28px"
       viewBox="0 0 510 510"
-      width="32px"
+      width="28px"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >

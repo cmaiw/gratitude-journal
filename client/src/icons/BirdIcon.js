@@ -17,8 +17,8 @@ function BirdIcon(props) {
   return (
     <SVG
       xmlns="http://www.w3.org/2000/svg"
-      width="32px"
-      height="32px"
+      width="28px"
+      height="28px"
       viewBox="0 0 469.333 469.333"
       {...props}
     >

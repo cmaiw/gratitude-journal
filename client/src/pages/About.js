@@ -6,19 +6,19 @@ import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import PageTitle from '../components/PageTitle';
 
 const ArticleWrapper = styled.div`
-width: 85%;
-height: 100%;
-display: flex:
-flex-direction: column;
-justify-content: center;
-align-items: center;
-margin-top: 10px;
-font-size: 12px;
-background-color: ${props => props.theme.colors.secondary};
-padding: 10px;
-border-radius: 8px;
-opacity: 0.75;
-overflow: hidden;
+  width: 85%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 12px;
+  background-color: ${props => props.theme.colors.secondary};
+  padding: 10px;
+  border-radius: 8px;
+  opacity: 0.75;
+  overflow: scroll;
 `;
 
 const AboutMainArticle = styled.main`
@@ -29,7 +29,7 @@ const AboutMainArticle = styled.main`
   overflow: scroll;
   color: ${props => props.theme.colors.font};
   margin: 12px;
-  font-size: 14px;
+  font-size: 12px;
   overflow: scroll;
 `;
 

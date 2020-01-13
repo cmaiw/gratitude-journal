@@ -43,8 +43,7 @@ function EntryConfirmationCard() {
         <ConfirmationText>Your entry has been submitted.</ConfirmationText>
         <ConfirmationText>I have something inspiring to think about for you:</ConfirmationText>
         <ConfirmationText>
-          Ich bin ein Platzhalter und noch ein Platzhalter und noch ein Platzhalter und noch ein
-          Platzhalter...
+          Life ist not about waiting the storm to pass. It is about learning to dance in the rain.
         </ConfirmationText>
         <FeatherIcon />
       </Confirmation>

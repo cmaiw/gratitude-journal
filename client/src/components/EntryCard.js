@@ -3,6 +3,13 @@ import styled from '@emotion/styled';
 import UniversalButton from './UniversalButton';
 import PageWrapperCenterSpEvenly from './PageWrapperCenterSpEvenly';
 import { useParams, useHistory } from 'react-router-dom';
+import WrapperTitleBird from '../components/WrapperTitleBird';
+import PageTitle from '../components/PageTitle';
+
+const Origamibird = styled.img`
+  height: 65px;
+  width: 85px;
+`;
 
 const QuestionLine = styled.p`
   width: 100%;
@@ -47,43 +54,47 @@ const ButtonWrapper = styled.div`
 
 export default function EntryCard() {
   const { entryId } = useParams();
-  const [entry, setEntry] = React.useState([]);
+  const [details, setDetails] = React.useState(null);
   const history = useHistory();
 
   React.useEffect(() => {
-    async function getEntry() {
-      const response = await fetch(`/api/entries${entryId}`);
-      const selected = await response.json();
-      setEntry(selected);
+    async function getEntryId() {
+      const response = await fetch(`/api/entries/${entryId}`);
+      const data = await response.json();
+      setDetails(data);
     }
 
-    getEntry();
-  }, []);
+    getEntryId();
+  }, [entryId]);
 
   function handleClick() {
-    history.push('/entry');
+    history.push('/:editId');
   }
 
   return (
     <PageWrapperCenterSpEvenly>
-      {entry && (
-        <Card key={entry.id}>
+      <WrapperTitleBird>
+        <PageTitle>What made you happy that day?</PageTitle>
+        <Origamibird src="/images/birdlookingleft.png" />
+      </WrapperTitleBird>
+      {details && (
+        <Card key={details.id}>
           <QuestionLine>date:</QuestionLine>
-          <EntryLine name="date">{entry.date}</EntryLine>
-          <QuestionLine>What made you smile or laugh that day?</QuestionLine>
-          <EntryLine name="answerQuestionOne">{entry.answerQuestionOne}</EntryLine>
-          <QuestionLine>What did you learn?</QuestionLine>
-          <EntryLine name="answerQuestionTwo">{entry.answerQuestionTwo}</EntryLine>
-          <QuestionLine>Who made you smile or laugh?</QuestionLine>
-          <EntryLine name="answerQuestionThree">{entry.answerQuestionThree}</EntryLine>
-          <QuestionLine>What were you thankful for that day?</QuestionLine>
-          <EntryLine name="answerQuestionFour">{entry.answerQuestionFour}</EntryLine>
-          <QuestionLine>Who did you like to thank that day?</QuestionLine>
-          <EntryLine name="answerQuestionFive">{entry.answerQuestionFive}</EntryLine>
-          <QuestionLine>What were you looking for the next day?</QuestionLine>
-          <EntryLine name="answerQuestionSix">{entry.answerQuestionSix}</EntryLine>
+          <EntryLine name="date">{details.date}</EntryLine>
+          <QuestionLine>1. What made you smile or laugh that day?</QuestionLine>
+          <EntryLine name="answerQuestionOne">{details.answerQuestionOne}</EntryLine>
+          <QuestionLine>2. What did you learn?</QuestionLine>
+          <EntryLine name="answerQuestionTwo">{details.answerQuestionTwo}</EntryLine>
+          <QuestionLine>3. Who made you smile or laugh?</QuestionLine>
+          <EntryLine name="answerQuestionThree">{details.answerQuestionThree}</EntryLine>
+          <QuestionLine>4. What were you thankful for that day?</QuestionLine>
+          <EntryLine name="answerQuestionFour">{details.answerQuestionFour}</EntryLine>
+          <QuestionLine>5. Who did you like to thank that day?</QuestionLine>
+          <EntryLine name="answerQuestionFive">{details.answerQuestionFive}</EntryLine>
+          <QuestionLine>6. What were you looking for the next day?</QuestionLine>
+          <EntryLine name="answerQuestionSix">{details.answerQuestionSix}</EntryLine>
           <QuestionLine>One of your favourite entries?</QuestionLine>
-          <EntryLine name="favourite">{entry.favourite}</EntryLine>
+          <EntryLine name="favourite">{details.favourite}</EntryLine>
           <ButtonWrapper>
             <UniversalButton type="button" onClick={handleClick}>
               Edit
@@ -94,3 +105,4 @@ export default function EntryCard() {
     </PageWrapperCenterSpEvenly>
   );
 }
+

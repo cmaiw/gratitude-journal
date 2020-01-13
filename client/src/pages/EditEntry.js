@@ -3,6 +3,14 @@ import styled from '@emotion/styled';
 import UniversalButton from '../components/UniversalButton';
 import { useParams, useHistory } from 'react-router-dom';
 import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
+import WrapperTitleBird from '../components/WrapperTitleBird';
+import PageTitle from '../components/PageTitle';
+
+const Origamibird = styled.img`
+  height: 65px;
+  width: 85px;
+`;
+
 
 const Textarea = styled.textarea`
   width: 100%;
@@ -25,6 +33,17 @@ const Card = styled.form`
   margin: 15px;
   overflow: scroll;
 `;
+
+const QuestionLine = styled.p`
+  width: 100%;
+  border-radius: 8px;
+  color: ${props => props.theme.colors.Primary};
+  background-color: ${props => props.theme.colors.quinary};
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+`;
+
+
 const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -56,36 +75,39 @@ function EditEntry() {
 
   function onChange(event) {
     const value = event.target.value;
-    setUpdate({
-      ...update,
+    setEdit({
+      ...edit,
       [event.target.name]: value
     });
   }
 
   function handleSubmit() {
     saveEditedEntriesToDB(update);
-    history.push('/entries');
+    history.push('/:entryId');
   }
 
   return (
     <PageWrapperCenterSpEvenly>
+      <WrapperTitleBird>
+        <PageTitle>Something wrong with your happiness?</PageTitle>
+        <Origamibird src="/images/birdlookingleft.png" />
+      </WrapperTitleBird>
       <Card onSubmit={handleSubmit}>
-        {edit && (
-          <div key={edit.id}>
-            <h2>Welcome! Edit your entry!</h2>
-            <h3>date:</h3>
-            <Textarea type="date" name="date" onChange={onChange} value={update.date}>
-              {edit.date}
+        {update && (
+          <div key={update.id}>
+            <QuestionLine>date:</QuestionLine>
+            <Textarea name="date" onChange={onChange} value={update.date}>
+              {update.date}
             </Textarea>
-            <h3>What made you smile or laugh that day?</h3>
+            <QuestionLine>What made you smile or laugh that day?</QuestionLine>
             <Textarea name="answerQuestionOne" onChange={onChange} value={update.answerQuestionOne}>
               {edit.answerQuestionOne}
             </Textarea>
-            <h3>What did you learn?</h3>
+            <QuestionLine>What did you learn?</QuestionLine>
             <Textarea name="answerQuestionTwo" onChange={onChange} value={update.answerQuestionTwo}>
               {edit.answerQuestionTwo}
             </Textarea>
-            <h3>Who made you smile or laugh?</h3>
+            <QuestionLine>Who made you smile or laugh?</QuestionLine>
             <Textarea
               name="answerQuestionThree"
               onChange={onChange}
@@ -93,7 +115,7 @@ function EditEntry() {
             >
               {edit.answerQuestionThree}
             </Textarea>
-            <h3>What were you thankful for that day?</h3>
+            <QuestionLine>What were you thankful for that day?</QuestionLine>
             <Textarea
               name="answerQuestionFour"
               onChange={onChange}
@@ -101,7 +123,7 @@ function EditEntry() {
             >
               {edit.answerQuestionFour}
             </Textarea>
-            <h3>Who did you like to thank that day?</h3>
+            <QuestionLine>Who did you like to thank that day?</QuestionLine>
             <Textarea
               name="answerQuestionFive"
               onChange={onChange}
@@ -127,5 +149,4 @@ function EditEntry() {
     </PageWrapperCenterSpEvenly>
   );
 }
-
 export default EditEntry;

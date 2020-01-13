@@ -17,6 +17,7 @@ const Origamibird = styled.img`
 `;
 
 const FormContainer = styled.form`
+  min-width: 320px;
   width: 100%;
   height: 100%;
   display: flex;
