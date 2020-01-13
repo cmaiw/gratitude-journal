@@ -39,8 +39,8 @@ export default function EntryOverview(...props) {
     getAllEntries();
   }, []);
 
-  function handleClick() {
-    history.push('/edit');
+  function handleDetailsClick(id) {
+    history.push(`/entries/${id}`);
   }
 
   return (
@@ -65,7 +65,7 @@ export default function EntryOverview(...props) {
             <h3>One of your favourite entries?</h3>
             <Textarea>{entry.favourite ? 'yes' : 'no'}</Textarea>
             <ButtonWrapper>
-              <UniversalButton type="button" onClick={handleClick}>
+              <UniversalButton type="button" onClick={() => handleDetailsClick(entry.id)}>
                 Detail
               </UniversalButton>
             </ButtonWrapper>

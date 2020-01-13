@@ -19,6 +19,8 @@ const ButtonContainer = styled.div`
 
 function Confirmation() {
   const history = useHistory();
+  function handleClick() {
+    history.push('/new')};
   return (
     <PageWrapperCenterSpEvenly>
       <WrapperTitleBird>
@@ -29,9 +31,7 @@ function Confirmation() {
       <ButtonContainer>
         <UniversalButton
           type="button"
-          onclick={() => {
-            history.push('/new');
-          }}
+          onClick={handleClick}
         >
           Back
         </UniversalButton>

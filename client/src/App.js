@@ -51,7 +51,7 @@ function App() {
           <Route exact path="/entries/:entryId">
             <EntryCard />
           </Route>
-          <Route exact path="/entries/:editId">
+          <Route exact path="/entries/edit/:entryId">
             <EditEntry />
           </Route>
           <Route>

@@ -85,25 +85,24 @@ function NewEntry(...props) {
     answerQuestionFour: '',
     answerQuestionFive: '',
     answerQuestionSix: '',
-    answerQuestionSeven: '',
     favourite: false
   });
 
-  function onChange(event) {
+  function handleChange(event) {
     const value = event.target.value;
     setEntry({
       ...entry,
-      [event.target.name]: value
+      [event.target.name]: value,
     });
   }
-
-  function onCheckboxChange(event) {
-    const checked = event.target.checked;
-    setEntry({
+function handleCheckboxChange(event) {
+  const checked = event.target.checked;
+setEntry({
       ...entry,
-      [event.target.name]: checked
+      [event.target.name]: checked,
     });
-  }
+}
+
 
   function handleSubmit() {
     saveEntriesToDB(entry);
@@ -122,48 +121,48 @@ function NewEntry(...props) {
           type="date"
           placeholder="date:"
           value={entry.date}
-          onChange={onChange}
+          onChange={handleChange}
         ></JournalInput>
         <Label>1. What made you smile / laugh?</Label>
         <JournalInput
           name="answerQuestionOne"
           type="text"
           value={entry.answerQuestionOne}
-          onChange={onChange}
+          onChange={handleChange}
         ></JournalInput>
         <Label>2. What did you learn?</Label>
         <JournalInput
           name="answerQuestionTwo"
           value={entry.answerQuestionTwo}
-          onChange={onChange}
+          onChange={handleChange}
           type="text"
         ></JournalInput>
         <Label>3. Who made you smile / laugh?</Label>
         <JournalInput
           name="answerQuestionThree"
           value={entry.answerQuestionThree}
-          onChange={onChange}
+          onChange={handleChange}
           type="text"
         ></JournalInput>
         <Label>4. What are you thankful for today?</Label>
         <JournalInput
           name="answerQuestionFour"
           value={entry.AnswerQuestionFour}
-          onChange={onChange}
+          onChange={handleChange}
           type="text"
         ></JournalInput>
         <Label>5. Who would you like to thank?</Label>
         <JournalInput
           name="answerQuestionFive"
           value={entry.answerQuestionFive}
-          onChange={onChange}
+          onChange={handleChange}
           type="text"
         ></JournalInput>
         <Label>6 .What are you looking for tomorrow?</Label>
         <JournalInput
           name="answerQuestionSix"
           value={entry.answerQuestionSix}
-          onChange={onChange}
+          onChange={handleChange}
           type="text"
         ></JournalInput>
         <ButtonCheckboxContainer>
@@ -172,7 +171,7 @@ function NewEntry(...props) {
             <FavCheckbox
               type="checkbox"
               name="favourite"
-              onChange={onCheckboxChange}
+              onChange = {handleCheckboxChange}
               value={entry.favourite}
             />
           </CheckboxContainer>

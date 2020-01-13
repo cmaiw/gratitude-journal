@@ -13,9 +13,7 @@ const Origamibird = styled.img`
 
 const QuestionLine = styled.p`
   width: 100%;
-  border: 1px solid white;
-  border-radius: 8px;
-  color: ${props => props.theme.colors.background};
+  color: ${props => props.theme.colors.primary};
   background-color: ${props => props.theme.colors.quinary};
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
@@ -23,8 +21,6 @@ const QuestionLine = styled.p`
 
 const EntryLine = styled.p`
   width: 100%;
-  border: 1px solid white;
-  border-radius: 8px;
   color: ${props => props.theme.colors.background};
   background-color: ${props => props.theme.colors.quinary};
   font-family: 'Roboto', sans-serif;
@@ -52,23 +48,24 @@ const ButtonWrapper = styled.div`
   margin-top: 8px;
 `;
 
+
 export default function EntryCard() {
   const { entryId } = useParams();
-  const [details, setDetails] = React.useState(null);
+  const [entry, setEntry] = React.useState({});
   const history = useHistory();
 
   React.useEffect(() => {
     async function getEntryId() {
       const response = await fetch(`/api/entries/${entryId}`);
       const data = await response.json();
-      setDetails(data);
+      setEntry(data);
     }
 
     getEntryId();
-  }, [entryId]);
+  }, []);
 
   function handleClick() {
-    history.push('/:editId');
+    history.push(`/entries/edit/${entryId}`);
   }
 
   return (
@@ -77,24 +74,24 @@ export default function EntryCard() {
         <PageTitle>What made you happy that day?</PageTitle>
         <Origamibird src="/images/birdlookingleft.png" />
       </WrapperTitleBird>
-      {details && (
-        <Card key={details.id}>
+      {entry && (
+        <Card key={entry.id}>
           <QuestionLine>date:</QuestionLine>
-          <EntryLine name="date">{details.date}</EntryLine>
+          <EntryLine name="date">{entry.date}</EntryLine>
           <QuestionLine>1. What made you smile or laugh that day?</QuestionLine>
-          <EntryLine name="answerQuestionOne">{details.answerQuestionOne}</EntryLine>
+          <EntryLine name="answerQuestionOne">{entry.answerQuestionOne}</EntryLine>
           <QuestionLine>2. What did you learn?</QuestionLine>
-          <EntryLine name="answerQuestionTwo">{details.answerQuestionTwo}</EntryLine>
+          <EntryLine name="answerQuestionTwo">{entry.answerQuestionTwo}</EntryLine>
           <QuestionLine>3. Who made you smile or laugh?</QuestionLine>
-          <EntryLine name="answerQuestionThree">{details.answerQuestionThree}</EntryLine>
+          <EntryLine name="answerQuestionThree">{entry.answerQuestionThree}</EntryLine>
           <QuestionLine>4. What were you thankful for that day?</QuestionLine>
-          <EntryLine name="answerQuestionFour">{details.answerQuestionFour}</EntryLine>
+          <EntryLine name="answerQuestionFour">{entry.answerQuestionFour}</EntryLine>
           <QuestionLine>5. Who did you like to thank that day?</QuestionLine>
-          <EntryLine name="answerQuestionFive">{details.answerQuestionFive}</EntryLine>
+          <EntryLine name="answerQuestionFive">{entry.answerQuestionFive}</EntryLine>
           <QuestionLine>6. What were you looking for the next day?</QuestionLine>
-          <EntryLine name="answerQuestionSix">{details.answerQuestionSix}</EntryLine>
+          <EntryLine name="answerQuestionSix">{entry.answerQuestionSix}</EntryLine>
           <QuestionLine>One of your favourite entries?</QuestionLine>
-          <EntryLine name="favourite">{details.favourite}</EntryLine>
+          <EntryLine name="favourite">{entry.favourite}</EntryLine>
           <ButtonWrapper>
             <UniversalButton type="button" onClick={handleClick}>
               Edit
