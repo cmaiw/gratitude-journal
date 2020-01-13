@@ -1,0 +1,91 @@
+{
+  "entries": [
+    {
+      "date": "2020-01-12",
+      "answerQuestionOne": "Ein",
+      "answerQuestionTwo": "wunderschönes",
+      "answerQuestionThree": "fröhliches",
+      "answerQuestionFour": "Kritzelpüh",
+      "answerQuestionFive": "miteinander",
+      "answerQuestionSix": "nicht wahr...",
+      "favourite": false,
+      "id": "UsOCF8v"
+    },
+    {
+      "date": "2020-01-10",
+      "answerQuestionOne": "I got entries.",
+      "answerQuestionTwo": "Getting my entries",
+      "answerQuestionThree": "My collegues, my budgies",
+      "answerQuestionFour": "Being healthy",
+      "answerQuestionFive": "My husband and his patience, the coaches",
+      "answerQuestionSix": "Getting stuff done with nice people.",
+      "favourite": false,
+      "id": "_RyrzlL"
+    },
+    {
+      "date": "2020-01-13",
+      "answerQuestionOne": "My Origamibird.",
+      "answerQuestionTwo": "Being patient.",
+      "answerQuestionThree": "Family.",
+      "answerQuestionFour": "Family, good books.",
+      "answerQuestionFive": "My family for having awesome humour.",
+      "answerQuestionSix": "Maybe nice weather.",
+      "favourite": false,
+      "id": "UFtLsI9"
+    },
+    {
+      "date": "2020-01-13",
+      "answerQuestionOne": "No errors, no red.",
+      "answerQuestionTwo": "Set up json-server for deplyment",
+      "answerQuestionThree": "Marvin: \"das kriege ich nicht hin! (Insider)...",
+      "answerQuestionFour": "Support",
+      "answerQuestionFive": "Collegues, coaches, family",
+      "answerQuestionSix": "Getting stuff done in time.",
+      "answerQuestionSeven": "",
+      "favourite": true,
+      "id": "WZ6YcgU"
+    }
+  ],
+  "motivating-advice": [
+    {
+      "id": "1",
+      "advice": "Sometimes silence is full of answers."
+    },
+    {
+      "id": "2",
+      "advice": "The sky is not the limit, your mind is it."
+    },
+    {
+      "id": "3",
+      "advice": "If you weren 'thappy with your life yesterday, try something new today."
+    },
+    {
+      "id": "4",
+      "advice": "Life is not about waiting the storm to pass, it is about learning to dance in the rain."
+    },
+    {
+      "id": "5",
+      "advice": "Every journey begins with one small step."
+    },
+    {
+      "id": "6",
+      "advice": "If you can dream it, you can do it."
+    },
+    {
+      "id": "7",
+      "advice": "Change your thoughts and you change your world."
+    },
+    {
+      "id": "8",
+      "advice": "Happyness consists in giving and sharing."
+    },
+    {
+      "id": "9",
+      "advice": "you can't be bitter and expect life to be sweet."
+    },
+    {
+      "id": "10",
+      "advice": "Winners are not people that never fail, but people who never quit."
+    }
+  ]
+}
