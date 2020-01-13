@@ -22,7 +22,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public -o build/storybook",
-    "build": "npm run build-app && npm run build-storybook"
+    "build": "npm run build-app"
   },
   "browserslist": {
     "production": [
