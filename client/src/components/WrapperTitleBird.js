@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
-const WrapperTitleBird = styled.header`
+const WrapperTitleBird = styled.div`
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;

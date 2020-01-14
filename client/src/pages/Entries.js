@@ -72,7 +72,7 @@ function Entries() {
       <PageTitle>Entries:</PageTitle>
       <EntryList>
         <EntryOverview></EntryOverview>
-      </EntryList>
+      </EntryList>  
     </PageWrapperCenterSpEvenly>
   );
 }

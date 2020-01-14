@@ -5,6 +5,7 @@ import defaultTheme from './themes/theme';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NewEntry from './pages/NewEntry';
 import styled from '@emotion/styled';
+
 import Entries from './pages/Entries';
 import NavBar from './components/NavBar';
 import JournalCover from './pages/JournalCover';
