@@ -2,15 +2,19 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 export default function removeEntry() {
-  const [entry, setEntry] = React.useState([]);
-  const [remove, setRemove] = React.useState();
-  const [id, setId] = React.useState();
+  const [removeEntry, setRemoveEntry] = React.useState({
+    date: '',
+    answerQuestionOne: '',
+    answerQuestionTwo: '',
+    answerQuestionThree: '',
+    answerQuestionFour: '',
+    answerQuestionFive: '',
+    answerQuestionSix: '',
+    favourite: false,
+    id: ''
+  });
   const { entryId } = useParams();
 
-  async function getEntry(id) {
-    const data = await fetchEntry(id);
-    setEntry(data);
-  }
   async function handleRemove() {
     await fetch(`api/entries/delete/${entryId}`, {
       method: 'DELETE',
@@ -21,14 +25,9 @@ export default function removeEntry() {
   }
 
   React.useEffect(() => {
-    handleRemove();
-    getEntry(id);
-    setRemove('');
-  }, [remove]);
-
-  React.useEffect(() => {
-    getEntry();
-  }, [id, remove]);
+    handleRemove(removeEntry);
+    removeEntry(removeEntry);
+  }, [entry]);
 
   return removeEntry;
 }

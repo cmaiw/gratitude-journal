@@ -1,5 +1,5 @@
 export async function saveEntriesToDB(entry) {
-  await fetch('/api/entries', {
+  await fetch(`/api/entries`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
 
