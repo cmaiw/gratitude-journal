@@ -7,7 +7,6 @@ import WrapperTitleBird from '../components/WrapperTitleBird';
 import PageTitle from '../components/PageTitle';
 import { useHistory } from 'react-router-dom';
 
-
 const Origamibird = styled.img`
   height: 65px;
   width: 85px;
@@ -20,7 +19,8 @@ const ButtonContainer = styled.div`
 function Confirmation() {
   const history = useHistory();
   function handleClick() {
-    history.push('/new')};
+    history.push('/new');
+  }
   return (
     <PageWrapperCenterSpEvenly>
       <WrapperTitleBird>
@@ -29,10 +29,7 @@ function Confirmation() {
       </WrapperTitleBird>
       <ConfirmationCard></ConfirmationCard>
       <ButtonContainer>
-        <UniversalButton
-          type="button"
-          onClick={handleClick}
-        >
+        <UniversalButton type="button" onClick={handleClick}>
           Back
         </UniversalButton>
       </ButtonContainer>
@@ -41,4 +38,3 @@ function Confirmation() {
 }
 
 export default Confirmation;
-
