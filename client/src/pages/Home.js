@@ -19,7 +19,7 @@ const ContentWrapper = styled.div`
   transform: scaleX(-1);
 `;
 
-const OrigamibirdAboutPage = styled.img`
+const OrigamibirdAboutPage = styled.div`
   align-self: flex-end;
   height: 75px;
   width: 95px;
@@ -27,6 +27,7 @@ const OrigamibirdAboutPage = styled.img`
   margin-top: 350px;
   transform: scaleX(-1);
   margin-left: none;
+  background-image: url('images/bird.png');
 `;
 
 const Speechbubble = styled.div`

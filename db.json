@@ -1,0 +1,156 @@
+{
+  "entries": [
+    {
+      "date": "2020-01-12222222",
+      "answerQuestionOne": "Ein",
+      "answerQuestionTwo": "wunderschönes",
+      "answerQuestionThree": "fröhliches",
+      "answerQuestionFour": "KRITZELPÜPÜPÜPÜPÜ",
+      "answerQuestionFive": "miteinander",
+      "answerQuestionSix": "nicht wahr...",
+      "favourite": false,
+      "id": "UsOCF8v"
+    },
+    {
+      "date": "2020-01-10",
+      "answerQuestionOne": "I got entries.",
+      "answerQuestionTwo": "Getting my entries",
+      "answerQuestionThree": "My collegues, my budgies",
+      "answerQuestionFour": "Being healthy",
+      "answerQuestionFive": "My husband and his patience, the coaches",
+      "answerQuestionSix": "Getting stuff done with nice people.",
+      "favourite": false,
+      "id": "_RyrzlL"
+    },
+    {
+      "date": "2020-01-13",
+      "answerQuestionOne": "My Origamibird.",
+      "answerQuestionTwo": "Being patient.",
+      "answerQuestionThree": "Family.",
+      "answerQuestionFour": "Family, good books.",
+      "answerQuestionFive": "My family for having awesome humour.",
+      "answerQuestionSix": "Maybe nice weather.",
+      "favourite": false,
+      "id": "UFtLsI9"
+    },
+    {
+      "date": "2020-01-13",
+      "answerQuestionOne": "No errors, no red.",
+      "answerQuestionTwo": "Set up json-server for deplyment",
+      "answerQuestionThree": "Marvin: 'das kriege ich nicht hin!' (Insider)...",
+      "answerQuestionFour": "Support",
+      "answerQuestionFive": "Collegues, coaches, family",
+      "answerQuestionSix": "Getting stuff done in time.",
+      "favourite": true,
+      "id": "WZ6YcgU"
+    },
+    {
+      "date": "2020-01-03",
+      "answerQuestionOne": "nkdnlfmsklmgf",
+      "answerQuestionTwo": "gfdl,bäöb.gäö.bgö.",
+      "answerQuestionThree": "fl,gföb.öäg.bgäö.bäg",
+      "answerQuestionFour": ",flöb,öl,böl KRITZELPÜH",
+      "answerQuestionFive": "MFDMÖL,LF,",
+      "answerQuestionSix": "FSFL,GLFÖ,BÖL,ÄF.B",
+      "favourite": true,
+      "id": "YLhHgHA"
+    },
+    {
+      "date": "2020-01-03",
+      "answerQuestionOne": "Friends",
+      "answerQuestionTwo": "Post-request and patience",
+      "answerQuestionThree": "My sister in law",
+      "answerQuestionFour": "Humour",
+      "answerQuestionFive": "My bestie for a funny evening at cinema",
+      "answerQuestionSix": "Working and funny lunch break with inspiring people",
+      "favourite": true,
+      "id": "YLhHgHA"
+    },
+    {
+      "date": "2020-01-13",
+      "answerQuestionOne": "knklsmfaölvmdölmv",
+      "answerQuestionTwo": "saklmflöd,däö,bäf",
+      "answerQuestionThree": "smflöd,d,äd",
+      "answerQuestionFour": "lsö,fdlö,vvä,öfäv.fäö",
+      "answerQuestionFive": "dl,vö.föäv.äf.bäöf",
+      "answerQuestionSix": "övöf.öäb.ä",
+      "favourite": true,
+      "id": "wN4VH7V"
+    },
+    {
+      "date": "2020-01-09",
+      "answerQuestionOne": "jk",
+      "answerQuestionTwo": "",
+      "answerQuestionThree": "",
+      "answerQuestionFour": "",
+      "answerQuestionFive": "",
+      "answerQuestionSix": "",
+      "favourite": false,
+      "id": "xUFHgEB"
+    },
+    {
+      "date": "2020-01-13",
+      "answerQuestionOne": "",
+      "answerQuestionTwo": "KRITZELPÜPÜPÜ",
+      "answerQuestionThree": "",
+      "answerQuestionFour": "",
+      "answerQuestionFive": "",
+      "answerQuestionSix": "",
+      "favourite": true,
+      "id": "CV7ut08"
+    },
+    {
+      "date": "2020-01-13",
+      "answerQuestionOne": "",
+      "answerQuestionTwo": "",
+      "answerQuestionThree": "KRITZELPÜ hoch 4",
+      "answerQuestionFour": "",
+      "answerQuestionFive": "",
+      "answerQuestionSix": "",
+      "favourite": false,
+      "id": "v5mlEzG"
+    }
+  ],
+  "motivating-advice": [
+    {
+      "id": "1",
+      "advice": "Sometimes silence is full of answers."
+    },
+    {
+      "id": "2",
+      "advice": "The sky is not the limit, your mind is it."
+    },
+    {
+      "id": "3",
+      "advice": "If you weren 'thappy with your life yesterday, try something new today."
+    },
+    {
+      "id": "4",
+      "advice": "Life is not about waiting the storm to pass, it is about learning to dance in the rain."
+    },
+    {
+      "id": "5",
+      "advice": "Every journey begins with one small step."
+    },
+    {
+      "id": "6",
+      "advice": "If you can dream it, you can do it."
+    },
+    {
+      "id": "7",
+      "advice": "Change your thoughts and you change your world."
+    },
+    {
+      "id": "8",
+      "advice": "Happyness consists in giving and sharing."
+    },
+    {
+      "id": "9",
+      "advice": "you can't be bitter and expect life to be sweet."
+    },
+    {
+      "id": "10",
+      "advice": "Winners are not people that never fail, but people who never quit."
+    }
+  ]
+}
