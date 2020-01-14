@@ -18,7 +18,7 @@ function GlobalStyles() {
           align-items: center;
           font-size: 16px;
           margin: 0;
-          background: ${theme.colors.ptimary};
+          background-color: ${theme.colors.ptimary};
           font-family: 'Roboto', sans-serif;
           color: ${theme.colors.font};
           height: 100vh;

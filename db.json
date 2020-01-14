@@ -1,11 +1,11 @@
 {
   "entries": [
     {
-      "date": "2020-01-12",
+      "date": "2020-01-12222222",
       "answerQuestionOne": "Ein",
       "answerQuestionTwo": "wunderschönes",
       "answerQuestionThree": "fröhliches",
-      "answerQuestionFour": "Kritzelpüh",
+      "answerQuestionFour": "KRITZELPÜPÜPÜPÜPÜ",
       "answerQuestionFive": "miteinander",
       "answerQuestionSix": "nicht wahr...",
       "favourite": false,
@@ -37,7 +37,7 @@
       "date": "2020-01-13",
       "answerQuestionOne": "No errors, no red.",
       "answerQuestionTwo": "Set up json-server for deplyment",
-      "answerQuestionThree": "Marvin: \"das kriege ich nicht hin! (Insider)...",
+      "answerQuestionThree": "Marvin: 'das kriege ich nicht hin!' (Insider)...",
       "answerQuestionFour": "Support",
       "answerQuestionFive": "Collegues, coaches, family",
       "answerQuestionSix": "Getting stuff done in time.",
@@ -52,6 +52,17 @@
       "answerQuestionFour": ",flöb,öl,böl KRITZELPÜH",
       "answerQuestionFive": "MFDMÖL,LF,",
       "answerQuestionSix": "FSFL,GLFÖ,BÖL,ÄF.B",
+      "favourite": true,
+      "id": "YLhHgHA"
+    },
+    {
+      "date": "2020-01-03",
+      "answerQuestionOne": "Friends",
+      "answerQuestionTwo": "Post-request and patience",
+      "answerQuestionThree": "My sister in law",
+      "answerQuestionFour": "Humour",
+      "answerQuestionFive": "My bestie for a funny evening at cinema",
+      "answerQuestionSix": "Working and funny lunch break with inspiring people",
       "favourite": true,
       "id": "YLhHgHA"
     },
