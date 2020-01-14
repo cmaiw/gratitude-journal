@@ -163,7 +163,6 @@ export default function EditEntry() {
             <Textarea name="favourite" onChange={handleChange} value={entry.favourite} />
             <ButtonWrapper>
               <UniversalButton type="submit">submit</UniversalButton>
-              <UniversalButton>delete</UniversalButton>
             </ButtonWrapper>
           </div>
         )}

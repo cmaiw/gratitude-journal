@@ -48,7 +48,6 @@ const ButtonWrapper = styled.div`
   margin-top: 8px;
 `;
 
-
 export default function EntryCard() {
   const { entryId } = useParams();
   const [entry, setEntry] = React.useState({});
@@ -96,10 +95,10 @@ export default function EntryCard() {
             <UniversalButton type="button" onClick={handleClick}>
               Edit
             </UniversalButton>
+            <UniversalButton>delete</UniversalButton>
           </ButtonWrapper>
         </Card>
       )}
     </PageWrapperCenterSpEvenly>
   );
 }
-
