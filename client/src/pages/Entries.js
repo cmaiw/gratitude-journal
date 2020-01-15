@@ -33,7 +33,7 @@ const SearchBarByDate = styled.input`
   width: 85%;
   color: ${props => props.theme.colors.primary};
   background-color: ${props => props.theme.colors.secondary};
-  opacity: 0.35;
+  opacity: 0.75;
   outline: none;
   cursor: text;
   border: none;
@@ -46,14 +46,14 @@ const SearchBarByDate = styled.input`
 const EntryList = styled.div`
   color: ${props => props.theme.colors.primary};
   background-color: ${props => props.theme.colors.quinary};
-  opacity: 0.75;
-  max-height: 450px;
+  opacity: 0.85;
+  max-height: 380px;
   width: 90%;
   margin: 10px;
   font-size: 14px;
   text-align: start;
   overflow: scroll;
-  padding: 5px;
+  padding: 20px;
   border-radius: 8px;
 `;
 
@@ -72,7 +72,7 @@ function Entries() {
       <PageTitle>Entries:</PageTitle>
       <EntryList>
         <EntryOverview></EntryOverview>
-      </EntryList>  
+      </EntryList>
     </PageWrapperCenterSpEvenly>
   );
 }

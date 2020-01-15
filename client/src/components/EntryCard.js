@@ -28,7 +28,7 @@ const EntryLine = styled.p`
 
 const Card = styled.main`
   width: 85%;
-  height: 500px;
+  height: 400px;
   border-radius: 8px;
   padding: 10px;
   font-family: 'Roboto', sans-serif;

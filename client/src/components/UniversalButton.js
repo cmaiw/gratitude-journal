@@ -11,6 +11,8 @@ const UniversalButton = styled.button`
   outline: none;
   color: ${props => props.theme.colors.background};
   border-radius: 4px;
+  border: 1px solid;
+  border-color: ${props => props.theme.colors.quartenary}
   padding: none;
   margin: none;
   text-decoration: none;
