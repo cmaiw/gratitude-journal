@@ -69,7 +69,7 @@ export default function EntryCard() {
   }
 
   function handleClickDelete() {
-    history.push(`/entries/delete/${entryId}`);
+    history.push(`/entries/preparedelete/${entryId}`);
   }
 
   return (
