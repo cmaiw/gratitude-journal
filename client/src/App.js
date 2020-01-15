@@ -15,6 +15,8 @@ import ConfirmationEdit from './pages/ConfirmationEdit';
 import About from './pages/About';
 import EntryCard from './components/EntryCard';
 import EditEntry from './pages/EditEntry';
+import ConfirmationBeforeDelete from './pages/ConfirmationBeforeDelete';
+import ConfirmationAfterDelete from './pages/ConfirmationAfterDelete';
 
 const ErrorMessage = styled.div`
   display: flex;
@@ -58,6 +60,12 @@ function App() {
           </Route>
           <Route exact path="/edit/confirm">
             <ConfirmationEdit />
+          </Route>
+          <Route exact path="/entries/preparedelete/:entryId">
+            <ConfirmationBeforeDelete />
+          </Route>
+          <Route exact path="/entries/delete/:entryId">
+            <ConfirmationAfterDelete />
           </Route>
           <Route>
             <ErrorMessage>
