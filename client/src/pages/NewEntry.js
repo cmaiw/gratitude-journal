@@ -92,21 +92,20 @@ function NewEntry(...props) {
     const value = event.target.value;
     setEntry({
       ...entry,
-      [event.target.name]: value,
+      [event.target.name]: value
     });
   }
-function handleCheckboxChange(event) {
-  const checked = event.target.checked;
-setEntry({
+  function handleCheckboxChange(event) {
+    const checked = event.target.checked;
+    setEntry({
       ...entry,
-      [event.target.name]: checked,
+      [event.target.name]: checked
     });
-}
-
+  }
 
   function handleSubmit() {
     saveEntriesToDB(entry);
-    history.push('/confirmation');
+    history.push('/submit/confirm');
   }
 
   return (
@@ -171,7 +170,7 @@ setEntry({
             <FavCheckbox
               type="checkbox"
               name="favourite"
-              onChange = {handleCheckboxChange}
+              onChange={handleCheckboxChange}
               value={entry.favourite}
             />
           </CheckboxContainer>

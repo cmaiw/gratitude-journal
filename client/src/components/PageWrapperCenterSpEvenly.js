@@ -5,8 +5,9 @@ const PageWrapperCenterSpEvenly = styled.div`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  height: 90%;
+  height: 100%;
   width: 100%;
+  overflow: scroll;
 `;
 
 export default PageWrapperCenterSpEvenly;

@@ -28,7 +28,7 @@ const EntryLine = styled.p`
 
 const Card = styled.main`
   width: 85%;
-  height: 500px;
+  height: 400px;
   border-radius: 8px;
   padding: 10px;
   font-family: 'Roboto', sans-serif;
@@ -43,11 +43,11 @@ const ButtonWrapper = styled.div`
   flex-direction: row;
   width: 100%;
   margin: 4px;
+  padding: 2px;
   justify-content: flex-start;
   align-items: space-around;
   margin-top: 8px;
 `;
-
 
 export default function EntryCard() {
   const { entryId } = useParams();
@@ -64,8 +64,12 @@ export default function EntryCard() {
     getEntryId();
   }, []);
 
-  function handleClick() {
+  function handleClickEdit() {
     history.push(`/entries/edit/${entryId}`);
+  }
+
+  function handleClickDelete() {
+    history.push(`/entries/delete/${entryId}`);
   }
 
   return (
@@ -93,8 +97,11 @@ export default function EntryCard() {
           <QuestionLine>One of your favourite entries?</QuestionLine>
           <EntryLine name="favourite">{entry.favourite}</EntryLine>
           <ButtonWrapper>
-            <UniversalButton type="button" onClick={handleClick}>
+            <UniversalButton type="button" onClick={handleClickEdit}>
               Edit
+            </UniversalButton>
+            <UniversalButton type="button" onClick={handleClickDelete}>
+              delete
             </UniversalButton>
           </ButtonWrapper>
         </Card>
@@ -102,4 +109,3 @@ export default function EntryCard() {
     </PageWrapperCenterSpEvenly>
   );
 }
-

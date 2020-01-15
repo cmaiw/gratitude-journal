@@ -4,33 +4,32 @@ import UniversalButton from '../components/UniversalButton';
 import WrapperTitleBird from '../components/WrapperTitleBird';
 import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import PageTitle from '../components/PageTitle';
+import { useHistory } from 'react-router-dom';
 
-const ArticleWrapper = styled.div`
-  width: 85%;
-  height: 450px;
+const ArticleWrapper = styled.main`
+  width: 90%;
+  height: 420px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
-  font-size: 12px;
-  background-color: ${props => props.theme.colors.secondary};
+  background-color: ${props => props.theme.colors.quinary};
   padding: 10px;
   border-radius: 8px;
-  opacity: 0.75;
+  opacity: 0.85;
   overflow: scroll;
 `;
 
-const AboutMainArticle = styled.main`
+const AboutMainArticle = styled.div`
+  width: 90%;
   display: block;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  overflow: scroll;
-  color: ${props => props.theme.colors.font};
-  margin: 12px;
-  font-size: 12px;
-  overflow: scroll;
+  color: ${props => props.theme.colors.primary};
+  margin: 10px;
+  font-size: 14px;
 `;
 
 const Origamibird = styled.img`
@@ -43,10 +42,15 @@ const ButtonCheckboxWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 15px;
   margin-bottom: 195px;
 `;
 function About() {
+  const history = useHistory();
+  function handleClickBack() {
+    history.push(`/home`);
+  }
+
   return (
     <>
       <PageWrapperCenterSpEvenly>
@@ -77,7 +81,9 @@ function About() {
           </AboutMainArticle>
         </ArticleWrapper>
         <ButtonCheckboxWrapper>
-          <UniversalButton>Back</UniversalButton>
+          <UniversalButton type="button" onClick={handleClickBack}>
+            Back
+          </UniversalButton>
         </ButtonCheckboxWrapper>
       </PageWrapperCenterSpEvenly>
     </>

@@ -1,15 +1,15 @@
 {
   "entries": [
     {
-      "date": "2020-01-12222222",
-      "answerQuestionOne": "Ein",
-      "answerQuestionTwo": "wunderschönes",
-      "answerQuestionThree": "fröhliches",
-      "answerQuestionFour": "KRITZELPÜPÜPÜPÜPÜ",
-      "answerQuestionFive": "miteinander",
-      "answerQuestionSix": "nicht wahr...",
-      "favourite": false,
-      "id": "UsOCF8v"
+      "date": "2020-01-01",
+      "answerQuestionOne": "My budgie talking to me during morning coffee...:)",
+      "answerQuestionTwo": "Much more coding. :)",
+      "answerQuestionThree": "The person who invented riddle Advent Calenders,",
+      "answerQuestionFour": "Riddle- time with my husband.",
+      "answerQuestionFive": "My husband, my mother in law (for her personality and the riddle Advent Calender.",
+      "answerQuestionSix": "Sunshine, hopefully...and meeting friends...",
+      "favourite": "true",
+      "id": "00001"
     },
     {
       "date": "2020-01-10",
@@ -20,7 +20,7 @@
       "answerQuestionFive": "My husband and his patience, the coaches",
       "answerQuestionSix": "Getting stuff done with nice people.",
       "favourite": false,
-      "id": "_RyrzlL"
+      "id": "00002"
     },
     {
       "date": "2020-01-13",
@@ -31,29 +31,29 @@
       "answerQuestionFive": "My family for having awesome humour.",
       "answerQuestionSix": "Maybe nice weather.",
       "favourite": false,
-      "id": "UFtLsI9"
+      "id": "00003"
     },
     {
       "date": "2020-01-13",
       "answerQuestionOne": "No errors, no red.",
-      "answerQuestionTwo": "Set up json-server for deplyment",
+      "answerQuestionTwo": "Set up json-server for deployment.",
       "answerQuestionThree": "Marvin: 'das kriege ich nicht hin!' (Insider)...",
       "answerQuestionFour": "Support",
       "answerQuestionFive": "Collegues, coaches, family",
       "answerQuestionSix": "Getting stuff done in time.",
-      "favourite": true,
-      "id": "WZ6YcgU"
+      "favourite": "false",
+      "id": "00004"
     },
     {
       "date": "2020-01-03",
-      "answerQuestionOne": "nkdnlfmsklmgf",
-      "answerQuestionTwo": "gfdl,bäöb.gäö.bgö.",
-      "answerQuestionThree": "fl,gföb.öäg.bgäö.bäg",
-      "answerQuestionFour": ",flöb,öl,böl KRITZELPÜH",
-      "answerQuestionFive": "MFDMÖL,LF,",
-      "answerQuestionSix": "FSFL,GLFÖ,BÖL,ÄF.B",
+      "answerQuestionOne": "Love Ice Hockey so much :)",
+      "answerQuestionTwo": "Somtimes to say no if you feel so...",
+      "answerQuestionThree": "My neighbour",
+      "answerQuestionFour": "Sunshine and Cookies right on time.",
+      "answerQuestionFive": "My best friend",
+      "answerQuestionSix": "Cinema with friends",
       "favourite": true,
-      "id": "YLhHgHA"
+      "id": "00005"
     },
     {
       "date": "2020-01-03",
@@ -64,51 +64,40 @@
       "answerQuestionFive": "My bestie for a funny evening at cinema",
       "answerQuestionSix": "Working and funny lunch break with inspiring people",
       "favourite": true,
-      "id": "YLhHgHA"
+      "id": "00006"
     },
     {
       "date": "2020-01-13",
-      "answerQuestionOne": "knklsmfaölvmdölmv",
-      "answerQuestionTwo": "saklmflöd,däö,bäf",
-      "answerQuestionThree": "smflöd,d,äd",
-      "answerQuestionFour": "lsö,fdlö,vvä,öfäv.fäö",
-      "answerQuestionFive": "dl,vö.föäv.äf.bäöf",
-      "answerQuestionSix": "övöf.öäb.ä",
+      "answerQuestionOne": "Lunchbreak with nice people, text on a shirt.",
+      "answerQuestionTwo": "Less perfectionism, asking my questions earlier.",
+      "answerQuestionThree": "My sister in law.",
+      "answerQuestionFour": "A comfortable home, cookies.",
+      "answerQuestionFive": "My mother for being patient and calling me on a regular basis.",
+      "answerQuestionSix": "Sushi with friends",
       "favourite": true,
-      "id": "wN4VH7V"
+      "id": "00007"
     },
     {
-      "date": "2020-01-09",
-      "answerQuestionOne": "jk",
+      "date": "2020-01-15",
+      "answerQuestionOne": "My budgies and coding :)",
       "answerQuestionTwo": "",
       "answerQuestionThree": "",
       "answerQuestionFour": "",
       "answerQuestionFive": "",
       "answerQuestionSix": "",
-      "favourite": false,
-      "id": "xUFHgEB"
+      "favourite": true,
+      "id": "tuReyYt"
     },
     {
-      "date": "2020-01-13",
-      "answerQuestionOne": "",
-      "answerQuestionTwo": "KRITZELPÜPÜPÜ",
+      "date": "2020-01-15",
+      "answerQuestionOne": "My budgies and coding :)",
+      "answerQuestionTwo": "",
       "answerQuestionThree": "",
       "answerQuestionFour": "",
       "answerQuestionFive": "",
       "answerQuestionSix": "",
       "favourite": true,
-      "id": "CV7ut08"
-    },
-    {
-      "date": "2020-01-13",
-      "answerQuestionOne": "",
-      "answerQuestionTwo": "",
-      "answerQuestionThree": "KRITZELPÜ hoch 4",
-      "answerQuestionFour": "",
-      "answerQuestionFive": "",
-      "answerQuestionSix": "",
-      "favourite": false,
-      "id": "v5mlEzG"
+      "id": "FQB-gVh"
     }
   ],
   "motivating-advice": [

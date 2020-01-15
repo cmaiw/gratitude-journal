@@ -18,11 +18,12 @@ const Textarea = styled.textarea`
   color: ${props => props.theme.colors.background};
   background-color: ${props => props.theme.colors.quinary};
   font-family: 'Roboto', sans-serif;
+  font-size: 14px;
 `;
 
 const Card = styled.form`
   width: 85%;
-  height: 500px;
+  height: 400px;
   border-radius: 8px;
   padding: 10px;
   font-family: 'Roboto', sans-serif;
@@ -39,7 +40,7 @@ const QuestionLine = styled.p`
   color: ${props => props.theme.colors.Primary};
   background-color: ${props => props.theme.colors.quinary};
   font-family: 'Roboto', sans-serif;
-  font-weight: bold;
+  font-weight: 250;
 `;
 
 const ButtonWrapper = styled.div`
@@ -109,13 +110,13 @@ export default function EditEntry() {
   function handleSubmit() {
     // handleEntryUpdate();
     saveEditedEntriesToDB(entry);
-    history.push('/confirmation');
+    history.push('/edit/confirm');
   }
 
   return (
     <PageWrapperCenterSpEvenly>
       <WrapperTitleBird>
-        <PageTitle>Something wrong with your happiness?</PageTitle>
+        <PageTitle>Not happy? Edit entry:</PageTitle>
         <Origamibird src="/images/birdlookingleft.png" />
       </WrapperTitleBird>
       <Card onSubmit={handleSubmit}>
@@ -153,17 +154,16 @@ export default function EditEntry() {
               onChange={handleChange}
               value={entry.answerQuestionFive}
             />
-            <h3>What were you looking for the next day?</h3>
+            <QuestionLine>What were you looking for the next day?</QuestionLine>
             <Textarea
               name="answerQuestionSix"
               onChange={handleChange}
               value={entry.answerQuestionSix}
             />
-            <h3>One of your favourite entries?</h3>
+            <QuestionLine>One of your favourite entries?</QuestionLine>
             <Textarea name="favourite" onChange={handleChange} value={entry.favourite} />
             <ButtonWrapper>
               <UniversalButton type="submit">submit</UniversalButton>
-              <UniversalButton>delete</UniversalButton>
             </ButtonWrapper>
           </div>
         )}

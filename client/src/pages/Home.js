@@ -3,6 +3,7 @@ import React from 'react';
 import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 
 const ContentWrapper = styled.div`
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
   height: 617px;
@@ -14,7 +15,7 @@ const ContentWrapper = styled.div`
   background-origin: border-box;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   position: relative;
   transform: scaleX(-1);
 `;

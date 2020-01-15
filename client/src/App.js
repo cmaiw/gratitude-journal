@@ -10,7 +10,8 @@ import Entries from './pages/Entries';
 import NavBar from './components/NavBar';
 import JournalCover from './pages/JournalCover';
 import Home from './pages/Home';
-import Confirmation from './pages/Confirmation';
+import ConfirmationSubmit from './pages/ConfirmationSubmit';
+import ConfirmationEdit from './pages/ConfirmationEdit';
 import About from './pages/About';
 import EntryCard from './components/EntryCard';
 import EditEntry from './pages/EditEntry';
@@ -46,14 +47,17 @@ function App() {
           <Route exact path="/about">
             <About />
           </Route>
-          <Route exact path="/confirmation">
-            <Confirmation />
+          <Route exact path="/submit/confirm">
+            <ConfirmationSubmit />
           </Route>
           <Route exact path="/entries/:entryId">
             <EntryCard />
           </Route>
           <Route exact path="/entries/edit/:entryId">
             <EditEntry />
+          </Route>
+          <Route exact path="/edit/confirm">
+            <ConfirmationEdit />
           </Route>
           <Route>
             <ErrorMessage>
