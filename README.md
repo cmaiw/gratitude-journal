@@ -22,7 +22,7 @@ first install dev dependencies on the server side: npm install
 
 npm install
 
-#### Again ob the Server side:
+#### Again on the Server side:
 
 Create a db.json to load up and fetch your entries.
 
