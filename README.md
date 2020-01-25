@@ -1,7 +1,5 @@
 # Welcome to the gratitude-journal <img src="./journalpreview.png" alt="gratitude-journal logo" align="right" width="150">
 
-Your Travel-Budget-App
-
 Hi,
 Gratitude Journal is no commercial project. It is my capstone project made during the last month of coding bootcamp at neuefische, Cologne. It is optimized for mobile view (iphone 6 / 7 8).
 
