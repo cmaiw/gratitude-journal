@@ -1,6 +1,7 @@
 # Welcome to the gratitude-journal <img src="./journalpreview.png" alt="gratitude-journal logo" align="right" width="150">
 
 Hi,
+
 gratitude - journal is no commercial project. It is my capstone project made during the last month of coding bootcamp at neuefische, Cologne. It is optimized for mobile view (iphone 6 / 7 / 8).
 
 Gratefully- your gratitude journal is about becoming happier by focusing on the positive aspects in your life.
@@ -20,7 +21,7 @@ first install dev dependencies on the server side: npm install
 
 npm install
 
-#### Again ob the Server side:
+#### Again on the Server side:
 
 Create a db.json to load up and fetch your entries.
 
