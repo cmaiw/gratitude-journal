@@ -63,15 +63,19 @@ function App() {
           </Route>
           <Route exact path="/entries/edit/:entryId">
             <EditEntry />
+            <NavBar />
           </Route>
           <Route exact path="/edit/confirm">
             <ConfirmationEdit />
+            <NavBar />
           </Route>
           <Route exact path="/entries/preparedelete/:entryId">
             <ConfirmationBeforeDelete />
+            <NavBar />
           </Route>
           <Route exact path="/entries/delete/:entryId">
             <ConfirmationAfterDelete />
+            <NavBar />
           </Route>
           <Route>
             <ErrorMessage>
@@ -79,10 +83,10 @@ function App() {
                 🌻 Sorry, Error 404! The Item you requested was not found, next time maybe, stay
                 happy!
               </span>
+              <NavBar />
             </ErrorMessage>
           </Route>
         </Switch>
-        <NavBar />
       </Router>
     </ThemeProvider>
   );
