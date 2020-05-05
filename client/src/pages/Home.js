@@ -1,6 +1,9 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
+import Login from '../components/Login';
+import UniversalButton from '../components/UniversalButton';
+import { useHistory } from 'react-router-dom';
 
 const ContentWrapper = styled.div`
   margin-top: 25px;
@@ -59,7 +62,22 @@ const SpeechbubbleText = styled.div`
   margin-left: 63px;
 `;
 
+const Form = styled.form`
+  display: block;
+  z-index: 1;
+  transform: scaleX(-1);
+  margin-top: 250px;
+  align-self: end;
+  padding: 15px;
+`;
+
 function Home(props) {
+  const history = useHistory();
+
+  function handleClick() {
+    history.push(`/journal`);
+  }
+
   return (
     <PageWrapperCenterSpEvenly {...props}>
       <ContentWrapper>
@@ -68,6 +86,13 @@ function Home(props) {
             I feel like this is a beautiful day. Let us write about it!
           </SpeechbubbleText>
         </Speechbubble>
+        <Form>
+          <Login type="text" value="" placeholder="Welcome guest!"></Login>
+          <Login type="text" value="" placeholder="******** hit Login!"></Login>
+          <UniversalButton name="login-btn" type="submit" onClick={handleClick}>
+            Login
+          </UniversalButton>
+        </Form>
         <OrigamibirdAboutPage src="/images/bird.png" />
       </ContentWrapper>
     </PageWrapperCenterSpEvenly>

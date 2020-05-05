@@ -1,10 +1,10 @@
 import React from 'react';
-import EntryInputFormNewEntryByDate from '../pages/EntryInputFormNewEntryByDate';
+import NewEntry from '../pages/NewEntry';
 
 export default {
   title: 'Entry Input Form'
 };
 
 export function EntryInputFormJournal() {
-  return <EntryInputFormNewEntryByDate></EntryInputFormNewEntryByDate>;
+  return <NewEntry></NewEntry>;
 }

@@ -1,7 +1,8 @@
 # Welcome to the gratitude-journal <img src="./journalpreview.png" alt="gratitude-journal logo" align="right" width="150">
 
 Hi,
-gratitude-journal is no commercial project. It is my capstone project made during the last month of coding bootcamp at neue fische, Cologne. It is optimized for mobile view (iphone 6 / 7 / 8).
+
+gratitude - journal is no commercial project. It is my capstone project made during the last month of coding bootcamp at neuefische, Cologne. It is optimized for mobile view (iphone 6 / 7 / 8).
 
 Gratefully- your gratitude journal is about becoming happier by focusing on the positive aspects in your life.
 Input forms with a few questions help you to log your happy and thankful moments during a day.
