@@ -5,6 +5,7 @@ import WrapperTitleBird from '../components/WrapperTitleBird';
 import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import PageTitle from '../components/PageTitle';
 import { useHistory } from 'react-router-dom';
+import { keyframes } from '@emotion/core';
 
 const ArticleWrapper = styled.main`
   min-width: 320px;
@@ -32,10 +33,22 @@ const AboutMainArticle = styled.div`
   font-size: 14px;
 `;
 
+const hob = keyframes`
+        0%   { transform: translateY(0); }
+        30%  { transform: translateY(-5px); }
+        50%  { transform: translateY(5px); }
+        100% { transform: translateY(0); }
+    }
+`;
+
 const Origamibird = styled.img`
   height: 65px;
   width: 85px;
   margin-top: 20px;
+  animation: ${hob};
+  animation-duration: 0.9s;
+  animation-timing-function: ease;
+  animation-iteration-count: 5;
 `;
 
 const ButtonCheckboxWrapper = styled.div`
