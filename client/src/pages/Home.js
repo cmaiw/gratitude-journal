@@ -4,6 +4,8 @@ import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import Login from '../components/Login';
 import UniversalButton from '../components/UniversalButton';
 import { useHistory } from 'react-router-dom';
+import { keyframes } from '@emotion/core';
+import { navLink } from 'react-router-dom';
 
 const ContentWrapper = styled.div`
   margin-top: 25px;
@@ -23,15 +25,25 @@ const ContentWrapper = styled.div`
   transform: scaleX(-1);
 `;
 
-const OrigamibirdAboutPage = styled.div`
+const hob = keyframes`
+        0%   { transform: translateY(0); }
+        30%  { transform: translateY(-5px); }
+        50%  { transform: translateY(5); }
+        100% { transform: translateY(0); }
+    }
+`;
+
+const OrigamibirdAboutPage = styled.img`
   align-self: flex-end;
   height: 75px;
   width: 95px;
   position: absolute;
   margin-top: 350px;
-  transform: scaleX(-1);
   margin-left: none;
-  background-image: url('images/bird.png');
+  animation: ${hob};
+  animation-duration: 0.9s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
 `;
 
 const Speechbubble = styled.div`
@@ -93,7 +105,7 @@ function Home(props) {
             Login
           </UniversalButton>
         </Form>
-        <OrigamibirdAboutPage src="/images/bird.png" />
+        <OrigamibirdAboutPage src="/images/birdlookingleft.png" />
       </ContentWrapper>
     </PageWrapperCenterSpEvenly>
   );

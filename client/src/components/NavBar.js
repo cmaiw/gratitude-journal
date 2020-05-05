@@ -5,6 +5,7 @@ import BirdIcon from '../icons/BirdIcon';
 import BookIcon from '../icons/BookIcon';
 import AddIcon from '../icons/AddIcon';
 import HelpIcon from '../icons/HelpIcon';
+import TreeIconSmall from '../icons/TreeIconSmall';
 
 const Footer = styled.footer`
   display: flex;
@@ -24,6 +25,9 @@ const Footer = styled.footer`
 export function NavBar() {
   return (
     <Footer>
+      <NavLinkStyled to="/">
+        <TreeIconSmall />
+      </NavLinkStyled>
       <NavLinkStyled to="/home">
         <BirdIcon />
       </NavLinkStyled>

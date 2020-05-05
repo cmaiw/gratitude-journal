@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { keyframes } from '@emotion/core';
 
 const LabelAndBirdWrapper = styled.div`
   width: 100%;
@@ -46,12 +47,24 @@ const LabelSubtitle = styled.div`
   display: block;
 `;
 
+const hob = keyframes`
+        0%   { transform: translateY(0); }
+        30%  { transform: translateY(-5px); }
+        50%  { transform: translateY(5px); }
+        100% { transform: translateY(0); }
+    }
+`;
+
 const OrigamiBirdImg = styled.img`
   height: 95px;
   width: 105px;
   position: absolute;
   margin-top: 95px;
   margin-left: 56px;
+  animation: ${hob};
+  animation-duration: 0.9s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
 `;
 
 function JournalLabel() {
