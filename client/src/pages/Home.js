@@ -5,7 +5,6 @@ import Login from '../components/Login';
 import UniversalButton from '../components/UniversalButton';
 import { useHistory } from 'react-router-dom';
 import { keyframes } from '@emotion/core';
-import { navLink } from 'react-router-dom';
 
 const ContentWrapper = styled.div`
   margin-top: 25px;
