@@ -2,11 +2,11 @@ import styled from '@emotion/styled';
 
 const PageWrapperCenterSpEvenly = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
+  height: 667px;
+  width: 375px;
   overflow: scroll;
 `;
 
