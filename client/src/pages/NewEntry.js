@@ -18,7 +18,7 @@ const Origamibird = styled.img`
 
 const FormContainer = styled.form`
   min-width: 320px;
-  width: 100%;
+  width: 95%;
   height: 100%;
   display: flex;
   flex-direction: column;

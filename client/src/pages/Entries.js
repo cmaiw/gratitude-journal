@@ -11,7 +11,7 @@ const Origamibird = styled.img`
   width: 85px;
 `;
 
-const TextAndSearchWrapper = styled.div`
+const SearchForm = styled.form`
   margin: 10px;
   display: flex;
   flex-direction: row;
@@ -57,21 +57,72 @@ const EntryList = styled.div`
   border-radius: 8px;
 `;
 
-function Entries() {
+function Entries(...props) {
+  const [entries, setEntries] = React.useState([]);
+  const [filter, setFilter] = React.useState('');
+  const [query, setQuery] = React.useState('');
+
+  async function getAllEntries() {
+    const response = await fetch(`/api/entries/?q=${query}`);
+    const pastEntries = await response.json();
+    console.log(pastEntries);
+    setEntries(pastEntries);
+  }
+
+  React.useEffect(() => {
+    getAllEntries();
+  }, [query]);
+
+  async function getFilteredEntries() {
+    const selectedEntries = await getAllEntries();
+    console.log(selectedEntries);
+    setEntries(selectedEntries);
+  }
+
+  const updateSearch = e => {
+    setFilter(e.target.value);
+    console.log(filter);
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    setQuery(filter);
+    setFilter('');
+  };
+
   return (
     <PageWrapperCenterSpEvenly>
       <WrapperTitleBird>
         <PageTitle>Journal:</PageTitle>
         <Origamibird src="/images/birdlookingleft.png" />
       </WrapperTitleBird>
-      <TextAndSearchWrapper>
+      <SearchForm onSubmit={handleSubmit}>
         <SubtitleSearch>Search entries:</SubtitleSearch>
-        <SearchBarByDate type="date" name="entry date" placeholder="date"></SearchBarByDate>
+        <SearchBarByDate
+          type="text"
+          name="search"
+          placeholder="Search"
+          value={filter}
+          onChange={updateSearch}
+        ></SearchBarByDate>
         <UniversalButton type="submit">Submit</UniversalButton>
-      </TextAndSearchWrapper>
+      </SearchForm>
       <PageTitle>Entries:</PageTitle>
-      <EntryList>
-        <EntryOverview></EntryOverview>
+      <EntryList {...props}>
+        {entries &&
+          entries.map(entries => (
+            <EntryOverview
+              key={entries.id}
+              id={entries.id}
+              date={entries.date}
+              answerQuestionOne={entries.answerQuestionOne}
+              answerQuestionThree={entries.answerQuestionThree}
+              answerQuestionFour={entries.answerQuestionFour}
+              answerQuestionFive={entries.answerQuestionFive}
+              answerQuestionSix={entries.answerQuestionSix}
+              favourite={entries.favourite}
+            />
+          ))}
       </EntryList>
     </PageWrapperCenterSpEvenly>
   );

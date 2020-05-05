@@ -7,15 +7,15 @@ import PageTitle from '../components/PageTitle';
 import { useHistory } from 'react-router-dom';
 
 const ArticleWrapper = styled.main`
-  width: 90%;
-  height: 420px;
+  min-width: 320px;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin: 20px;
   background-color: ${props => props.theme.colors.quinary};
-  padding: 10px;
+  padding: auto;
   border-radius: 8px;
   opacity: 0.85;
   overflow: scroll;
@@ -43,7 +43,7 @@ const ButtonCheckboxWrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 15px;
-  margin-bottom: 195px;
+  margin-bottom: 55px;
 `;
 function About() {
   const history = useHistory();

@@ -2,17 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 import UniversalButton from './UniversalButton';
 import { useHistory } from 'react-router-dom';
-
-const Textarea = styled.div`
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  padding: 3px;
-  background: ${props => props.theme.colors.quinary};
-  color: ${props => props.theme.colors.background};
-  border: none;
-  font-family: ;
-`;
+import Textfield from './Textfield';
+import propTypes from 'prop-types';
 
 const ButtonWrapper = styled.div`
   display: flex;
@@ -24,53 +15,60 @@ const ButtonWrapper = styled.div`
   margin-top: 8px;
 `;
 
-export default function EntryOverview(...props) {
+export default function EntryOverview({
+  id,
+  date,
+  answerQuestionOne,
+  answerQuestionTwo,
+  answerQuestionThree,
+  answerQuestionFour,
+  answerQuestionFive,
+  answerQuestionSix,
+  favourite
+}) {
   const history = useHistory();
-  const [entries, setEntries] = React.useState(null);
-
-  async function getAllEntries() {
-    const response = await fetch('/api/entries');
-    const pastEntries = await response.json();
-    console.log(pastEntries);
-    setEntries(pastEntries);
-  }
-
-  React.useEffect(() => {
-    getAllEntries();
-  }, []);
-
   function handleDetailsClick(id) {
     history.push(`/entries/${id}`);
   }
 
   return (
-    <div {...props}>
-      {entries &&
-        entries.map(entry => (
-          <div key={entry.id}>
-            <h3>Entry date:</h3>
-            <Textarea>{entry.date}</Textarea>
-            <h3>What made you smile or laugh that day?</h3>
-            <Textarea type="text">{entry.answerQuestionOne}</Textarea>
-            <h3>What did you learn?</h3>
-            <Textarea>{entry.answerQuestionTwo}</Textarea>
-            <h3>Who made you smile or laugh?</h3>
-            <Textarea>{entry.answerQuestionThree}</Textarea>
-            <h3>What were you thankful for that day?</h3>
-            <Textarea>{entry.answerQuestionFour}</Textarea>
-            <h3>Who did you like to thank that day?</h3>
-            <Textarea>{entry.answerQuestionFive}</Textarea>
-            <h3>What were you looking for the next day?</h3>
-            <Textarea>{entry.answerQuestionSix}</Textarea>
-            <h3>One of your favourite entries?</h3>
-            <Textarea>{entry.favourite ? 'yes' : 'no'}</Textarea>
-            <ButtonWrapper>
-              <UniversalButton type="button" onClick={() => handleDetailsClick(entry.id)}>
-                Detail
-              </UniversalButton>
-            </ButtonWrapper>
-          </div>
-        ))}
+    <div>
+      <div>
+        <h3>Entry date:</h3>
+        <Textfield>{date}</Textfield>
+        <h3>What made you smile or laugh that day?</h3>
+        <Textfield type="text">{answerQuestionOne}</Textfield>
+        <h3>What did you learn?</h3>
+        <Textfield>{answerQuestionTwo}</Textfield>
+        <h3>Who made you smile or laugh?</h3>
+        <Textfield>{answerQuestionThree}</Textfield>
+        <h3>What were you thankful for that day?</h3>
+        <Textfield>{answerQuestionFour}</Textfield>
+        <h3>Who did you like to thank that day?</h3>
+        <Textfield>{answerQuestionFive}</Textfield>
+        <h3>What were you looking for the next day?</h3>
+        <Textfield>{answerQuestionSix}</Textfield>
+        <h3>One of your favourite entries?</h3>
+        <Textfield>{favourite ? 'yes' : 'no'}</Textfield>
+        <ButtonWrapper>
+          <UniversalButton type="button" onClick={() => handleDetailsClick(id)}>
+            Detail
+          </UniversalButton>
+        </ButtonWrapper>
+      </div>
     </div>
   );
 }
+
+EntryOverview.propTypes = {
+  key: propTypes.string,
+  id: propTypes.string,
+  date: propTypes.string,
+  answerQuestionOne: propTypes.string,
+  answerQuestionTwo: propTypes.string,
+  answerQuestionThree: propTypes.string,
+  answerQuestionFour: propTypes.string,
+  answerQuestionFive: propTypes.string,
+  answerQuestionSix: propTypes.string,
+  favourite: propTypes.bool
+};
