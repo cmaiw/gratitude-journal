@@ -61,7 +61,6 @@ export default function EntryOverview({
 }
 
 EntryOverview.propTypes = {
-  key: propTypes.string,
   id: propTypes.string,
   date: propTypes.string,
   answerQuestionOne: propTypes.string,

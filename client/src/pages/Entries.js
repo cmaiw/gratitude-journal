@@ -73,12 +73,6 @@ function Entries(...props) {
     getAllEntries();
   }, [query]);
 
-  async function getFilteredEntries() {
-    const selectedEntries = await getAllEntries();
-    console.log(selectedEntries);
-    setEntries(selectedEntries);
-  }
-
   const updateSearch = e => {
     setFilter(e.target.value);
     console.log(filter);
