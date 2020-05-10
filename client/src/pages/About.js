@@ -17,7 +17,6 @@ const ArticleWrapper = styled.main`
   border-radius: 8px;
   opacity: 0.85;
   overflow: scroll;
-  flex-wrap: wrap;
 `;
 
 const AboutMainArticle = styled.div`

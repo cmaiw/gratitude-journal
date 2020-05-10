@@ -99,7 +99,7 @@ function Home(props) {
         </Speechbubble>
         <Form>
           <Login type="text" value="" placeholder="Welcome guest!"></Login>
-          <Login type="text" value="" placeholder="******** hit Login!"></Login>
+          <Login type="text" value="" placeholder="******** Hit Login!"></Login>
           <UniversalButton name="login-btn" type="submit" onClick={handleClick}>
             Login
           </UniversalButton>
