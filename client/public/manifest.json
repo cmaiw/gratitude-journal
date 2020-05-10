@@ -11,5 +11,9 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "description": "Gratefully- your gratitude journal",
+  "og:title": "Gratefully- your Gratitude Journal",
+  "og:image": "gratefully_preview_image.png",
+  "keywords": "gratitude, journal, application, lifestyle, health, happiness"
 }
