@@ -1,16 +1,22 @@
 import React from 'react';
-import NavButton from '../components/NavButton';
+import UniversalButton from '../components/UniversalButton';
 import { action } from '@storybook/addon-actions';
-import BirdIcon from '../icons/BirdIcon';
+import { text } from '@storybook/addon-knobs';
 
 export default {
-  title: 'Navigation Button'
+  title: 'Universal Button (edit, back, delete, submit)'
 };
 
-export function NavButtonBird() {
+const info = 'edit';
+
+export function MyUniversalButton() {
   return (
-    <NavButton onClick={action('clicked')} onMouseover={action('hover')}>
-      <BirdIcon />
-    </NavButton>
+    <UniversalButton
+      onClick={action('clicked')}
+      text={text('Button Label', 'edit')}
+      onMouseover={action('hover')}
+    >
+      {info}
+    </UniversalButton>
   );
 }

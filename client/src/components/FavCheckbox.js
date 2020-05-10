@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-const StyledCheckbox = styled.input`
+const FavCheckbox = styled.input`
   opacity: 0.35;
   display: flex;
   width: 16px;
@@ -10,4 +10,4 @@ const StyledCheckbox = styled.input`
   align-items: center;
 `;
 
-export default StyledCheckbox;
+export default FavCheckbox;

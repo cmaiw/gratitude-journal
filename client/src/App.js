@@ -39,27 +39,21 @@ function App() {
           </Route>
           <Route exact path="/home">
             <Home />
-            <NavBar />
           </Route>
           <Route exact path="/journal">
             <Entries />
-            <NavBar />
           </Route>
           <Route exact path="/new">
             <NewEntry />
-            <NavBar />
           </Route>
           <Route exact path="/about">
             <About />
-            <NavBar />
           </Route>
           <Route exact path="/submit/confirm">
             <ConfirmationSubmit />
-            <NavBar />
           </Route>
           <Route exact path="/entries/:entryId">
             <EntryCard />
-            <NavBar />
           </Route>
           <Route exact path="/entries/edit/:entryId">
             <EditEntry />
