@@ -8,28 +8,23 @@ import { useHistory } from 'react-router-dom';
 import { keyframes } from '@emotion/core';
 
 const ArticleWrapper = styled.main`
-  min-width: 320px;
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 350px;
+  height: 70%;
+  display: block;
   margin: 20px;
   background-color: ${props => props.theme.colors.quinary};
-  padding: auto;
+  padding: 8px;
   border-radius: 8px;
   opacity: 0.85;
   overflow: scroll;
+  flex-wrap: wrap;
 `;
 
 const AboutMainArticle = styled.div`
-  width: 90%;
+  width: 100%;
   display: block;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
   color: ${props => props.theme.colors.primary};
-  margin: 10px;
+  padding: 8px;
   font-size: 14px;
 `;
 
@@ -64,6 +59,13 @@ function About() {
     history.push(`/home`);
   }
 
+  const A = styled.a`
+    color: ${props => props.theme.colors.primary};
+    &:hover {
+      color: orange;
+    }
+  `;
+
   return (
     <>
       <PageWrapperCenterSpEvenly>
@@ -91,6 +93,94 @@ function About() {
             laughter during the day and it will help you to be thankful for the hidden benefits in
             your life. By using the journal on a daily basis you will become more grateful,
             healthier and happier.
+          </AboutMainArticle>
+          <AboutMainArticle>Credits to the free picture sources:</AboutMainArticle>
+          <AboutMainArticle>
+            <div>
+              Origami bird:{' '}
+              <A href="https://www.pngfuel.com/free-png/aubqv" title="Origami-bird">
+                from pngfuel
+              </A>
+            </div>
+
+            <div>
+              tape green:{' '}
+              <A
+                href="https://www.pngguru.com/free-transparent-background-png-clipart-lccmi"
+                title="tape green"
+              >
+                from pngguru
+              </A>
+            </div>
+            <div>
+              tape teal:{' '}
+              <A href="https://www.pngfuel.com/free-png/bcmlr" title="tape teal">
+                from pngfuel
+              </A>
+            </div>
+            <div>
+              tape be happy:{' '}
+              <A
+                href="https://www.pngguru.com/free-transparent-background-png-clipart-lcagf"
+                title="tape be happy"
+              >
+                from pngguru
+              </A>
+            </div>
+            <div>
+              label:{' '}
+              <A
+                href="https://www.pngguru.com/free-transparent-background-png-clipart-kyuuu"
+                title="label"
+              >
+                from pngguru
+              </A>
+            </div>
+            <div>
+              watercolor tree:{' '}
+              <A
+                href="https://www.kindpng.com/imgv/iiwJbJJ_little-watercolor-trees-transparent-tree-watercolor-png-png/"
+                title="watercolor tree"
+              >
+                from kindpng
+              </A>
+            </div>
+            <div>
+              paperclip with clover:{' '}
+              <A
+                href="https://www.pngguru.com/free-transparent-background-png-clipart-lbpbr"
+                title="paperclip"
+              >
+                from pngguru
+              </A>
+            </div>
+            <div>
+              pin needle:{' '}
+              <A
+                href="https://www.pngguru.com/free-transparent-background-png-clipart-bgdse"
+                title="pin needle"
+              >
+                from pngguru
+              </A>
+            </div>
+            <div>
+              speechbubble orange:{' '}
+              <A
+                href="https://www.pngguru.com/free-transparent-background-png-clipart-knbmo"
+                title="speechbubble orange"
+              >
+                from pngguru
+              </A>
+            </div>
+            <div>
+              orange splash:{' '}
+              <A
+                href="https://www.nicepng.com/ourpic/u2e6r5e6q8y3t4u2_-img-orange-paint-splatter-png/"
+                title="orange splash"
+              >
+                nicepng
+              </A>
+            </div>
           </AboutMainArticle>
         </ArticleWrapper>
         <ButtonCheckboxWrapper>
