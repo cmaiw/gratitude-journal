@@ -1,13 +1,13 @@
 {
   "name": "gratitude-journal",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Gratefully- Your Gratitude Journal",
+  "main": "server.js",
   "scripts": {
     "build": "cd client && npm run build",
     "build-storybook": "cd client && npm run build-storybook",
     "client": "cd client && npm start",
-    "server": "npx nodemon server.js",
+    "server": "nodemon server.js",
     "storybook": "cd client && npm run storybook",
     "test": "cd client && npm test",
     "postinstall": "cd client && npm install",
@@ -17,7 +17,12 @@
     "type": "git",
     "url": "git+https://github.com/cmaiw/gratitude-journal.git"
   },
-  "keywords": [],
+  "keywords": [
+    "CRUD App",
+    "MERN stack",
+    "Journal",
+    "gratitude journal"
+  ],
   "author": "cmaiw",
   "license": "MIT",
   "bugs": {
@@ -28,12 +33,12 @@
     "babel-plugin-emotion": "^10.0.23",
     "eslint": "^6.7.2",
     "eslint-plugin-react": "^7.17.0",
-    "nodemon": "^2.0.2",
     "prettier": "1.19.1"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongodb": "^4.2.1"
+    "mongodb": "^3.4.0",
+    "nodemon": "^2.0.2"
   }
 }
