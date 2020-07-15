@@ -69,5 +69,5 @@ EntryOverview.propTypes = {
   answerQuestionFour: propTypes.string,
   answerQuestionFive: propTypes.string,
   answerQuestionSix: propTypes.string,
-  favourite: propTypes.bool
+  favourite: propTypes.string
 };

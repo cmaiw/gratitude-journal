@@ -34,47 +34,27 @@ function App() {
       <GlobalStyles />
       <Router>
         <Switch>
-          <Route exact path="/">
-            <JournalCover />
-          </Route>
-          <Route exact path="/home">
-            <Home />
-          </Route>
-          <Route exact path="/journal">
-            <Entries />
-          </Route>
-          <Route exact path="/new">
-            <NewEntry />
-          </Route>
-          <Route exact path="/about">
-            <About />
-          </Route>
-          <Route exact path="/submit/confirm">
-            <ConfirmationSubmit />
-          </Route>
-          <Route exact path="/entries/:entryId">
-            <EntryCard />
-          </Route>
-          <Route exact path="/entries/edit/:entryId">
-            <EditEntry />
-          </Route>
-          <Route exact path="/edit/confirm">
-            <ConfirmationEdit />
-          </Route>
-          <Route exact path="/entries/preparedelete/:entryId">
-            <ConfirmationBeforeDelete />
-          </Route>
-          <Route exact path="/entries/delete/:entryId">
-            <ConfirmationAfterDelete />
-          </Route>
-          <Route>
-            <ErrorMessage>
-              <span role="img" aria-label=":sunflower:">
-                🌻 Sorry, Error 404! The Item you requested was not found, next time maybe, stay
-                happy!
-              </span>
-            </ErrorMessage>
-          </Route>
+          <Route exact path="/" component={JournalCover} />
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/journal" component={Entries} />
+          <Route exact path="/new" component={NewEntry} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/submit/confirm" component={ConfirmationSubmit} />
+          <Route exact path="/entries/:entryId" component={EntryCard} />
+          <Route exact path="/entries/edit/:entryId" component={EditEntry} />
+          <Route exact path="/edit/confirm" component={ConfirmationEdit} />
+          <Route
+            exact
+            path="/entries/preparedelete/:entryId"
+            component={ConfirmationBeforeDelete}
+          />
+          <Route exact path="/deleteconfirm" component={ConfirmationAfterDelete} />
+          <ErrorMessage>
+            <span role="img" aria-label=":sunflower:">
+              🌻 Sorry, Error 404! The Item you requested was not found, next time maybe, stay
+              happy!
+            </span>
+          </ErrorMessage>
         </Switch>
         <NavBar />
       </Router>

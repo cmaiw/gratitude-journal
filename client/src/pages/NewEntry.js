@@ -127,7 +127,7 @@ function NewEntry(...props) {
         <PageTitle>New entry:</PageTitle>
         <Origamibird src="/images/birdlookingleft.png" />
       </WrapperTitleBird>
-      <FormContainer onSubmit={handleSubmit}>
+      <FormContainer onSubmit={handleSubmit} key="_id">
         <JournalInput
           name="date"
           type="date"
