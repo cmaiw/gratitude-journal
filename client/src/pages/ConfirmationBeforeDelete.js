@@ -6,6 +6,7 @@ import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import WrapperTitleBird from '../components/WrapperTitleBird';
 import PageTitle from '../components/PageTitle';
 import { useHistory, useParams } from 'react-router-dom';
+import { deleteOneEntry } from '../api/entryRequests';
 
 const Origamibird = styled.img`
   height: 65px;
@@ -20,18 +21,9 @@ function ConfirmationBeforeDelete() {
   const { entryId } = useParams();
   const history = useHistory();
 
-  async function handleRemove() {
-    await fetch(`/api/entries/${entryId}`, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-  }
-
   async function handleClickDelete() {
-    await handleRemove();
-    history.push('/journal');
+    console.log(await deleteOneEntry(entryId));
+    history.push('/deleteconfirm/');
   }
 
   function handleClickBack() {

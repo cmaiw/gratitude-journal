@@ -25,7 +25,7 @@ function Confirmation() {
   return (
     <PageWrapperCenterSpEvenly>
       <WrapperTitleBird>
-        <PageTitle>Thank you!</PageTitle>
+        <PageTitle>Your Entry was deletetd</PageTitle>
         <Origamibird src="/images/birdlookingleft.png" />
       </WrapperTitleBird>
       <ConfirmationCardAfterDelete></ConfirmationCardAfterDelete>

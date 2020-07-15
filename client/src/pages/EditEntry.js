@@ -5,6 +5,7 @@ import { useParams, useHistory } from 'react-router-dom';
 import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import WrapperTitleBird from '../components/WrapperTitleBird';
 import PageTitle from '../components/PageTitle';
+import { getOneEntry, updateOneEntry } from '../api/entryRequests';
 
 const Origamibird = styled.img`
   height: 65px;
@@ -65,52 +66,33 @@ export default function EditEntry() {
     answerQuestionSix: '',
     favourite: false
   });
+  // eslint-disable-next-line
   const history = useHistory();
 
   React.useEffect(() => {
     async function getEntry() {
-      const response = await fetch(`/api/entries/${entryId}`);
-      const data = await response.json();
-      setEntry(data);
+      const response = await getOneEntry(entryId, entry);
+      setEntry(response);
     }
 
     getEntry();
+    // eslint-disable-next-line
   }, []);
 
-  async function saveEditedEntriesToDB(value) {
-    console.log(value);
-    await fetch(`/api/entries/${entryId}`, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        date: value.date,
-        answerQuestionOne: value.answerQuestionOne,
-        answerQuestionTwo: value.answerQuestionTwo,
-        answerQuestionThree: value.answerQuestionThree,
-        answerQuestionFour: value.answerQuestionFour,
-        answerQuestionFive: value.answerQuestionFive,
-        answerQuestionSix: value.answerQuestionSix,
-        favourite: value.favourite
-      })
-    });
-  }
-
   function handleChange(event) {
+    event.preventDefault();
     const value = event.target.value;
-    console.log(entry);
-
     setEntry({
       ...entry,
       [event.target.name]: value
     });
   }
 
-  function handleSubmit() {
-    // handleEntryUpdate();
-    saveEditedEntriesToDB(entry);
+  async function handleSubmit(event) {
+    event.preventDefault();
+    await updateOneEntry(entryId, entry);
     history.push('/edit/confirm');
+    console.log(entryId, entry);
   }
 
   return (
@@ -121,7 +103,7 @@ export default function EditEntry() {
       </WrapperTitleBird>
       <Card onSubmit={handleSubmit}>
         {entry && (
-          <div key={entry.id}>
+          <div key={entry._id}>
             <QuestionLine>date:</QuestionLine>
             <Textarea name="date" onChange={handleChange} value={entry.date} />
             <QuestionLine>What made you smile or laugh that day?</QuestionLine>

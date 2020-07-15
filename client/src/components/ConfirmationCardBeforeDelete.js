@@ -39,20 +39,20 @@ const ConfirmationText = styled.div`
   font-size: 14px;
 `;
 
-function ConfirmationCardSubmit() {
+function ConfirmationCardBeforeDelete() {
   return (
     <Confirmation>
       <Needle src="/images/needle.png" />
       <Confirmation>
         <ConfirmationText>Hi friend,</ConfirmationText>
-        <ConfirmationText>Good, we changed your entry.</ConfirmationText>
+        <ConfirmationText>Good, we will delete your entry.</ConfirmationText>
         <ConfirmationText>
-          Change is great. Once Rumi said: “Yesterday I was clever, so I wanted to change the world.
-          Today I am wise, so I am changing myself.”
+          Sometimes the best way to be happy is to learn to let go of things you tried hard to hold
+          on to, that are not longer good for you.
         </ConfirmationText>
         <FeatherIcon />
       </Confirmation>
     </Confirmation>
   );
 }
-export default ConfirmationCardSubmit;
+export default ConfirmationCardBeforeDelete;

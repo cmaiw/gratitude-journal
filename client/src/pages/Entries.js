@@ -6,6 +6,7 @@ import PageTitle from '../components/PageTitle';
 import WrapperTitleBird from '../components/WrapperTitleBird';
 import EntryOverview from '../components/EntryOverview';
 import { keyframes } from '@emotion/core';
+import { getAllEntries } from '../api/entryRequests';
 
 const hob = keyframes`
         0%   { transform: translateY(0); }
@@ -75,15 +76,14 @@ function Entries(...props) {
   const [filter, setFilter] = React.useState('');
   const [query, setQuery] = React.useState('');
 
-  async function getAllEntries() {
-    const response = await fetch(`/api/entries/?q=${query}`);
-    const pastEntries = await response.json();
-    console.log(pastEntries);
-    setEntries(pastEntries);
+  async function getEntryList() {
+    const response = await getAllEntries();
+
+    setEntries(response);
   }
 
   React.useEffect(() => {
-    getAllEntries();
+    getEntryList();
   }, [query]);
 
   const updateSearch = e => {
@@ -119,10 +119,11 @@ function Entries(...props) {
         {entries &&
           entries.map(entries => (
             <EntryOverview
-              key={entries.id}
-              id={entries.id}
+              key={entries._id}
+              id={entries._id}
               date={entries.date}
               answerQuestionOne={entries.answerQuestionOne}
+              answerQuestionTwo={entries.answerQuestionTwo}
               answerQuestionThree={entries.answerQuestionThree}
               answerQuestionFour={entries.answerQuestionFour}
               answerQuestionFive={entries.answerQuestionFive}

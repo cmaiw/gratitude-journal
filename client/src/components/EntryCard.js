@@ -5,6 +5,7 @@ import PageWrapperCenterSpEvenly from './PageWrapperCenterSpEvenly';
 import { useParams, useHistory } from 'react-router-dom';
 import WrapperTitleBird from '../components/WrapperTitleBird';
 import PageTitle from '../components/PageTitle';
+import { getOneEntry } from '../api/entryRequests';
 
 const Origamibird = styled.img`
   height: 65px;
@@ -56,12 +57,12 @@ export default function EntryCard() {
 
   React.useEffect(() => {
     async function getEntryId() {
-      const response = await fetch(`/api/entries/${entryId}`);
-      const data = await response.json();
-      setEntry(data);
+      const result = await getOneEntry(entryId);
+      setEntry(result);
     }
 
     getEntryId();
+    // eslint-disable-next-line
   }, []);
 
   function handleClickEdit() {
@@ -79,7 +80,7 @@ export default function EntryCard() {
         <Origamibird src="/images/birdlookingleft.png" />
       </WrapperTitleBird>
       {entry && (
-        <Card key={entry.id}>
+        <Card key={entry._id}>
           <QuestionLine>date:</QuestionLine>
           <EntryLine name="date">{entry.date}</EntryLine>
           <QuestionLine>1. What made you smile or laugh that day?</QuestionLine>
