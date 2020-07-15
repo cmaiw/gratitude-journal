@@ -56,7 +56,7 @@ function App() {
             </span>
           </ErrorMessage>
         </Switch>
-        <NavBar />
+     <NavBar />
       </Router>
     </ThemeProvider>
   );
