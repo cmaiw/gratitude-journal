@@ -34,14 +34,14 @@ const LabelTitle = styled.div`
   display: block;
   margin-right: auto;
   margin-left: auto;
-  font-family: 'Cookie', cursive;
+  font-family: 'Dancing Script', cursive;
   font-size: 32px;
 `;
 const LabelSubtitle = styled.div`
   color: ${props => props.theme.colors.font};
   margin-right: auto;
   margin-left: auto;
-  font-family: 'Cookie', cursive;
+  font-family: 'Dosis', sans-serif;
   font-size: 18px;
   text-wrap: wrap;
   display: block;

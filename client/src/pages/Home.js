@@ -5,12 +5,13 @@ import Login from '../components/Login';
 import UniversalButton from '../components/UniversalButton';
 import { useHistory } from 'react-router-dom';
 import { keyframes } from '@emotion/core';
+import Header from '../components/Header';
 
 const ContentWrapper = styled.div`
-  margin-top: 25px;
+  margin-top: 90px;
   display: flex;
   flex-direction: column;
-  height: 617px;
+  height: 580px;
   width: 320px;
   justify-content: flex-start;
   align-items: center;
@@ -22,6 +23,7 @@ const ContentWrapper = styled.div`
   background-size: cover;
   position: relative;
   transform: scaleX(-1);
+  align-self: center;
 `;
 
 const hob = keyframes`
@@ -91,6 +93,7 @@ function Home(props) {
 
   return (
     <PageWrapperCenterSpEvenly {...props}>
+      <Header>Welcome:</Header>
       <ContentWrapper>
         <Speechbubble>
           <SpeechbubbleText>

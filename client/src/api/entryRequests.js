@@ -37,12 +37,12 @@ export async function updateOneEntry(entryId, value) {
     },
     body: JSON.stringify({
       date: value.date,
-      answerQuestionOne: value.answerQuestionOne,
-      answerQuestionTwo: value.answerQuestionTwo,
-      answerQuestionThree: value.answerQuestionThree,
-      answerQuestionFour: value.answerQuestionFour,
-      answerQuestionFive: value.answerQuestionFive,
-      answerQuestionSix: value.answerQuestionSix,
+      social: value.social,
+      suroundings: value.suroundings,
+      nutrition: value.nutrition,
+      creativity: value.creativity,
+      selfloveAndCare: value.selfloveAndCare,
+      goals: value.goals,
       favourite: value.favourite
     })
   });

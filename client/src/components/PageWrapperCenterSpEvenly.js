@@ -5,9 +5,8 @@ const PageWrapperCenterSpEvenly = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 667px;
-  width: 375px;
+  width: 100vw;
   overflow: scroll;
+  font-family: 'Dosis', sans-serif;
 `;
-
 export default PageWrapperCenterSpEvenly;

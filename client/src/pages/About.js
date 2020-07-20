@@ -6,25 +6,26 @@ import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import PageTitle from '../components/PageTitle';
 import { useHistory } from 'react-router-dom';
 import { keyframes } from '@emotion/core';
+import Header from '../components/Header';
 
 const ArticleWrapper = styled.main`
-  width: 350px;
-  height: 70%;
   display: block;
-  margin: 20px;
+  height: 58vh;
   background-color: ${props => props.theme.colors.quinary};
   padding: 8px;
-  border-radius: 8px;
-  opacity: 0.85;
+  border-radius: 30px 15px 30px 15px;
   overflow: scroll;
+  margin: 30px;
+  border-right: 6px solid ${props => props.theme.colors.quartenary};
+  border-bottom: 6px solid ${props => props.theme.colors.quartenary};
 `;
 
-const AboutMainArticle = styled.div`
+const AboutMainArticle = styled.p`
   width: 100%;
   display: block;
-  color: ${props => props.theme.colors.primary};
+  color: ${props => props.theme.colors.font};
   padding: 8px;
-  font-size: 14px;
+  font-size: 18px;
 `;
 
 const hob = keyframes`
@@ -36,8 +37,8 @@ const hob = keyframes`
 `;
 
 const Origamibird = styled.img`
-  height: 65px;
-  width: 85px;
+  height: 45px;
+  width: 65px;
   margin-top: 20px;
   animation: ${hob};
   animation-duration: 0.9s;
@@ -59,7 +60,7 @@ function About() {
   }
 
   const A = styled.a`
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.font};
     &:hover {
       color: orange;
     }
@@ -68,6 +69,7 @@ function About() {
   return (
     <>
       <PageWrapperCenterSpEvenly>
+        <Header>Welcome:</Header>
         <WrapperTitleBird>
           <PageTitle>About:</PageTitle>
           <Origamibird src="/images/birdlookingleft.png" />

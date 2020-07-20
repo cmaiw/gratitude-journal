@@ -12,14 +12,16 @@ const Footer = styled.footer`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  height: 42px;
-  width: 100%;
+  height: 48px;
+  width: 99.2%;
   position: fixed;
   bottom: 0;
-  left: 0;
+  right: 0;
   background-color: ${props => props.theme.colors.primary};
-  border: ${props => props.theme.colors.primary};
+  border-top: 6px solid ${props => props.theme.colors.quartenary};
   margin-top: 10px;
+  border-radius: 60px 0px 0px 0px;
+  padding-top: 10px;
 `;
 
 export function NavBar() {

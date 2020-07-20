@@ -2,12 +2,23 @@ import React from 'react';
 import styled from '@emotion/styled';
 import JournalLabel from '../components/JournalLabel';
 import TreeIcon from '../icons/TreeIcon';
-import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import { NavLink } from 'react-router-dom';
 
-const JournalCoverBackground = styled.div`
-  height: 627px;
+const PageWrapperCenterSpEvenly = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 667px;
   width: 375px;
+  overflow: scroll;
+`;
+
+const JournalCoverBackground = styled.div`
+  margin-top: 20px;
+  margin-bottom: 60px;
+  height: 577px;
+  width: 335px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -16,7 +27,8 @@ const JournalCoverBackground = styled.div`
   background-color: ${props => props.theme.colors.primary};
   align-self: center;
   overflow: scroll;
-  box-shadow: 6px -9px 11px 0px rgba(99, 164, 183, 0.8);
+  box-shadow: 10px 10px 15px 1px rgba(99, 164, 183, 0.8);
+  border-radius: 4px;
 `;
 
 const WashiTapeImgGreenVertical = styled.img`
@@ -75,7 +87,7 @@ const SplashOrange = styled.div`
   width: 154px;
   position: absolute;
   margin-top: 430px;
-  margin-left: 192px;
+  margin-left: 182px;
   opacity: 0.9;
   background-image: url('/images/orangesplash1.png');
   background-origin: border-box;

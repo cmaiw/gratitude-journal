@@ -6,38 +6,51 @@ import { useParams, useHistory } from 'react-router-dom';
 import WrapperTitleBird from '../components/WrapperTitleBird';
 import PageTitle from '../components/PageTitle';
 import { getOneEntry } from '../api/entryRequests';
+import Header from './Header';
 
 const Origamibird = styled.img`
   height: 65px;
   width: 85px;
 `;
 
-const QuestionLine = styled.p`
+const QuestionLabel = styled.label`
+  display: flex;
+  flex-direction: row;
   width: 100%;
   color: ${props => props.theme.colors.primary};
   background-color: ${props => props.theme.colors.quinary};
-  font-family: 'Roboto', sans-serif;
   font-weight: bold;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 4px;
+`;
+
+const Icon = styled.img`
+  fill: white;
+  height: 40px;
+  width: auto;
+  padding: 5px;
+  margin-right: 10px;
+  padding: auto;
 `;
 
 const EntryLine = styled.p`
   width: 100%;
-  color: ${props => props.theme.colors.background};
+  color: ${props => props.theme.colors.font};
   background-color: ${props => props.theme.colors.quinary};
-  font-family: 'Roboto', sans-serif;
 `;
 
 const Card = styled.main`
   width: 85%;
-  height: 400px;
-  border-radius: 8px;
+  height: 65vh;
+  border-radius: 30px 15px 30px 15px;
   padding: 10px;
-  font-family: 'Roboto', sans-serif;
-  color: ${props => props.theme.colors.primary};
+  color: ${props => props.theme.colors.font};
   background-color: ${props => props.theme.colors.quinary};
-  opacity: 0.75;
   margin: 15px;
   overflow: scroll;
+  border-right: 6px solid ${props => props.theme.colors.quartenary};
+  border-bottom: 6px solid ${props => props.theme.colors.quartenary};
 `;
 const ButtonWrapper = styled.div`
   display: flex;
@@ -47,7 +60,7 @@ const ButtonWrapper = styled.div`
   padding: 2px;
   justify-content: flex-start;
   align-items: space-around;
-  margin-top: 8px;
+  margin-top: 30px;
 `;
 
 export default function EntryCard() {
@@ -75,28 +88,45 @@ export default function EntryCard() {
 
   return (
     <PageWrapperCenterSpEvenly>
+      <Header>Welcome</Header>
       <WrapperTitleBird>
         <PageTitle>What made you happy that day?</PageTitle>
         <Origamibird src="/images/birdlookingleft.png" />
       </WrapperTitleBird>
       {entry && (
         <Card key={entry._id}>
-          <QuestionLine>date:</QuestionLine>
-          <EntryLine name="date">{entry.date}</EntryLine>
-          <QuestionLine>1. What made you smile or laugh that day?</QuestionLine>
-          <EntryLine name="answerQuestionOne">{entry.answerQuestionOne}</EntryLine>
-          <QuestionLine>2. What did you learn?</QuestionLine>
-          <EntryLine name="answerQuestionTwo">{entry.answerQuestionTwo}</EntryLine>
-          <QuestionLine>3. Who made you smile or laugh?</QuestionLine>
-          <EntryLine name="answerQuestionThree">{entry.answerQuestionThree}</EntryLine>
-          <QuestionLine>4. What were you thankful for that day?</QuestionLine>
-          <EntryLine name="answerQuestionFour">{entry.answerQuestionFour}</EntryLine>
-          <QuestionLine>5. Who did you like to thank that day?</QuestionLine>
-          <EntryLine name="answerQuestionFive">{entry.answerQuestionFive}</EntryLine>
-          <QuestionLine>6. What were you looking for the next day?</QuestionLine>
-          <EntryLine name="answerQuestionSix">{entry.answerQuestionSix}</EntryLine>
-          <QuestionLine>One of your favourite entries?</QuestionLine>
-          <EntryLine name="favourite">{entry.favourite}</EntryLine>
+          <QuestionLabel>
+            <Icon src="/images/kalender.svg" />
+            <EntryLine name="date">{entry.date}</EntryLine>
+          </QuestionLabel>
+          <QuestionLabel>
+            <Icon src="/images/family.svg" />
+            <EntryLine name="social">{entry.social}</EntryLine>
+          </QuestionLabel>
+          <QuestionLabel>
+            <Icon src="/images/nature1.svg" />
+            <EntryLine name="suroundings">{entry.suroundings}</EntryLine>
+          </QuestionLabel>
+          <QuestionLabel>
+            <Icon src="/images/food.svg" />
+            <EntryLine name="nutrition">{entry.nutrition}</EntryLine>
+          </QuestionLabel>
+          <QuestionLabel>
+            <Icon src="/images/creativity.svg" />
+            <EntryLine name="creativity">{entry.creativity}</EntryLine>
+          </QuestionLabel>
+          <QuestionLabel>
+            <Icon src="/images/lotus.svg" />
+            <EntryLine name="selfloveAndCare">{entry.selfloveAndCare}</EntryLine>
+          </QuestionLabel>
+          <QuestionLabel>
+            <Icon src="/images/goal.svg" />
+            <EntryLine name="goals">{entry.goals}</EntryLine>
+          </QuestionLabel>
+          <QuestionLabel>
+            <Icon src="/images/fav.svg" />
+            <EntryLine name="favourite">{entry.favourite ? 'yes' : 'no'}</EntryLine>
+          </QuestionLabel>
           <ButtonWrapper>
             <UniversalButton type="button" onClick={handleClickEdit}>
               Edit
