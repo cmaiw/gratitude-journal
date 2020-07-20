@@ -17,18 +17,6 @@ const {
 //middleware
 app.use(express.json({ extended: false }));
 
-// get routes
-
-// app.get(`/api/entries/`, async (req, res) => {
-//   try {
-//     const entries = await getEntries();
-//     res.send(entries);
-//   } catch (error) {
-//     console.error(error);
-//     res.end();
-//   }
-// });
-
 app.get('/api/entries/', async (req, res) => {
   try {
     const entries = await getEntries();

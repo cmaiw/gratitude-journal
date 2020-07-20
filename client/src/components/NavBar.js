@@ -13,7 +13,7 @@ const Footer = styled.footer`
   justify-content: space-evenly;
   align-items: center;
   height: 48px;
-  width: 99.2%;
+  width: 100%;
   position: fixed;
   bottom: 0;
   right: 0;

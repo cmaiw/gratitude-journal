@@ -115,6 +115,7 @@ function NewEntry(...props) {
 
   const [entry, setEntry] = React.useState({
     date: '',
+    title: '',
     social: '',
     suroundings: '',
     nutrition: '',
@@ -146,7 +147,7 @@ function NewEntry(...props) {
 
   return (
     <PageWrapperCenterSpEvenly {...props}>
-      <Header>Welcome:</Header>
+      <Header>Welcome</Header>
       <WrapperTitleBird>
         <PageTitle>New entry:</PageTitle>
         <Origamibird src="/images/birdlookingleft.png" />
@@ -155,6 +156,7 @@ function NewEntry(...props) {
         <Label>
           <Icon src="/images/kalender.svg" />
           <JournalInput
+            required
             name="date"
             type="date"
             placeholder="date:"
@@ -163,10 +165,22 @@ function NewEntry(...props) {
           ></JournalInput>
         </Label>
         <Label>
+          <Icon src="/images/write.svg" />
+          <JournalInput
+            required
+            name="title"
+            type="text"
+            placeholder="Your title / tags of the day"
+            value={entry.title}
+            onChange={handleChange}
+          ></JournalInput>
+        </Label>
+        <Label>
           <Icon src="/images/family.svg" />
           <JournalInput
             name="social"
             type="text"
+            placeholder="Awesome people"
             value={entry.social}
             onChange={handleChange}
           ></JournalInput>
@@ -175,6 +189,7 @@ function NewEntry(...props) {
           <Icon src="/images/nature1.svg" />
           <JournalInput
             name="suroundings"
+            placeholder="Weather, nature and suroundings"
             value={entry.suroundings}
             onChange={handleChange}
             type="text"
@@ -184,6 +199,7 @@ function NewEntry(...props) {
           <Icon src="/images/food.svg" />
           <JournalInput
             name="nutrition"
+            placeholder="Nutrition and the joy of food / cooking"
             value={entry.nutrition}
             onChange={handleChange}
             type="text"
@@ -193,6 +209,7 @@ function NewEntry(...props) {
           <Icon src="/images/creativity.svg" />
           <JournalInput
             name="creativity"
+            placeholder="Learning, tasks, creativity, work"
             value={entry.creativity}
             onChange={handleChange}
             type="text"
@@ -202,6 +219,7 @@ function NewEntry(...props) {
           <Icon src="/images/lotus.svg" />
           <JournalInput
             name="selfloveAndCare"
+            placeholder="selflove and selfcare"
             value={entry.selfloveAndCare}
             onChange={handleChange}
             type="text"
@@ -211,6 +229,7 @@ function NewEntry(...props) {
           <Icon src="/images/goal.svg" />
           <JournalInput
             name="goals"
+            placeholder="your goals"
             value={entry.goals}
             onChange={handleChange}
             type="text"

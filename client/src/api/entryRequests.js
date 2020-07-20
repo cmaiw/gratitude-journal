@@ -38,6 +38,7 @@ export async function updateOneEntry(entryId, value) {
     body: JSON.stringify({
       date: value.date,
       social: value.social,
+      title: value.title,
       suroundings: value.suroundings,
       nutrition: value.nutrition,
       creativity: value.creativity,

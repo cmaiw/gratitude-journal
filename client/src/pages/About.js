@@ -69,7 +69,7 @@ function About() {
   return (
     <>
       <PageWrapperCenterSpEvenly>
-        <Header>Welcome:</Header>
+        <Header>Welcome</Header>
         <WrapperTitleBird>
           <PageTitle>About:</PageTitle>
           <Origamibird src="/images/birdlookingleft.png" />

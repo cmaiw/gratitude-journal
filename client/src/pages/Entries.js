@@ -53,7 +53,7 @@ function Entries(...props) {
 
   return (
     <PageWrapperCenterSpEvenly>
-      <Header>Welcome:</Header>
+      <Header>Welcome</Header>
       <WrapperTitleBird>
         <PageTitle>Journal:</PageTitle>
         <Origamibird src="/images/birdlookingleft.png" />
@@ -65,6 +65,7 @@ function Entries(...props) {
               key={entries._id}
               id={entries._id}
               date={entries.date}
+              title={entries.title}
               social={entries.social}
               suroundings={entries.suroundings}
               nutrition={entries.nutrition}

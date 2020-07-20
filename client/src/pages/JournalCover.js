@@ -9,23 +9,18 @@ const PageWrapperCenterSpEvenly = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 667px;
-  width: 375px;
   overflow: scroll;
 `;
 
 const JournalCoverBackground = styled.div`
-  margin-top: 20px;
-  margin-bottom: 60px;
-  height: 577px;
-  width: 335px;
+  height: 667px;
+  width: 375px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   text-align: center;
   background-color: ${props => props.theme.colors.primary};
-  align-self: center;
   overflow: scroll;
   box-shadow: 10px 10px 15px 1px rgba(99, 164, 183, 0.8);
   border-radius: 4px;

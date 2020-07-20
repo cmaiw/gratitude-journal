@@ -93,7 +93,7 @@ function Home(props) {
 
   return (
     <PageWrapperCenterSpEvenly {...props}>
-      <Header>Welcome:</Header>
+      <Header>Welcome</Header>
       <ContentWrapper>
         <Speechbubble>
           <SpeechbubbleText>

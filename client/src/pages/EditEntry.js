@@ -109,7 +109,7 @@ export default function EditEntry() {
 
   return (
     <PageWrapperCenterSpEvenly>
-      <Header>Welcome: </Header>
+      <Header>Welcome </Header>
       <WrapperTitleBird>
         <PageTitle>Not happy? Edit entry:</PageTitle>
         <Origamibird src="/images/birdlookingleft.png" />
@@ -120,6 +120,10 @@ export default function EditEntry() {
             <Label>
               <Icon src="/images/kalender.svg" />
               <Textarea name="date" onChange={handleChange} value={entry.date} />
+            </Label>
+            <Label>
+              <Icon src="/images/write.svg" />
+              <Textarea name="title" onChange={handleChange} value={entry.title} />
             </Label>
             <Label>
               <Icon src="/images/family.svg" />

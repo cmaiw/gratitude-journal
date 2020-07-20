@@ -100,6 +100,10 @@ export default function EntryCard() {
             <EntryLine name="date">{entry.date}</EntryLine>
           </QuestionLabel>
           <QuestionLabel>
+            <Icon src="/images/write.svg" />
+            <EntryLine name="title">{entry.title}</EntryLine>
+          </QuestionLabel>
+          <QuestionLabel>
             <Icon src="/images/family.svg" />
             <EntryLine name="social">{entry.social}</EntryLine>
           </QuestionLabel>

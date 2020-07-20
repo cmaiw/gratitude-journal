@@ -16,6 +16,7 @@ const Header = styled.header`
   padding: 8px;
   border-radius: 0px 0px 60px 0px;
   border-bottom: 6px solid ${props => props.theme.colors.quartenary};
+  z-index: +5;
 `;
 
 export default Header;
