@@ -22,6 +22,7 @@ const Footer = styled.footer`
   margin-top: 10px;
   border-radius: 60px 0px 0px 0px;
   padding-top: 10px;
+  z-index: 5;
 `;
 
 export function NavBar() {

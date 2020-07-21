@@ -19,8 +19,8 @@ const OrigamibirdAboutPage = styled.img`
   height: 85px;
   width: 105px;
   align-self: flex-end;
-  margin-bottom: 50px;
   margin-left: 10px;
+  margin-bottom: 35px;
   animation: ${hob};
   animation-duration: 0.9s;
   animation-timing-function: ease;
@@ -33,7 +33,9 @@ const SpeechbubbleText = styled.div`
   font-family: 'Dancing Script', cursive;
   font-size: 24px;
   text-align: center;
-  margin: 20px;
+  margin-top: 80px;
+  margin-left: 20px;
+  margin-right: 20px;
 `;
 
 const Form = styled.form`
@@ -42,7 +44,7 @@ const Form = styled.form`
   justify-content: space-around;
   align-items: center;
   align-self: center;
-  padding: 15px;
+  padding: 10px;
 `;
 
 function Home(props) {

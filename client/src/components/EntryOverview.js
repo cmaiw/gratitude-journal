@@ -10,6 +10,7 @@ const Card = styled.div`
   flex-direction: row;
   justify-content: space-around;
   height: 33vh;
+  min-height: 220px;
   max-width: 350px;
   align-items: space-evenly;
   background-color: ${props => props.theme.colors.quinary};

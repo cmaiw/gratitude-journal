@@ -5,7 +5,7 @@ import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import Header from '../components/Header';
 
 const JournalCoverBackground = styled.div`
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -13,20 +13,22 @@ const JournalCoverBackground = styled.div`
   align-items: center;
   text-align: center;
   background-color: ${props => props.theme.colors.primary};
+  overflow: hidden;
 `;
 
 const ItemContainer = styled.div`
   display: flex;
-  height: 60vh;
+  height: 60%;
   width: 100vw;
   margin: auto;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 `;
 
 const WashiTapeImgBlueHorizontal = styled.img`
-  position: absolute:
-  margin-top: 50px;
+  position: absolute;
+  margin-top: 350px;
   height: 45px;
   width: 270px;
   object-fit: cover;
@@ -34,19 +36,23 @@ const WashiTapeImgBlueHorizontal = styled.img`
 `;
 
 const WashiTapeImgGreenHappy = styled.img`
+  position: absolute;
   height: 40px;
   width: 210px;
   object-fit: cover;
   overflow: hidden;
-  z-index: 2;
-  margin-top: -20px;
+  z-index: 1;
+  margin-top: 330px;
 `;
 
 const PaperclipClover = styled.img`
+  position: absolute;
   height: 90px;
   width: 100px;
-  z-index: 3;
-  margin-top: -60px;
+  z-index: 2;
+  margin-top: -80px;
+  margin-right: -70px;
+  margin-top: 310px;
 `;
 
 function JournalCover() {
@@ -55,7 +61,6 @@ function JournalCover() {
       <Header>Welcome</Header>
       <JournalCoverBackground>
         <ItemContainer>
-          {/* <WashiTapeImgGreenVertical src="/images/washitapegreentexturevert.png" /> */}
           <JournalLabel />
           <WashiTapeImgBlueHorizontal src="images/washitapebluevert.png" />
           <WashiTapeImgGreenHappy src="images/maskingtapebehappy.png" />

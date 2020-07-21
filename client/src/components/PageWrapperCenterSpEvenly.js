@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 const PageWrapperCenterSpEvenly = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   width: 100vw;

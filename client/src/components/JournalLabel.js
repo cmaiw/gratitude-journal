@@ -7,7 +7,8 @@ const LabelAndBirdWrapper = styled.div`
   width: 340px;
   height: 260px;
   align-self: center;
-  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
 `;
 
 const BookLabel = styled.div`

@@ -26,7 +26,6 @@ function GlobalStyles() {
           bottom: 0;
           right: 0;
           z-index: -1;
-          overflow: scroll;
           animation: fadein 1s;
           -moz-animation: fadein 1s;
           -webkit-animation: fadein 1s;
