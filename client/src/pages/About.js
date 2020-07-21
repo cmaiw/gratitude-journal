@@ -16,8 +16,9 @@ const ArticleWrapper = styled.main`
   border-radius: 30px 15px 30px 15px;
   overflow: scroll;
   margin: 30px;
-  border-right: 6px solid ${props => props.theme.colors.quartenary};
-  border-bottom: 6px solid ${props => props.theme.colors.quartenary};
+  border-right: 6px solid ${props => props.theme.colors.primary};
+  border-bottom: 6px solid ${props => props.theme.colors.primary};
+  opacity: 0.85;
 `;
 
 const AboutMainArticle = styled.p`
@@ -37,9 +38,9 @@ const hob = keyframes`
 `;
 
 const Origamibird = styled.img`
-  height: 45px;
-  width: 65px;
-  margin-top: 20px;
+  height: 65px;
+  width: 85px;
+  margin-top: 10px;
   animation: ${hob};
   animation-duration: 0.9s;
   animation-timing-function: ease;

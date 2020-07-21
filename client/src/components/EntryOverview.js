@@ -6,30 +6,32 @@ import Textfield from './Textfield';
 import propTypes from 'prop-types';
 
 const Card = styled.div`
-  display: inline flex;
+  display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   height: 33vh;
-  width: 100%;
+  max-width: 350px;
   align-items: space-evenly;
   background-color: ${props => props.theme.colors.quinary};
   color: ${props => props.theme.colors.primary};
   border-radius: 30px 15px 30px 15px;
   padding: 20px;
   margin: 10px;
-  overflow: scroll;
-  text-overflow: ellipsis;
-  border-right: 6px solid ${props => props.theme.colors.quartenary};
-  border-bottom: 6px solid ${props => props.theme.colors.quartenary};
+  border-right: 6px solid ${props => props.theme.colors.primary};
+  border-bottom: 6px solid ${props => props.theme.colors.primary};
   flex-wrap: wrap;
+  opacity: 0.88;
+  overflow: hidden;
 `;
 const Section = styled.div`
   display: flex;
   flex-direction: row;
-  min-width: 40%;
+  position: relative;
+  width: 100%;
+  margin: 20px;
   justify-content: space-evenly;
   align-items: center;
-  margin: 20px;
+  margin: 10px;
   flex-wrap: nowrap;
 `;
 
@@ -37,34 +39,16 @@ const CardIcon = styled.img`
   height: 40px;
   width: auto;
   padding: 0px;
-  margin-right: 50px;
-`;
-
-const ButtonWrapper = styled.div`
-  display: flex;
-  width: 95%;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px;
+  margin-right: 10px;
 `;
 
 const H3 = styled.h3`
-  color: ${props => props.theme.colors.primary};
+  color: ${props => props.theme.colors.headings};
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
-export default function EntryOverview({
-  id,
-  date,
-  title,
-  social,
-  suroundings,
-  nutrition,
-  creativity,
-  selfloveAndCare,
-  goals,
-  favourite
-}) {
+export default function EntryOverview({ id, date, title, favourite }) {
   const history = useHistory();
   function handleDetailsClick(id) {
     history.push(`/entries/${id}`);
@@ -72,60 +56,16 @@ export default function EntryOverview({
 
   return (
     <Card key="_id">
-      <ButtonWrapper>
-        <H3>What made you happy today?</H3>
-        <UniversalButton type="button" onClick={() => handleDetailsClick(id)}>
-          Detail
-        </UniversalButton>
-      </ButtonWrapper>
       <Section>
         <Textfield>
           <CardIcon src="/images/kalender.svg" />
           {date}
         </Textfield>
+        <UniversalButton type="button" onClick={() => handleDetailsClick(id)}>
+          Detail
+        </UniversalButton>
       </Section>
-      <Section>
-        <Textfield>
-          <CardIcon src="/images/write.svg" />
-          {title}
-        </Textfield>
-      </Section>
-      <Section>
-        <Textfield>
-          <CardIcon src="/images/family.svg" />
-          {social}
-        </Textfield>
-      </Section>
-      <Section>
-        <Textfield>
-          <CardIcon src="/images/nature1.svg" />
-          {suroundings}
-        </Textfield>
-      </Section>
-      <Section>
-        <Textfield>
-          <CardIcon src="/images/food.svg" />
-          {nutrition}
-        </Textfield>
-      </Section>
-      <Section>
-        <Textfield>
-          <CardIcon src="/images/creativity.svg" />
-          {creativity}
-        </Textfield>
-      </Section>
-      <Section>
-        <Textfield>
-          <CardIcon src="/images/lotus.svg" />
-          {selfloveAndCare}
-        </Textfield>
-      </Section>
-      <Section>
-        <Textfield>
-          <CardIcon src="/images/goal.svg" />
-          {goals}
-        </Textfield>
-      </Section>
+      <H3>{title}</H3>
       <Section>
         <Textfield>
           <CardIcon src="/images/fav.svg" />

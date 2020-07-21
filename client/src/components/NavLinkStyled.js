@@ -2,6 +2,9 @@ import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
 const NavLinkStyled = styled(NavLink)`
+padding-top: 4px;
+  height: 44px;
+  width: auto;
   align-items: center;
   background-color: transparent;
   border: none;

@@ -17,8 +17,8 @@ const hob = keyframes`
 `;
 
 const Origamibird = styled.img`
-  height: 45px;
-  width: 65px;
+  height: 65px;
+  width: 85px;
   animation: ${hob};
   animation-duration: 0.9s;
   animation-timing-function: ease;
@@ -31,11 +31,13 @@ const EntryList = styled.div`
   flex-direction: row;
   font-size: 16px;
   text-align: start;
-  overflow: scroll;
   padding: 20px;
   border-radius: 8px;
-  width: 99%;
+  width: 100%;
   flex-wrap: wrap;
+  align-self: flex-start;
+  overflow: scroll;
+  margin-bottom: 54px;
 `;
 
 function Entries(...props) {

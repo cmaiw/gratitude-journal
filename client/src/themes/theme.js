@@ -8,13 +8,15 @@ const defaultTheme = {
     // quartenary: '#B7DD96', //buttons hover state
     // quinary: '#63A4B7' //submit confirmation textarea
 
-    background: '#F8F8EF',
-    font: '#100B1E',
-    primary: '#246A73', //background landing page and most headings
-    secondary: '#F5E4CC', //background forms and textareas
-    tertiary: '#eb991e', //buttons navbar
-    quartenary: '#8ed4d4', //buttons hover state
-    quinary: '#F5E4CC' //submit confirmation textarea
+    background: '#F5ECE0',
+    font: '#272727',
+    primary: '#2B6272', //background landing page and most headings
+    secondary: '#CCE0CE', //background forms and textareas
+    tertiary: '#ED9027', //buttons navbar
+    quartenary: '#C5E99B', //buttons hover state
+    quinary: '#CCE0CE', //submit confirmation textarea
+    headings: '8FBC94',
+    borders: '#ED9027'
   }
 };
 

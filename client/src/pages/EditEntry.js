@@ -56,7 +56,7 @@ const Label = styled.label`
   border-radius: 8px;
   padding: 4px;
   background-color: ${props => props.theme.colors.quinary};
-  border: 1px solid ${props => props.theme.colors.primary};
+  opacity: 0.85;
 `;
 
 const Icon = styled.img`

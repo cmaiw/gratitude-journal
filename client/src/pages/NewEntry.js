@@ -3,7 +3,6 @@ import React from 'react';
 import JournalInput from '../components/JournalInput';
 import UniversalButton from '../components/UniversalButton';
 import FavCheckbox from '../components/FavCheckbox';
-import FeatherIcon from '../icons/FeatherIcon';
 import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import WrapperTitleBird from '../components/WrapperTitleBird';
 import PageTitle from '../components/PageTitle';
@@ -36,26 +35,19 @@ const FormContainer = styled.form`
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 4px;
+  padding: 10px;
   color: ${props => props.theme.colors.font};
   font-size: 14px;
   overflow: scroll;
   text-align: start;
   justify-content: flex-start;
   align-items: flex-start;
-  margin: auto;
   margin-top: 15px;
+  background-color: ${props => props.theme.colors.background};
+  opacity: 0.9;
+  border-radius: 12px;
+  margin-bottom: 60px;
 `;
-
-// const Label = styled.label`
-//   width: auto;
-//   display: flex;
-//   flex-direction: row;
-//   background-color: transparent;
-//   color: ${props => props.theme.colors.font};
-//   font-size: 14px;
-//   margin: 3px;
-// `;
 
 const P = styled.p`
   color: ${props => props.theme.colors.font};
@@ -73,24 +65,22 @@ const ButtonCheckboxContainer = styled.div`
   border: none;
   box-shadow: none;
   padding: 5px;
-  margin-top: 20px;
-  margin-bottom: 42px;
 `;
 
 const CheckboxContainer = styled.div`
   display: flex;
   width: 20px;
   height: 20px;
-  background-color: ${props => props.theme.colors.quinary};
+  background-color: ${props => props.theme.colors.quartenary};
   border-radius: 5px;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   cursor: pointer;
+  border: 1px solid ${props => props.theme.colors.primary};
 `;
 
 const Icon = styled.img`
-  fill: white;
   height: 40px;
   width: auto;
   padding: 5px;
@@ -105,16 +95,15 @@ const Label = styled.label`
   width: 100%;
   align-items: center;
   margin-bottom: 10px;
-  background-color: ${props => props.theme.colors.quartenary};
+  background-color: ${props => props.theme.colors.quinary};
   border-radius: 8px;
-  border: 1px solid ${props => props.theme.colors.primary};
 `;
 
 function NewEntry(...props) {
   const history = useHistory();
 
   const [entry, setEntry] = React.useState({
-    date: '',
+    date: ``,
     title: '',
     social: '',
     suroundings: '',
@@ -159,7 +148,7 @@ function NewEntry(...props) {
             required
             name="date"
             type="date"
-            placeholder="date:"
+            placeholder={Date.now}
             value={entry.date}
             onChange={handleChange}
           ></JournalInput>
@@ -243,9 +232,9 @@ function NewEntry(...props) {
               name="favourite"
               onChange={handleCheckboxChange}
               value={entry.favourite}
+              {...props}
             />
           </CheckboxContainer>
-          <FeatherIcon />
           <UniversalButton type="submit">submit</UniversalButton>
         </ButtonCheckboxContainer>
       </FormContainer>

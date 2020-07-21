@@ -16,14 +16,13 @@ const Card = styled.div`
   background-color: ${props => props.theme.colors.quinary};
   overflow: scroll;
   border-radius: 30px 15px 30px 15px;
-  border-right: 6px solid ${props => props.theme.colors.quartenary};
-  border-bottom: 6px solid ${props => props.theme.colors.quartenary};
-  text-align: center;
+  border-right: 6px solid ${props => props.theme.colors.primary};
+  border-bottom: 6px solid ${props => props.theme.colors.primary};
   color: ${props => props.theme.colors.primary};
   font-size: 16px;
-  z-index: -5;
   padding: 12px;
   text-align: center;
+  opacity: 0.85;
 `;
 const Needle = styled.img`
   display: flex;

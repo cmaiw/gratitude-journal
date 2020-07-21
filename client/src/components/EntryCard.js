@@ -49,8 +49,9 @@ const Card = styled.main`
   background-color: ${props => props.theme.colors.quinary};
   margin: 15px;
   overflow: scroll;
-  border-right: 6px solid ${props => props.theme.colors.quartenary};
-  border-bottom: 6px solid ${props => props.theme.colors.quartenary};
+  border-right: 6px solid ${props => props.theme.colors.primary};
+  border-bottom: 6px solid ${props => props.theme.colors.primary};
+  opacity: 0.85;
 `;
 const ButtonWrapper = styled.div`
   display: flex;

@@ -15,7 +15,7 @@ const Header = styled.header`
   font-size: 24px;
   padding: 8px;
   border-radius: 0px 0px 60px 0px;
-  border-bottom: 6px solid ${props => props.theme.colors.quartenary};
+  border-bottom: 6px solid ${props => props.theme.colors.borders};
   z-index: +5;
 `;
 

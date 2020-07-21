@@ -1,31 +1,30 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core';
+import { useHistory } from 'react-router-dom';
 
 const LabelAndBirdWrapper = styled.div`
-  width: 100%;
-  height: 500px;
+  width: 340px;
+  height: 260px;
+  align-self: center;
+  margin: auto;
 `;
 
 const BookLabel = styled.div`
   background-color: transparent;
   display: flex;
   flex-direction: column;
-  margin-top: 125px;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
   justify-content: center;
-  align-items: flex-start;
-  height: 200px;
-  width: 280px;
+  align-items: center;
+  height: 250px;
+  width: 330px;
   padding: none;
   background-image: url('images/label.png');
   background-origin: border-box;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  position: relative;
   overflow: hidden;
 `;
 
@@ -56,11 +55,11 @@ const hob = keyframes`
 `;
 
 const OrigamiBirdImg = styled.img`
-  height: 95px;
-  width: 105px;
   position: absolute;
-  margin-top: 95px;
-  margin-left: 56px;
+  margin-top: -25px;
+  margin-right: 20px;
+  height: 85px;
+  width: 95px;
   animation: ${hob};
   animation-duration: 0.9s;
   animation-timing-function: ease;
@@ -68,9 +67,14 @@ const OrigamiBirdImg = styled.img`
 `;
 
 function JournalLabel() {
+  const history = useHistory();
+  function handleClick() {
+    history.push(`/home`);
+  }
+
   return (
     <LabelAndBirdWrapper>
-      <OrigamiBirdImg src="/images/birdlookingleft.png" />
+      <OrigamiBirdImg src="/images/birdlookingleft.png" onClick={handleClick} />
       <BookLabel>
         <LabelTitle>Gratefully</LabelTitle>
         <LabelSubtitle>your gratitude</LabelSubtitle>

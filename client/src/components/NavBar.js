@@ -18,7 +18,7 @@ const Footer = styled.footer`
   bottom: 0;
   right: 0;
   background-color: ${props => props.theme.colors.primary};
-  border-top: 6px solid ${props => props.theme.colors.quartenary};
+  border-top: 6px solid ${props => props.theme.colors.borders};
   margin-top: 10px;
   border-radius: 60px 0px 0px 0px;
   padding-top: 10px;

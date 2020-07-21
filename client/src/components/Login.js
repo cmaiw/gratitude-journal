@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 const Login = styled.input`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: 150px;
   height: 30px;
@@ -11,6 +11,8 @@ const Login = styled.input`
   border-radius: 10px;
   padding: 8px;
   margin: 10px 10px 10px 0px;
+  background-color: ${props => props.theme.colors.quinary};
+  opacity: 0.85;
 `;
 
 export default Login;

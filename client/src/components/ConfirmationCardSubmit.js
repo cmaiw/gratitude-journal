@@ -6,8 +6,13 @@ import { TextSubmit } from './ConfirmationText';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  max-height: 350px;
+  max-width: 300px;
+  align-items: center;
   position: absolute;
-  z-index: 2;
+  flex-wrap: wrap;
+  text-align: center;
 `;
 
 function ConfirmationCardSubmit() {

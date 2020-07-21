@@ -6,8 +6,9 @@ const WrapperTitleBird = styled.div`
   justify-content: space-between;
   align-items: center;
   height: auto;
-  width: 78%;
-  margin-top: 70px;
+  width: 90%;
+  margin-top: 55px;
+  background: transparent;
 `;
 
 export default WrapperTitleBird;

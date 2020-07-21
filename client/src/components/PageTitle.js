@@ -8,6 +8,7 @@ const JournalPageTitle = styled.h2`
   margin: 0px;
   padding: 0px;
   align-self: center;
+  margin-top: 10px;
 `;
 
 function PageTitle(props) {
