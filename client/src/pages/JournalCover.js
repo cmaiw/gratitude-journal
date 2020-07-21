@@ -62,7 +62,7 @@ function JournalCover() {
       <JournalCoverBackground>
         <ItemContainer>
           <JournalLabel />
-          <WashiTapeImgBlueHorizontal src="images/washitapebluevert.png" />
+          <WashiTapeImgBlueHorizontal src="images/washitapeblue.png" />
           <WashiTapeImgGreenHappy src="images/maskingtapebehappy.png" />
           <PaperclipClover src="images/paperclipclover.png" />
         </ItemContainer>
