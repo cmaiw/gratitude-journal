@@ -11,24 +11,21 @@ function GlobalStyles() {
           box-sizing: border-box;
         }
         body {
-          height: 100vh;
           width: 100vw;
           display: flex;
           flex-direction: column;
           align-items: center;
-          font-size: 16px;
           margin: 0;
-          background-color: ${theme.colors.ptimary};
-          font-family: 'Roboto', sans-serif;
+          font-family: 'Dosis', sans-serif;
           color: ${theme.colors.font};
-          height: 100vh;
-          width: 100vw;
-          background-image: url(/images/backgroundsplashes1.jpg);
+          background-color: #faf5eb;
+          background-image: url(/images/linedpaper.png);
           background-size: fill;
-          background-repeat: no-repeat;
-          background-position: center;
-          height: 100%;
-          overflow: hidden;
+          background-repeat: repeat;
+          background-position: bottom right;
+          bottom: 0;
+          right: 0;
+          z-index: -1;
           animation: fadein 1s;
           -moz-animation: fadein 1s;
           -webkit-animation: fadein 1s;

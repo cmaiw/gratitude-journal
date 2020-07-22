@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import UniversalButton from '../components/UniversalButton';
 import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import PageTitle from '../components/PageTitle';
 import WrapperTitleBird from '../components/WrapperTitleBird';
 import EntryOverview from '../components/EntryOverview';
 import { keyframes } from '@emotion/core';
 import { getAllEntries } from '../api/entryRequests';
+import Header from '../components/Header';
 
 const hob = keyframes`
         0%   { transform: translateY(0); }
@@ -25,96 +25,41 @@ const Origamibird = styled.img`
   animation-iteration-count: 5;
 `;
 
-const SearchForm = styled.form`
-  margin: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: space-evenly;
-  width: 85%;
-  text-align: flex-start;
-`;
-
-const SubtitleSearch = styled.p`
-  color: ${props => props.theme.colors.text};
-  font-size: 14px;
-  margin: 0px;
-`;
-
-const SearchBarByDate = styled.input`
-  all: unset;
-  height: 22px;
-  width: 85%;
-  color: ${props => props.theme.colors.primary};
-  background-color: ${props => props.theme.colors.secondary};
-  opacity: 0.75;
-  outline: none;
-  cursor: text;
-  border: none;
-  border-radius: 4px;
-  margin-top: none;
-  margin-bottom: none;
-  margin-right: 5px;
-`;
-
 const EntryList = styled.div`
   color: ${props => props.theme.colors.primary};
-  background-color: ${props => props.theme.colors.quinary};
-  opacity: 0.85;
-  max-height: 380px;
-  width: 90%;
-  margin: 10px;
-  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
   text-align: start;
-  overflow: scroll;
   padding: 20px;
   border-radius: 8px;
+  width: 100%;
+  flex-wrap: wrap;
+  align-self: flex-start;
+  overflow: scroll;
+  margin-bottom: 54px;
 `;
 
 function Entries(...props) {
   const [entries, setEntries] = React.useState([]);
-  const [filter, setFilter] = React.useState('');
-  const [query, setQuery] = React.useState('');
 
   async function getEntryList() {
-    const response = await getAllEntries();
-
+    let response = await getAllEntries();
     setEntries(response);
   }
 
   React.useEffect(() => {
     getEntryList();
-  }, [query]);
-
-  const updateSearch = e => {
-    setFilter(e.target.value);
-    console.log(filter);
-  };
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    setQuery(filter);
-    setFilter('');
-  };
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <PageWrapperCenterSpEvenly>
+      <Header>Welcome</Header>
       <WrapperTitleBird>
         <PageTitle>Journal:</PageTitle>
         <Origamibird src="/images/birdlookingleft.png" />
       </WrapperTitleBird>
-      <SearchForm onSubmit={handleSubmit}>
-        <SubtitleSearch>Search entries:</SubtitleSearch>
-        <SearchBarByDate
-          type="text"
-          name="search"
-          placeholder="Search"
-          value={filter}
-          onChange={updateSearch}
-        ></SearchBarByDate>
-        <UniversalButton type="submit">Submit</UniversalButton>
-      </SearchForm>
-      <PageTitle>Entries:</PageTitle>
       <EntryList {...props}>
         {entries &&
           entries.map(entries => (
@@ -122,12 +67,13 @@ function Entries(...props) {
               key={entries._id}
               id={entries._id}
               date={entries.date}
-              answerQuestionOne={entries.answerQuestionOne}
-              answerQuestionTwo={entries.answerQuestionTwo}
-              answerQuestionThree={entries.answerQuestionThree}
-              answerQuestionFour={entries.answerQuestionFour}
-              answerQuestionFive={entries.answerQuestionFive}
-              answerQuestionSix={entries.answerQuestionSix}
+              title={entries.title}
+              social={entries.social}
+              suroundings={entries.suroundings}
+              nutrition={entries.nutrition}
+              creativity={entries.creativity}
+              selfloveAndCare={entries.selfloveAndCare}
+              goals={entries.goals}
               favourite={entries.favourite}
             />
           ))}

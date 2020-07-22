@@ -5,14 +5,19 @@ const app = express();
 const path = require('path');
 
 const PORT = process.env.PORT || 8081;
-const { getEntries, getEntry, setEntry, updateEntry, deleteEntry } = require('./lib/entries');
+const {
+  getEntries,
+  getEntry,
+  setEntry,
+  updateEntry,
+  deleteEntry
+  // searchEntries
+} = require('./lib/entries');
 
 //middleware
 app.use(express.json({ extended: false }));
 
-// get routes
-
-app.get('/api/entries', async (req, res) => {
+app.get('/api/entries/', async (req, res) => {
   try {
     const entries = await getEntries();
     res.send(entries);

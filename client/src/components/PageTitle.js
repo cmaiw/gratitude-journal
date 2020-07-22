@@ -3,11 +3,12 @@ import styled from '@emotion/styled';
 
 const JournalPageTitle = styled.h2`
   color: ${props => props.theme.colors.primary};
-  font-family: 'Cookie', cursive;
-  font-size: 48px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
   margin: 0px;
   padding: 0px;
   align-self: center;
+  margin-top: 10px;
 `;
 
 function PageTitle(props) {

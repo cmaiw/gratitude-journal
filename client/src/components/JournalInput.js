@@ -3,15 +3,14 @@ import styled from '@emotion/styled';
 const JournalInput = styled.input`
   all: unset;
   height: 34px;
-  width: 100%;
+  width: 99%;
   display: block;
-  padding: 2px;
+  padding: 4px;
   background-color: ${props => props.theme.colors.quinary};
-  border-radius: 6px;
+  border-radius: 0px 8px 8px 0px;
   font-size: 14px;
   border: none;
   outline: none;
-  opacity: 0.75;
   align-items: center;
 `;
 

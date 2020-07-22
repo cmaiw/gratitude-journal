@@ -3,13 +3,13 @@ import React from 'react';
 import JournalInput from '../components/JournalInput';
 import UniversalButton from '../components/UniversalButton';
 import FavCheckbox from '../components/FavCheckbox';
-import FeatherIcon from '../icons/FeatherIcon';
 import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import WrapperTitleBird from '../components/WrapperTitleBird';
 import PageTitle from '../components/PageTitle';
 import { saveEntriesToDB } from '../api/entryRequests';
 import { useHistory } from 'react-router-dom';
 import { keyframes } from '@emotion/core';
+import Header from '../components/Header';
 
 const hob = keyframes`
         0%   { transform: translateY(0); }
@@ -20,9 +20,9 @@ const hob = keyframes`
 `;
 
 const Origamibird = styled.img`
-  height: 65px;
-  width: 85px;
-  margin-top: 20px;
+  height: 45px;
+  width: 65px;
+  margin-top: 10px;
   animation: ${hob};
   animation-duration: 0.9s;
   animation-timing-function: ease;
@@ -35,25 +35,18 @@ const FormContainer = styled.form`
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 4px;
+  padding: 10px;
   color: ${props => props.theme.colors.font};
   font-size: 14px;
   overflow: scroll;
   text-align: start;
   justify-content: flex-start;
   align-items: flex-start;
-  margin: auto;
   margin-top: 15px;
-`;
-
-const Label = styled.label`
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  background-color: transparent;
-  color: ${props => props.theme.colors.font};
-  font-size: 14px;
-  margin: 3px;
+  background-color: ${props => props.theme.colors.background};
+  opacity: 0.9;
+  border-radius: 12px;
+  margin-bottom: 60px;
 `;
 
 const P = styled.p`
@@ -72,32 +65,59 @@ const ButtonCheckboxContainer = styled.div`
   border: none;
   box-shadow: none;
   padding: 5px;
-  margin-top: 42px;
-  margin-bottom: 42px;
 `;
 
 const CheckboxContainer = styled.div`
   display: flex;
   width: 20px;
   height: 20px;
-  background-color: ${props => props.theme.colors.quinary};
+  background-color: ${props => props.theme.colors.quartenary};
   border-radius: 5px;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   cursor: pointer;
+  border: 1px solid ${props => props.theme.colors.primary};
+`;
+
+const Icon = styled.img`
+  height: 40px;
+  width: auto;
+  padding: 5px;
+  margin-right: 10px;
+  padding: auto;
+`;
+
+const Label = styled.label`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: ${props => props.theme.colors.quinary};
+  border-radius: 8px;
 `;
 
 function NewEntry(...props) {
-  let history = useHistory();
+  const history = useHistory();
+
+  let today = new Date();
+  let dd = String(today.getDate()).padStart(2, '0');
+  let mm = String(today.getMonth() + 1).padStart(2, '0'); //January = 0!
+  let yyyy = today.getFullYear();
+
+  today = mm + '-' + dd + '-' + yyyy;
+
   const [entry, setEntry] = React.useState({
-    date: '',
-    answerQuestionOne: '',
-    answerQuestionTwo: '',
-    answerQuestionThree: '',
-    answerQuestionFour: '',
-    answerQuestionFive: '',
-    answerQuestionSix: '',
+    date: today,
+    title: '',
+    social: '',
+    suroundings: '',
+    nutrition: '',
+    creativity: '',
+    selfLoveandCare: '',
+    goals: '',
     favourite: false
   });
 
@@ -123,60 +143,95 @@ function NewEntry(...props) {
 
   return (
     <PageWrapperCenterSpEvenly {...props}>
+      <Header>Welcome</Header>
       <WrapperTitleBird>
         <PageTitle>New entry:</PageTitle>
         <Origamibird src="/images/birdlookingleft.png" />
       </WrapperTitleBird>
       <FormContainer onSubmit={handleSubmit} key="_id">
-        <JournalInput
-          name="date"
-          type="date"
-          placeholder="date:"
-          value={entry.date}
-          onChange={handleChange}
-        ></JournalInput>
-        <Label>1. What made you smile / laugh?</Label>
-        <JournalInput
-          name="answerQuestionOne"
-          type="text"
-          value={entry.answerQuestionOne}
-          onChange={handleChange}
-        ></JournalInput>
-        <Label>2. What did you learn?</Label>
-        <JournalInput
-          name="answerQuestionTwo"
-          value={entry.answerQuestionTwo}
-          onChange={handleChange}
-          type="text"
-        ></JournalInput>
-        <Label>3. Who made you smile / laugh?</Label>
-        <JournalInput
-          name="answerQuestionThree"
-          value={entry.answerQuestionThree}
-          onChange={handleChange}
-          type="text"
-        ></JournalInput>
-        <Label>4. What are you thankful for today?</Label>
-        <JournalInput
-          name="answerQuestionFour"
-          value={entry.AnswerQuestionFour}
-          onChange={handleChange}
-          type="text"
-        ></JournalInput>
-        <Label>5. Who would you like to thank?</Label>
-        <JournalInput
-          name="answerQuestionFive"
-          value={entry.answerQuestionFive}
-          onChange={handleChange}
-          type="text"
-        ></JournalInput>
-        <Label>6 .What are you looking for tomorrow?</Label>
-        <JournalInput
-          name="answerQuestionSix"
-          value={entry.answerQuestionSix}
-          onChange={handleChange}
-          type="text"
-        ></JournalInput>
+        <Label>
+          <Icon src="/images/kalender.svg" />
+          <JournalInput
+            required
+            name="date"
+            type="text"
+            placeholder={today}
+            value={entry.date}
+            onChange={handleChange}
+            onfocus="(this.type='date')"
+          ></JournalInput>
+        </Label>
+        <Label>
+          <Icon src="/images/write.svg" />
+          <JournalInput
+            required
+            name="title"
+            type="text"
+            placeholder="Your title / tags of the day"
+            value={entry.title}
+            onChange={handleChange}
+          ></JournalInput>
+        </Label>
+        <Label>
+          <Icon src="/images/family.svg" />
+          <JournalInput
+            name="social"
+            type="text"
+            placeholder="Awesome people"
+            value={entry.social}
+            onChange={handleChange}
+          ></JournalInput>
+        </Label>
+        <Label>
+          <Icon src="/images/nature1.svg" />
+          <JournalInput
+            name="suroundings"
+            placeholder="Weather, nature and suroundings"
+            value={entry.suroundings}
+            onChange={handleChange}
+            type="text"
+          ></JournalInput>
+        </Label>
+        <Label>
+          <Icon src="/images/food.svg" />
+          <JournalInput
+            name="nutrition"
+            placeholder="Nutrition and the joy of food / cooking"
+            value={entry.nutrition}
+            onChange={handleChange}
+            type="text"
+          ></JournalInput>
+        </Label>
+        <Label>
+          <Icon src="/images/creativity.svg" />
+          <JournalInput
+            name="creativity"
+            placeholder="Learning, tasks, creativity, work"
+            value={entry.creativity}
+            onChange={handleChange}
+            type="text"
+          ></JournalInput>
+        </Label>
+        <Label>
+          <Icon src="/images/lotus.svg" />
+          <JournalInput
+            name="selfloveAndCare"
+            placeholder="selflove and selfcare"
+            value={entry.selfloveAndCare}
+            onChange={handleChange}
+            type="text"
+          ></JournalInput>
+        </Label>
+        <Label>
+          <Icon src="/images/goal.svg" />
+          <JournalInput
+            name="goals"
+            placeholder="your goals"
+            value={entry.goals}
+            onChange={handleChange}
+            type="text"
+          ></JournalInput>
+        </Label>
         <ButtonCheckboxContainer>
           <P>Mark as favourite: </P>
           <CheckboxContainer>
@@ -185,14 +240,13 @@ function NewEntry(...props) {
               name="favourite"
               onChange={handleCheckboxChange}
               value={entry.favourite}
+              {...props}
             />
           </CheckboxContainer>
-          <FeatherIcon />
           <UniversalButton type="submit">submit</UniversalButton>
         </ButtonCheckboxContainer>
       </FormContainer>
     </PageWrapperCenterSpEvenly>
   );
 }
-
 export default NewEntry;

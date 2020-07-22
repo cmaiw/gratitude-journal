@@ -9,6 +9,7 @@ const ConfirmationText = styled.div`
   overflow: scroll;
   color: ${props => props.theme.colors.primary};
   font-size: 14px;
+  z-index: +1;
 `;
 
 export function TextSubmit() {
@@ -40,10 +41,10 @@ export function TextDelete() {
   return (
     <>
       <ConfirmationText>Hi friend,</ConfirmationText>
-      <ConfirmationText>Good, we changed your entry.</ConfirmationText>
+      <ConfirmationText>you want to delete your entry?</ConfirmationText>
       <ConfirmationText>
-        Change is great. Once Rumi said: “Yesterday I was clever, so I wanted to change the world.
-        Today I am wise, so I am changing myself.”
+        One of the happiest moments in life is when you find the courage to let go of what you
+        cannot change.
       </ConfirmationText>
     </>
   );
@@ -53,10 +54,10 @@ export function EditConfirm() {
   return (
     <>
       <ConfirmationText>Hi friend,</ConfirmationText>
-      <ConfirmationText>Are you shure that you want to delete this?</ConfirmationText>
+      <ConfirmationText>we changed your entry.</ConfirmationText>
       <ConfirmationText>
-        One of the happiest moments in life is when you find the courage to let go of what you
-        cannot change.
+        Change is great. Once Rumi said: “Yesterday I was clever, so I wanted to change the world.
+        Today I am wise, so I am changing myself.”
       </ConfirmationText>
     </>
   );

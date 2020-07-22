@@ -1,104 +1,79 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import JournalLabel from '../components/JournalLabel';
-import TreeIcon from '../icons/TreeIcon';
 import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
-import { NavLink } from 'react-router-dom';
+import Header from '../components/Header';
 
 const JournalCoverBackground = styled.div`
-  height: 627px;
-  width: 375px;
+  height: 100%;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
   text-align: center;
   background-color: ${props => props.theme.colors.primary};
-  align-self: center;
-  overflow: scroll;
-  box-shadow: 6px -9px 11px 0px rgba(99, 164, 183, 0.8);
+  overflow: hidden;
 `;
 
-const WashiTapeImgGreenVertical = styled.img`
-  height: 98px;
-  width: 50px;
-  object-fit: cover;
-  position: absolute;
-  margin-top: none;
-  margin-left: 45px;
+const ItemContainer = styled.div`
+  display: flex;
+  height: 60%;
+  width: 100vw;
+  margin: auto;
+  align-items: center;
+  flex-direction: column;
   overflow: hidden;
 `;
 
 const WashiTapeImgBlueHorizontal = styled.img`
+  position: absolute;
+  margin-top: 350px;
   height: 45px;
   width: 270px;
   object-fit: cover;
-  position: absolute;
-  margin-top: 450px;
-  margin-left: -20px;
-  overflow: hidden;
+  margin-bottom: 0px;
+  @media only screen and (max-height: 450px) {
+    display: none;
+  }
 `;
 
 const WashiTapeImgGreenHappy = styled.img`
+  position: absolute;
   height: 40px;
   width: 210px;
   object-fit: cover;
-  position: absolute;
-  margin-top: 430px;
-  margin-left: 0px;
   overflow: hidden;
+  z-index: 1;
+  margin-top: 330px;
+  @media only screen and (max-height: 450px) {
+    display: none;
+  }
 `;
 
 const PaperclipClover = styled.img`
+  position: absolute;
   height: 90px;
   width: 100px;
-  position: absolute;
-  margin-top: 417px;
-  margin-left: 135px;
-`;
-
-const SpecialHomeButton = styled(NavLink)`
-  height: 62px;
-  width: 62px;
-  background: transparent;
-  border: none;
-  outline: none;
-  padding-right: 60px;
-`;
-
-const SplashOrange = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 25px;
-  align-items: center;
-  height: 154px;
-  width: 154px;
-  position: absolute;
-  margin-top: 430px;
-  margin-left: 192px;
-  opacity: 0.9;
-  background-image: url('/images/orangesplash1.png');
-  background-origin: border-box;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  overflow: hidden;
+  z-index: 2;
+  margin-top: -80px;
+  margin-right: -70px;
+  margin-top: 310px;
+  @media only screen and (max-height: 450px) {
+    display: none;
+  }
 `;
 
 function JournalCover() {
   return (
     <PageWrapperCenterSpEvenly>
+      <Header>Welcome</Header>
       <JournalCoverBackground>
-        <WashiTapeImgGreenVertical src="/images/washitapegreentexturevert.png" />
-        <JournalLabel />
-        <WashiTapeImgBlueHorizontal src="images/washitapebluevert.png" />
-        <WashiTapeImgGreenHappy src="images/maskingtapebehappy.png" />
-        <PaperclipClover src="images/paperclipclover.png" />
-        <SplashOrange>
-          <SpecialHomeButton to="/home">
-            <TreeIcon />
-          </SpecialHomeButton>
-        </SplashOrange>
+        <ItemContainer>
+          <JournalLabel />
+          <WashiTapeImgBlueHorizontal src="images/washitapeblue.png" />
+          <WashiTapeImgGreenHappy src="images/maskingtapebehappy.png" />
+          <PaperclipClover src="images/paperclipclover.png" />
+        </ItemContainer>
       </JournalCoverBackground>
     </PageWrapperCenterSpEvenly>
   );

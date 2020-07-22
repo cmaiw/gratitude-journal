@@ -6,6 +6,7 @@ import PageWrapperCenterSpEvenly from '../components/PageWrapperCenterSpEvenly';
 import WrapperTitleBird from '../components/WrapperTitleBird';
 import PageTitle from '../components/PageTitle';
 import { useHistory } from 'react-router-dom';
+import Header from '../components/Header';
 
 const Origamibird = styled.img`
   height: 65px;
@@ -24,6 +25,7 @@ function Confirmation() {
 
   return (
     <PageWrapperCenterSpEvenly>
+      <Header>Welcome</Header>
       <WrapperTitleBird>
         <PageTitle>Thank you!</PageTitle>
         <Origamibird src="/images/birdlookingleft.png" />

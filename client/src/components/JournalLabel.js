@@ -1,32 +1,40 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core';
+import { useHistory } from 'react-router-dom';
 
 const LabelAndBirdWrapper = styled.div`
-  width: 100%;
-  height: 500px;
+  width: 310px;
+  height: 230px;
+  align-self: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  @media only screen and (max-height: 450px) {
+    height: 210px;
+    width: 290px;
+  }
 `;
 
 const BookLabel = styled.div`
   background-color: transparent;
   display: flex;
   flex-direction: column;
-  margin-top: 125px;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
   justify-content: center;
-  align-items: flex-start;
-  height: 200px;
-  width: 280px;
+  align-items: center;
+  height: 220px;
+  width: 300px;
   padding: none;
   background-image: url('images/label.png');
   background-origin: border-box;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  position: relative;
   overflow: hidden;
+  @media only screen and (max-height: 450px) {
+    height: 180px;
+    width: 260px;
+  }
 `;
 
 const LabelTitle = styled.div`
@@ -34,14 +42,14 @@ const LabelTitle = styled.div`
   display: block;
   margin-right: auto;
   margin-left: auto;
-  font-family: 'Cookie', cursive;
+  font-family: 'Dancing Script', cursive;
   font-size: 32px;
 `;
 const LabelSubtitle = styled.div`
   color: ${props => props.theme.colors.font};
   margin-right: auto;
   margin-left: auto;
-  font-family: 'Cookie', cursive;
+  font-family: 'Dosis', sans-serif;
   font-size: 18px;
   text-wrap: wrap;
   display: block;
@@ -56,21 +64,30 @@ const hob = keyframes`
 `;
 
 const OrigamiBirdImg = styled.img`
-  height: 95px;
-  width: 105px;
   position: absolute;
-  margin-top: 95px;
-  margin-left: 56px;
+  margin-top: -25px;
+  margin-right: 20px;
+  height: 85px;
+  width: 105px;
   animation: ${hob};
   animation-duration: 0.9s;
   animation-timing-function: ease;
   animation-iteration-count: infinite;
+  @media only screen and (max-height: 450px) {
+    height: 65px;
+    width: 85px;
+  }
 `;
 
 function JournalLabel() {
+  const history = useHistory();
+  function handleClick() {
+    history.push(`/home`);
+  }
+
   return (
     <LabelAndBirdWrapper>
-      <OrigamiBirdImg src="/images/birdlookingleft.png" />
+      <OrigamiBirdImg src="/images/birdlookingleft.png" onClick={handleClick} />
       <BookLabel>
         <LabelTitle>Gratefully</LabelTitle>
         <LabelSubtitle>your gratitude</LabelSubtitle>
