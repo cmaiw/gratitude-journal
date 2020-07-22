@@ -14,44 +14,52 @@ const Origamibird = styled.img`
 `;
 
 const QuestionLabel = styled.label`
+  width: 90%;
   display: flex;
   flex-direction: row;
-  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
   color: ${props => props.theme.colors.primary};
   background-color: ${props => props.theme.colors.quinary};
-  font-weight: bold;
   justify-content: flex-start;
   align-items: center;
   margin: 4px;
+  flex-wrap: wrap;
 `;
 
 const Icon = styled.img`
-  fill: white;
   height: 40px;
-  width: auto;
   padding: 5px;
   margin-right: 10px;
-  padding: auto;
 `;
 
-const EntryLine = styled.p`
-  width: 100%;
+const EntryLine = styled.div`
+  display: block;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 75%;
   color: ${props => props.theme.colors.font};
   background-color: ${props => props.theme.colors.quinary};
+  flex-wrap: wrap;
+  text-align: flex-start;
+  word-wrap: break-word;
 `;
 
 const Card = styled.main`
-  width: 85%;
-  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 57vh;
   border-radius: 30px 15px 30px 15px;
   padding: 10px;
   color: ${props => props.theme.colors.font};
   background-color: ${props => props.theme.colors.quinary};
-  margin: 15px;
-  overflow: scroll;
   border-right: 6px solid ${props => props.theme.colors.primary};
   border-bottom: 6px solid ${props => props.theme.colors.primary};
   opacity: 0.85;
+  overflow: scroll;
+  margin-bottom: 30px;
 `;
 const ButtonWrapper = styled.div`
   display: flex;

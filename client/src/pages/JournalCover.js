@@ -8,7 +8,6 @@ const JournalCoverBackground = styled.div`
   height: 100%;
   width: 100vw;
   display: flex;
-  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
@@ -33,6 +32,9 @@ const WashiTapeImgBlueHorizontal = styled.img`
   width: 270px;
   object-fit: cover;
   margin-bottom: 0px;
+  @media only screen and (max-height: 450px) {
+    display: none;
+  }
 `;
 
 const WashiTapeImgGreenHappy = styled.img`
@@ -43,6 +45,9 @@ const WashiTapeImgGreenHappy = styled.img`
   overflow: hidden;
   z-index: 1;
   margin-top: 330px;
+  @media only screen and (max-height: 450px) {
+    display: none;
+  }
 `;
 
 const PaperclipClover = styled.img`
@@ -53,6 +58,9 @@ const PaperclipClover = styled.img`
   margin-top: -80px;
   margin-right: -70px;
   margin-top: 310px;
+  @media only screen and (max-height: 450px) {
+    display: none;
+  }
 `;
 
 function JournalCover() {
