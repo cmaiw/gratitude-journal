@@ -11,7 +11,8 @@ const LabelAndBirdWrapper = styled.div`
   margin-top: 10px;
   @media only screen and (max-height: 450px) {
     height: 210px;
-  width: 290px;
+    width: 290px;
+  }
 `;
 
 const BookLabel = styled.div`
@@ -32,7 +33,8 @@ const BookLabel = styled.div`
   overflow: hidden;
   @media only screen and (max-height: 450px) {
     height: 180px;
-  width: 260px;
+    width: 260px;
+  }
 `;
 
 const LabelTitle = styled.div`
@@ -73,7 +75,8 @@ const OrigamiBirdImg = styled.img`
   animation-iteration-count: infinite;
   @media only screen and (max-height: 450px) {
     height: 65px;
-  width: 85px;
+    width: 85px;
+  }
 `;
 
 function JournalLabel() {

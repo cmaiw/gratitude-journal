@@ -102,8 +102,15 @@ const Label = styled.label`
 function NewEntry(...props) {
   const history = useHistory();
 
+  let today = new Date();
+  let dd = String(today.getDate()).padStart(2, '0');
+  let mm = String(today.getMonth() + 1).padStart(2, '0'); //January = 0!
+  let yyyy = today.getFullYear();
+
+  today = mm + '-' + dd + '-' + yyyy;
+
   const [entry, setEntry] = React.useState({
-    date: ``,
+    date: today,
     title: '',
     social: '',
     suroundings: '',
@@ -147,10 +154,11 @@ function NewEntry(...props) {
           <JournalInput
             required
             name="date"
-            type="date"
-            placeholder={Date.now}
+            type="text"
+            placeholder={today}
             value={entry.date}
             onChange={handleChange}
+            onfocus="(this.type='date')"
           ></JournalInput>
         </Label>
         <Label>

@@ -81,11 +81,5 @@ EntryOverview.propTypes = {
   id: propTypes.string,
   date: propTypes.string,
   title: propTypes.string,
-  social: propTypes.string,
-  suroundings: propTypes.string,
-  nutrition: propTypes.string,
-  creativity: propTypes.string,
-  selfloveAndCare: propTypes.string,
-  goals: propTypes.string,
-  favourite: propTypes.string
+  favourite: propTypes.bool
 };
