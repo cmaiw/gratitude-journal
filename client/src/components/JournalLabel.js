@@ -4,11 +4,14 @@ import { keyframes } from '@emotion/core';
 import { useHistory } from 'react-router-dom';
 
 const LabelAndBirdWrapper = styled.div`
-  width: 340px;
-  height: 260px;
+  width: 310px;
+  height: 230px;
   align-self: center;
   margin-bottom: 20px;
   margin-top: 10px;
+  @media only screen and (max-height: 450px) {
+    height: 210px;
+  width: 290px;
 `;
 
 const BookLabel = styled.div`
@@ -18,8 +21,8 @@ const BookLabel = styled.div`
   text-align: center;
   justify-content: center;
   align-items: center;
-  height: 250px;
-  width: 330px;
+  height: 220px;
+  width: 300px;
   padding: none;
   background-image: url('images/label.png');
   background-origin: border-box;
@@ -27,6 +30,9 @@ const BookLabel = styled.div`
   background-repeat: no-repeat;
   background-size: contain;
   overflow: hidden;
+  @media only screen and (max-height: 450px) {
+    height: 180px;
+  width: 260px;
 `;
 
 const LabelTitle = styled.div`
@@ -60,11 +66,14 @@ const OrigamiBirdImg = styled.img`
   margin-top: -25px;
   margin-right: 20px;
   height: 85px;
-  width: 95px;
+  width: 105px;
   animation: ${hob};
   animation-duration: 0.9s;
   animation-timing-function: ease;
   animation-iteration-count: infinite;
+  @media only screen and (max-height: 450px) {
+    height: 65px;
+  width: 85px;
 `;
 
 function JournalLabel() {
