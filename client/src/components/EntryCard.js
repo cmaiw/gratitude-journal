@@ -7,7 +7,6 @@ import WrapperTitleBird from '../components/WrapperTitleBird';
 import PageTitle from '../components/PageTitle';
 import { getOneEntry } from '../api/entryRequests';
 import Header from './Header';
-import propTypes from 'prop-types';
 
 const Origamibird = styled.img`
   height: 65px;
@@ -154,16 +153,3 @@ export default function EntryCard() {
     </PageWrapperCenterSpEvenly>
   );
 }
-
-EntryCard.propTypes = {
-  id: propTypes.string,
-  date: propTypes.string,
-  title: propTypes.string,
-  social: propTypes.string,
-  suroundings: propTypes.string,
-  nutrition: propTypes.string,
-  creativity: propTypes.string,
-  selfloveAndCare: propTypes.string,
-  goals: propTypes.string,
-  favourite: propTypes.bool
-};

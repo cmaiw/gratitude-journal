@@ -7,7 +7,6 @@ import EntryOverview from '../components/EntryOverview';
 import { keyframes } from '@emotion/core';
 import { getAllEntries } from '../api/entryRequests';
 import Header from '../components/Header';
-import propTypes from 'prop-types';
 
 const hob = keyframes`
         0%   { transform: translateY(0); }
@@ -83,16 +82,3 @@ function Entries(...props) {
   );
 }
 export default Entries;
-
-Entries.propTypes = {
-  id: propTypes.string,
-  date: propTypes.string,
-  title: propTypes.string,
-  social: propTypes.string,
-  suroundings: propTypes.string,
-  nutrition: propTypes.string,
-  creativity: propTypes.string,
-  selfloveAndCare: propTypes.string,
-  goals: propTypes.string,
-  favourite: propTypes.bool
-};
