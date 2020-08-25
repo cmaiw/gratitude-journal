@@ -7,6 +7,8 @@ gratitude - journal is no commercial project. It is my capstone project made dur
 Gratefully- your gratitude journal is about becoming happier by focusing on the positive aspects in your life.
 Input forms with a few questions help you to log your happy and thankful moments during a day.
 
+#### See Storybook of the projects Components here: <https://gratefully-storybook.netlify.app/>
+
 ### Getting Started
 
 This project requires mongodb.
