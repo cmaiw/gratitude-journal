@@ -22,7 +22,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "build": "npm run build-app"
+    "build": "npm run build-app",
+    "chromatic": "npx chromatic --project-token ys7u30nqwq8"
   },
   "browserslist": {
     "production": [
@@ -38,11 +39,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
-    "@storybook/addon-essentials": "^6.0.16",
-    "@storybook/addon-links": "^6.0.16",
-    "@storybook/node-logger": "^6.0.16",
+    "@storybook/addon-essentials": "^6.0.17",
+    "@storybook/addon-links": "^6.0.17",
+    "@storybook/node-logger": "^6.0.17",
     "@storybook/preset-create-react-app": "^3.1.4",
-    "@storybook/react": "^6.0.16",
+    "@storybook/react": "^6.0.17",
     "babel-loader": "^8.1.0",
     "react-is": "^16.13.1"
   },
