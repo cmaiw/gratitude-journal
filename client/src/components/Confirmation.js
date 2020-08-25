@@ -31,9 +31,9 @@ const Needle = styled.img`
   align-self: bottom;
 `;
 
-function Confirmation() {
+function Confirmation(props) {
   return (
-    <Card>
+    <Card {...props}>
       <Needle src="/images/needle.png" />
       <FeatherIcon />
     </Card>

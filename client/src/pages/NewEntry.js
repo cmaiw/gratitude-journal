@@ -88,7 +88,7 @@ const Icon = styled.img`
   padding: auto;
 `;
 
-const Label = styled.label`
+export const Label = styled.label`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

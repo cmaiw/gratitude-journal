@@ -83,7 +83,7 @@ export default function EditEntry() {
 
   React.useEffect(() => {
     async function getEntry() {
-      const response = await getOneEntry(entryId, entry);
+      const response = await getOneEntry(entryId);
       setEntry(response);
     }
 
