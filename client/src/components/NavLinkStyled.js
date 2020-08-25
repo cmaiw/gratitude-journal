@@ -9,7 +9,6 @@ padding-top: 4px;
   background-color: transparent;
   border: none;
   outline: none;
-  background-color: ${props => props.theme.colors.primary};
   border-radius: 6px; 
 
   &:hover {

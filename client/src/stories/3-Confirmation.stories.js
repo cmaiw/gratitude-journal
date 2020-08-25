@@ -1,10 +1,10 @@
 import React from 'react';
-import ConfirmationCardSubmit from '../components/ConfirmationCardSubmit';
+import Confirmation from '../components/Confirmation';
 
 export default {
-  title: 'Entry Confirmation Card'
+  title: 'Confirmation Textbox'
 };
 
 export function JournalConfirmation() {
-  return <ConfirmationCardSubmit></ConfirmationCardSubmit>;
+  return <Confirmation></Confirmation>;
 }

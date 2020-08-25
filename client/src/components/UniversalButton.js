@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 const UniversalButton = styled.button`
   display: flex;
   height: 20px;
-  width: 60px;
+  width: auto;
   justify-content: center;
   align-items: center;
   background-color: ${props => props.theme.colors.primary};
@@ -16,6 +16,7 @@ const UniversalButton = styled.button`
   padding: none;
   margin: none;
   text-decoration: none;
+  cursor: pointer;
 
   &:active {
     background-color: ${props => props.theme.colors.tertiary};

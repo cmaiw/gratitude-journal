@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/cmaiw/gratitude-journal#readme",
   "devDependencies": {
+    "@storybook/addon-controls": "^6.0.16",
     "babel-plugin-emotion": "^10.0.33",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.20.6",
