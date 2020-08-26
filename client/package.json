@@ -23,7 +23,8 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "build": "npm run build-app",
-    "chromatic": "npx chromatic --project-token ys7u30nqwq8"
+    "chromatic": "npx chromatic --project-token ys7u30nqwq8",
+    "cypress:open": "cypress open"
   },
   "browserslist": {
     "production": [
