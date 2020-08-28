@@ -27,21 +27,21 @@ const Footer = styled.footer`
 
 export function NavBar() {
   return (
-    <Footer>
-      <NavLinkStyled to="/">
-        <TreeIconSmall />
+    <Footer id="footer">
+      <NavLinkStyled id="link-landing" to="/">
+        <TreeIconSmall id="nav-icon-tree" />
       </NavLinkStyled>
-      <NavLinkStyled to="/home">
-        <BirdIcon />
+      <NavLinkStyled id="link-home" to="/home">
+        <BirdIcon id="nav-icon-bird" />
       </NavLinkStyled>
-      <NavLinkStyled to="/journal">
-        <BookIcon />
+      <NavLinkStyled id="link-journal" to="/journal">
+        <BookIcon id="nav-icon-journal" />
       </NavLinkStyled>
-      <NavLinkStyled to="/new">
-        <AddIcon />
+      <NavLinkStyled id="link-new" to="/new">
+        <AddIcon id="nav-icon-new" />
       </NavLinkStyled>
-      <NavLinkStyled to="/about">
-        <HelpIcon />
+      <NavLinkStyled id="link-about" to="/about">
+        <HelpIcon id="nav-icon-about" />
       </NavLinkStyled>
     </Footer>
   );
