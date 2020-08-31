@@ -7,6 +7,7 @@ import WrapperTitleBird from '../components/WrapperTitleBird';
 import PageTitle from '../components/PageTitle';
 import { useHistory } from 'react-router-dom';
 import Header from '../components/Header';
+import propTypes from 'prop-types';
 
 const Origamibird = styled.img`
   height: 65px;
@@ -17,10 +18,10 @@ const ButtonContainer = styled.div`
   margin-bottom: 34px;
 `;
 
-function Confirmation() {
+function Confirmation({ currentPage }) {
   const history = useHistory();
   function handleClick() {
-    history.push('/journal');
+    history.push(`/journal/${currentPage}`);
   }
 
   return (
@@ -41,3 +42,7 @@ function Confirmation() {
 }
 
 export default Confirmation;
+
+Confirmation.propTypes = {
+  currentPage: propTypes.string
+};

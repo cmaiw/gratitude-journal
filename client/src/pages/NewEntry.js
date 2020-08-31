@@ -107,7 +107,7 @@ function NewEntry(...props) {
   let mm = String(today.getMonth() + 1).padStart(2, '0'); //January = 0!
   let yyyy = today.getFullYear();
 
-  today = dd + '-' + mm + '-' + yyyy;
+  today = yyyy + '-' + mm + '-' + dd;
 
   const [entry, setEntry] = React.useState({
     date: today,
