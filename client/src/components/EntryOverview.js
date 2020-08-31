@@ -44,8 +44,10 @@ const CardIcon = styled.img`
 `;
 
 const H3 = styled.h3`
+  display: flex;
+  flex-direction: row;
   color: ${props => props.theme.colors.headings};
-  overflow: hidden;
+  flex-wrap: nowrap;
   text-overflow: ellipsis;
 `;
 

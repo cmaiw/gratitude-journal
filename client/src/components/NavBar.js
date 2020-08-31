@@ -6,6 +6,7 @@ import BookIcon from '../icons/BookIcon';
 import AddIcon from '../icons/AddIcon';
 import HelpIcon from '../icons/HelpIcon';
 import TreeIconSmall from '../icons/TreeIconSmall';
+import propTypes from 'prop-types';
 
 const Footer = styled.footer`
   display: flex;
@@ -25,26 +26,30 @@ const Footer = styled.footer`
   z-index: 5;
 `;
 
-export function NavBar() {
+export function NavBar({ currentPage }) {
   return (
-    <Footer>
-      <NavLinkStyled to="/">
-        <TreeIconSmall />
+    <Footer id="footer">
+      <NavLinkStyled id="link-landing" to="/">
+        <TreeIconSmall id="nav-icon-tree" />
       </NavLinkStyled>
-      <NavLinkStyled to="/home">
-        <BirdIcon />
+      <NavLinkStyled id="link-home" to="/home">
+        <BirdIcon id="nav-icon-bird" />
       </NavLinkStyled>
-      <NavLinkStyled to="/journal">
-        <BookIcon />
+      <NavLinkStyled id="link-journal" to={`/journal/${currentPage}`}>
+        <BookIcon id="nav-icon-journal" />
       </NavLinkStyled>
-      <NavLinkStyled to="/new">
-        <AddIcon />
+      <NavLinkStyled id="link-new" to="/new">
+        <AddIcon id="nav-icon-new" />
       </NavLinkStyled>
-      <NavLinkStyled to="/about">
-        <HelpIcon />
+      <NavLinkStyled id="link-about" to="/about">
+        <HelpIcon id="nav-icon-about" />
       </NavLinkStyled>
     </Footer>
   );
 }
 
 export default NavBar;
+
+NavBar.propTypes = {
+  currentPage: propTypes.string
+};

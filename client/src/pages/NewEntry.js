@@ -107,7 +107,7 @@ function NewEntry(...props) {
   let mm = String(today.getMonth() + 1).padStart(2, '0'); //January = 0!
   let yyyy = today.getFullYear();
 
-  today = mm + '-' + dd + '-' + yyyy;
+  today = yyyy + '-' + mm + '-' + dd;
 
   const [entry, setEntry] = React.useState({
     date: today,
@@ -145,14 +145,15 @@ function NewEntry(...props) {
     <PageWrapperCenterSpEvenly {...props}>
       <Header>Welcome</Header>
       <WrapperTitleBird>
-        <PageTitle>New entry:</PageTitle>
+        <PageTitle id="page-title">New entry:</PageTitle>
         <Origamibird src="/images/birdlookingleft.png" />
       </WrapperTitleBird>
-      <FormContainer onSubmit={handleSubmit} key="_id">
+      <FormContainer id="submit-form-new" onSubmit={handleSubmit} key="_id">
         <Label>
           <Icon src="/images/kalender.svg" />
           <JournalInput
             required
+            id="date-input"
             name="date"
             type="text"
             placeholder={today}
@@ -165,6 +166,7 @@ function NewEntry(...props) {
           <Icon src="/images/write.svg" />
           <JournalInput
             required
+            id="title-input"
             name="title"
             type="text"
             placeholder="Your title / tags of the day"
@@ -175,6 +177,7 @@ function NewEntry(...props) {
         <Label>
           <Icon src="/images/family.svg" />
           <JournalInput
+            id="social-input"
             name="social"
             type="text"
             placeholder="Awesome people"
@@ -185,6 +188,7 @@ function NewEntry(...props) {
         <Label>
           <Icon src="/images/nature1.svg" />
           <JournalInput
+            id="suroundings-input"
             name="suroundings"
             placeholder="Weather, nature and suroundings"
             value={entry.suroundings}
@@ -195,6 +199,7 @@ function NewEntry(...props) {
         <Label>
           <Icon src="/images/food.svg" />
           <JournalInput
+            id="nutrition-input"
             name="nutrition"
             placeholder="Nutrition and the joy of food / cooking"
             value={entry.nutrition}
@@ -205,6 +210,7 @@ function NewEntry(...props) {
         <Label>
           <Icon src="/images/creativity.svg" />
           <JournalInput
+            id="creativity-input"
             name="creativity"
             placeholder="Learning, tasks, creativity, work"
             value={entry.creativity}
@@ -215,6 +221,7 @@ function NewEntry(...props) {
         <Label>
           <Icon src="/images/lotus.svg" />
           <JournalInput
+            id="selfloveAndCare-input"
             name="selfloveAndCare"
             placeholder="selflove and selfcare"
             value={entry.selfloveAndCare}
@@ -225,6 +232,7 @@ function NewEntry(...props) {
         <Label>
           <Icon src="/images/goal.svg" />
           <JournalInput
+            id="goals-input"
             name="goals"
             placeholder="your goals"
             value={entry.goals}
@@ -236,6 +244,7 @@ function NewEntry(...props) {
           <P>Mark as favourite: </P>
           <CheckboxContainer>
             <FavCheckbox
+              id="favCheckbox"
               type="checkbox"
               name="favourite"
               onChange={handleCheckboxChange}
@@ -243,7 +252,9 @@ function NewEntry(...props) {
               {...props}
             />
           </CheckboxContainer>
-          <UniversalButton type="submit">submit</UniversalButton>
+          <UniversalButton id="sub-btn-new" type="submit">
+            submit
+          </UniversalButton>
         </ButtonCheckboxContainer>
       </FormContainer>
     </PageWrapperCenterSpEvenly>
