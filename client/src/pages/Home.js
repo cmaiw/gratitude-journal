@@ -51,7 +51,7 @@ function Home(props) {
   const history = useHistory();
 
   function handleClick() {
-    history.push(`/journal`);
+    history.push(`/journal/page-1`);
   }
 
   return (
