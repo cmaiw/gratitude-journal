@@ -17,7 +17,6 @@ import EntryCard from './components/EntryCard';
 import EditEntry from './pages/EditEntry';
 import ConfirmationBeforeDelete from './pages/ConfirmationBeforeDelete';
 import ConfirmationAfterDelete from './pages/ConfirmationAfterDelete';
-import propTypes from 'prop-types';
 
 const ErrorMessage = styled.div`
   display: flex;
@@ -29,7 +28,7 @@ const ErrorMessage = styled.div`
   margin: 30px;
 `;
 
-function App({ currentPage }) {
+function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyles />
@@ -37,7 +36,7 @@ function App({ currentPage }) {
         <Switch>
           <Route exact path="/" component={JournalCover} />
           <Route exact path="/home" component={Home} />
-          <Route exact path={`/journal/${currentPage}`} component={Entries} />
+          <Route exact path={`/journal/:pageNumber`} component={Entries} />
           <Route exact path="/new" component={NewEntry} />
           <Route exact path="/about" component={About} />
           <Route exact path="/submit/confirm" component={ConfirmationSubmit} />
@@ -64,7 +63,3 @@ function App({ currentPage }) {
 }
 
 export default App;
-
-App.propTypes = {
-  currentPage: propTypes.string
-};

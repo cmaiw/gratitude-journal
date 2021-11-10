@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import propTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const Nav = styled.nav`
   display: flex;
@@ -29,7 +29,10 @@ const Li = styled.li`
   margin-right: 20px;
 `;
 
-const A = styled(NavLink)`
+const Button = styled.button`
+  background-color: transparent;
+  outline: none;
+  border: none;
   color: ${props => props.theme.colors.background};
   padding: auto;
   text-decoration: none;
@@ -39,8 +42,9 @@ const A = styled(NavLink)`
   }
 `;
 
-const Pagination = ({ entriesPerPage, totalEntries, paginate, currentPage }) => {
+const Pagination = ({ entriesPerPage, totalEntries, paginate }) => {
   const pageNumbers = [];
+  const history = useHistory()
 
   for (let i = 1; i <= Math.ceil(totalEntries / entriesPerPage); i++) {
     pageNumbers.push(i);
@@ -51,9 +55,11 @@ const Pagination = ({ entriesPerPage, totalEntries, paginate, currentPage }) => 
       <Ul id="pagination">
         {pageNumbers.map(pageNumber => (
           <Li key={pageNumber} id="page-item">
-            <A id="page-link" onClick={() => paginate(pageNumber)} to={`/journal/${currentPage}`}>
+            <Button 
+            id="page-link" onClick={() => {paginate(pageNumber)
+            history.push(`page-${pageNumber}`)}}>
               {pageNumber}
-            </A>
+            </Button>
           </Li>
         ))}
       </Ul>
@@ -67,5 +73,4 @@ Pagination.propTypes = {
   entriesPerPage: propTypes.number,
   totalEntries: propTypes.number,
   paginate: propTypes.func,
-  currentPage: propTypes.number
 };
